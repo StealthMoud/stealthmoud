@@ -39,7 +39,7 @@
 </table>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8&exclude_repo=BrowserPasswordExporter" width="60%" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" width="60%" alt="Top Languages" />
 </div>
 
 <div align="center">
