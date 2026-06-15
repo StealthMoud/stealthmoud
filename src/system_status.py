@@ -60,13 +60,32 @@ def update_readme_commits(commits):
         with open("README.md", "r") as f:
             content = f.read()
         
+        # 1. Update recent commits section
         pattern = r"<!-- RECENT_COMMITS_START -->.*?<!-- RECENT_COMMITS_END -->"
         replacement = f"<!-- RECENT_COMMITS_START -->\n\n{commits_text}\n\n<!-- RECENT_COMMITS_END -->"
         new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
         
+        # 2. Cache-bust the SVG links by appening current timestamp
+        timestamp = int(datetime.datetime.now().timestamp())
+        new_content = re.sub(
+            r'(src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/status\.svg)(?:\?v=\d+)?(")',
+            rf'\1?v={timestamp}\2',
+            new_content
+        )
+        new_content = re.sub(
+            r'(src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/streak\.svg)(?:\?v=\d+)?(")',
+            rf'\1?v={timestamp}\2',
+            new_content
+        )
+        new_content = re.sub(
+            r'(src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/contributions\.svg)(?:\?v=\d+)?(")',
+            rf'\1?v={timestamp}\2',
+            new_content
+        )
+        
         with open("README.md", "w") as f:
             f.write(new_content)
-        print("Success! README.md updated with recent commits.")
+        print("Success! README.md updated with recent commits and cache-busted SVG parameters.")
     except Exception as e:
         print(f"Error updating README.md: {e}")
 
