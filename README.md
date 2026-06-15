@@ -21,6 +21,12 @@
 
 ## Active Contributions & Activity
 
+<div align="center">
+  <img src="https://ghchart.rshah.org/6366f1/stealthmoud" alt="StealthMoud's Contribution Calendar" width="100%" />
+</div>
+
+<br />
+
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
