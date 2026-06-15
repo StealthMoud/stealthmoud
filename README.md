@@ -33,14 +33,18 @@
       <img src="https://github-readme-stats.vercel.app/api?username=stealthmoud&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9&count_private=true&include_all_commits=true" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" width="100%" alt="Top Languages" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
       <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak.svg?v=4" width="100%" alt="Streak Stats" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status.svg?v=1" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" width="60%" alt="Top Languages" />
-</div>
 
 <div align="center">
 
@@ -49,6 +53,21 @@
 ![](https://github-profile-trophy.vercel.app/?username=stealthmoud&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7&title=Commits,Repositories,Stars,Followers,PullRequest,Issues,MultiLanguage)
 
 </div>
+
+---
+
+## Recent System Updates
+
+<!-- RECENT_COMMITS_START -->
+
+### System Logs
+- **stealthmoud** — `fix current streak text color rendering` [#4a7ea71](https://github.com/StealthMoud/stealthmoud/commit/4a7ea714b7d166a9274b0ec5d5821fe809a0d99a)
+- **stealthmoud** — `cache bust streak svg link` [#ca2856f](https://github.com/StealthMoud/stealthmoud/commit/ca2856ff8af71838896d25b31ee9ddcb98639862)
+- **stealthmoud** — `revert exclude_repo parameter for language stats` [#de4f576](https://github.com/StealthMoud/stealthmoud/commit/de4f576e655ed124a14587902a5a15005b02cd47)
+- **stealthmoud** — `exclude BrowserPasswordExporter from languages chart` [#00b42c8](https://github.com/StealthMoud/stealthmoud/commit/00b42c8b69284c5e5e1fab7369803d4885d32de2)
+- **stealthmoud** — `fix streak number text contrast` [#9d630be](https://github.com/StealthMoud/stealthmoud/commit/9d630bec15f69c5b1061911c7770b168c1063223)
+
+<!-- RECENT_COMMITS_END -->
 
 ---
 

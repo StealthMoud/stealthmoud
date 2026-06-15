@@ -1,14 +1,13 @@
 import urllib.request
 import re
-import os
 
-def generate_svg():
-    username = "stealthmoud"
+def generate_svg(username="stealthmoud"):
+    # Fech public contribution HTML page and parse it
     url = f"https://github.com/users/{username}/contributions"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
 
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=5) as response:
             html = response.read().decode()
     except Exception as e:
         print(f"Error fetching contributions: {e}")
@@ -35,7 +34,7 @@ def generate_svg():
         print(f"Error: Expected 7 rows in table body, found {len(tr_blocks)}.")
         return False
 
-    # Parse level grid
+    # Pars level grid from html
     grid = []  # 7 rows of 53 weeks
     for day_index, tr_block in enumerate(tr_blocks):
         cells = re.findall(r"<td[^>]*class=\"[^\"]*ContributionCalendar-day[^\"]*\"[^>]*>", tr_block)
@@ -48,7 +47,6 @@ def generate_svg():
 
     # Verify grid dimensions
     num_weeks = len(grid[0])
-    print(f"Grid dimensions: 7 rows x {num_weeks} columns.")
 
     # Extract month labels from thead
     thead_match = re.search(r"<thead>(.*?)</thead>", html, re.DOTALL)
@@ -71,32 +69,62 @@ def generate_svg():
             col_offset += colspan
 
     # Generate SVG Content
-    # Dimensions: 53 weeks * 13px = 689px + labels margin
     svg_width = 780
     svg_height = 165
 
-    # Colors (GitHub Dark Theme exact specs)
+    # Premium Indigo HSL Theme Palette
     bg_color = "#0D1117"
     border_color = "#30363D"
     text_color = "#8B949E"
     colors = {
         0: "#161B22",  # Level 0
-        1: "#0E4429",  # Level 1
-        2: "#006D32",  # Level 2
-        3: "#26A641",  # Level 3
-        4: "#39D353",  # Level 4
+        1: "#221c4e",  # Level 1 (Sleek dark indigo)
+        2: "#3d3290",  # Level 2 (Medium violet-indigo)
+        3: "#6366f1",  # Level 3 (Accent indigo)
+        4: "#8f7aff",  # Level 4 (High intensity glow indigo)
     }
 
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" fill="none">')
-    # Background and border
-    svg.append(f'  <rect width="{svg_width}" height="{svg_height}" rx="6" fill="{bg_color}" stroke="{border_color}" stroke-width="1"/>')
+    
+    # Custom glow defnition for hover
+    svg.append('  <defs>')
+    svg.append('    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">')
+    svg.append('      <feGaussianBlur stdDeviation="3" result="blur" />')
+    svg.append('      <feMerge>')
+    svg.append('        <feMergeNode in="blur" />')
+    svg.append('        <feMergeNode in="SourceGraphic" />')
+    svg.append('      </feMerge>')
+    svg.append('    </filter>')
+    # Gradient for card border
+    svg.append('    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">')
+    svg.append('      <stop offset="0%" stop-color="#30363D" />')
+    svg.append('      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4" />')
+    svg.append('      <stop offset="100%" stop-color="#30363D" />')
+    svg.append('    </linearGradient>')
+    svg.append('  </defs>')
 
-    # Font styles
+    # Background and border
+    svg.append(f'  <rect width="{svg_width}" height="{svg_height}" rx="6" fill="{bg_color}" stroke="url(#card-border)" stroke-width="1.2"/>')
+
+    # Font styles and hover animations
     font_family = '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif'
     svg.append('  <style>')
     svg.append(f'    .lbl {{ font-family: {font_family}; font-size: 9px; fill: {text_color}; }}')
-    svg.append(f'    .title {{ font-family: {font_family}; font-size: 11px; font-weight: 600; fill: {text_color}; }}')
+    svg.append(f'    .title {{ font-family: {font_family}; font-size: 11px; font-weight: 600; fill: #ffffff; }}')
+    svg.append('    .contrib-day {')
+    svg.append('      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), fill 0.2s, stroke 0.2s;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: center;')
+    svg.append('    }')
+    svg.append('    .contrib-day:hover {')
+    svg.append('      transform: scale(1.35);')
+    svg.append('      stroke: #8f7aff;')
+    svg.append('      stroke-width: 1;')
+    svg.append('      fill: #8f7aff !important;')
+    svg.append('      filter: url(#neon-glow);')
+    svg.append('      cursor: pointer;')
+    svg.append('    }')
     svg.append('  </style>')
 
     # 1. Month Labels
@@ -120,18 +148,18 @@ def generate_svg():
             else:
                 level = 0
             color = colors.get(level, colors[0])
-            svg.append(f'  <rect x="{x_pos}" y="{y_pos}" width="10" height="10" rx="2" ry="2" fill="{color}"/>')
+            svg.append(f'  <rect x="{x_pos}" y="{y_pos}" width="10" height="10" rx="2.2" fill="{color}" class="contrib-day"/>')
 
     # 4. Total count text (bottom left)
-    svg.append(f'  <text x="32" y="145" class="lbl">{total_contribs} contributions in the last year</text>')
+    svg.append(f'  <text x="32" y="146" class="lbl">{total_contribs} contributions in the last year</text>')
 
     # 5. Legend (bottom right)
     legend_start_x = svg_width - 130
-    svg.append(f'  <text x="{legend_start_x - 30}" y="145" class="lbl">Less</text>')
+    svg.append(f'  <text x="{legend_start_x - 30}" y="146" class="lbl">Less</text>')
     for lvl in range(5):
         lx = legend_start_x + lvl * 13
-        svg.append(f'  <rect x="{lx}" y="136" width="10" height="10" rx="2" ry="2" fill="{colors[lvl]}"/>')
-    svg.append(f'  <text x="{legend_start_x + 5 * 13 + 5}" y="145" class="lbl">More</text>')
+        svg.append(f'  <rect x="{lx}" y="137" width="10" height="10" rx="2.2" fill="{colors[lvl]}" class="contrib-day"/>')
+    svg.append(f'  <text x="{legend_start_x + 5 * 13 + 5}" y="146" class="lbl">More</text>')
 
     svg.append('</svg>')
 
@@ -145,26 +173,3 @@ def generate_svg():
     except Exception as e:
         print(f"Error writing contributions.svg: {e}")
         return False
-
-def fetch_streak():
-    username = "stealthmoud"
-    url = f"https://streak-stats.demolab.com/?user={username}&hide_border=true&background=0d1117&stroke=6366f1&ring=6366f1&fire=818cf8&currStreakLabel=6366f1&currStreakNum=ffffff&sideNums=ffffff&sideLabels=c9d1d9&dates=c9d1d9"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    try:
-        with urllib.request.urlopen(req) as response:
-            content = response.read().decode('utf-8')
-            
-            # Post-process to fix buggy current streak text animation which causes color issues in some browsers
-            content = content.replace("animation: currstreak 0.6s linear forwards", "opacity: 0; animation: fadein 0.5s linear forwards 0.9s")
-            
-            with open("streak.svg", "w") as f:
-                f.write(content)
-        print("Success! streak.svg generated and post-processed.")
-        return True
-    except Exception as e:
-        print(f"Error fetching/processing streak stats: {e}")
-        return False
-
-if __name__ == "__main__":
-    generate_svg()
-    fetch_streak()
