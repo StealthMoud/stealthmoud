@@ -24,7 +24,7 @@ jobs:
         run: |
           git config --global user.name "StealthMoud"
           git config --global user.email "stealthmoud@users.noreply.github.com"
-          git add contributions.svg
+          git add contributions.svg streak.svg
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes in contribution graph."
           else

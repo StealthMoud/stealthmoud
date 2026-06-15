@@ -146,5 +146,21 @@ def generate_svg():
         print(f"Error writing contributions.svg: {e}")
         return False
 
+def fetch_streak():
+    username = "stealthmoud"
+    url = f"https://streak-stats.demolab.com/?user={username}&hide_border=true&background=0d1117&stroke=6366f1&ring=6366f1&fire=818cf8&currStreakLabel=6366f1&sideNums=c9d1d9&sideLabels=c9d1d9&dates=c9d1d9"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req) as response:
+            content = response.read()
+            with open("streak.svg", "wb") as f:
+                f.write(content)
+        print("Success! streak.svg generated.")
+        return True
+    except Exception as e:
+        print(f"Error fetching streak stats: {e}")
+        return False
+
 if __name__ == "__main__":
     generate_svg()
+    fetch_streak()
