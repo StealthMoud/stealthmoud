@@ -44,7 +44,7 @@ def fetch_recent_commits(username="stealthmoud"):
             
     return commits_list
 
-def update_readme_commits(commits):
+def update_readme_commits(commits, contributions_file, streak_file, status_file):
     if not commits:
         return
     
@@ -65,27 +65,26 @@ def update_readme_commits(commits):
         replacement = f"<!-- RECENT_COMMITS_START -->\n\n{commits_text}\n\n<!-- RECENT_COMMITS_END -->"
         new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
         
-        # 2. Cache-bust the SVG links by appening current timestamp
-        timestamp = int(datetime.datetime.now().timestamp())
+        # 2. Cache-bust the SVG links by updating filenames
         new_content = re.sub(
-            r'(src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/status\.svg)(?:\?v=\d+)?(")',
-            rf'\1?v={timestamp}\2',
+            r'src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/contributions(?:_[^"]+)?\.svg(?:\?v=\d+)?"',
+            f'src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/{contributions_file}"',
             new_content
         )
         new_content = re.sub(
-            r'(src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/streak\.svg)(?:\?v=\d+)?(")',
-            rf'\1?v={timestamp}\2',
+            r'src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/streak(?:_[^"]+)?\.svg(?:\?v=\d+)?"',
+            f'src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/{streak_file}"',
             new_content
         )
         new_content = re.sub(
-            r'(src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/contributions\.svg)(?:\?v=\d+)?(")',
-            rf'\1?v={timestamp}\2',
+            r'src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/status(?:_[^"]+)?\.svg(?:\?v=\d+)?"',
+            f'src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/{status_file}"',
             new_content
         )
         
         with open("README.md", "w") as f:
             f.write(new_content)
-        print("Success! README.md updated with recent commits and cache-busted SVG parameters.")
+        print("Success! README.md updated with recent commits and cache-busted SVG paths.")
     except Exception as e:
         print(f"Error updating README.md: {e}")
 
@@ -214,7 +213,7 @@ def get_real_cpu_mem():
     mem_sim = f"{4.2 + ((now.minute * 9) % 30) / 10.0:.2f} GB / 16.0 GB"
     return cpu_sim, mem_sim
 
-def generate_status_svg(latest_commit_msg, latest_repo=None):
+def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.svg"):
     now = datetime.datetime.now(datetime.timezone.utc)
     # Adjust to Europe/Rome timezone (UTC+2)
     local_now = now + datetime.timedelta(hours=2)
@@ -354,10 +353,10 @@ def generate_status_svg(latest_commit_msg, latest_repo=None):
     
     svg_content = "\n".join(svg)
     try:
-        with open("status.svg", "w") as f:
+        with open(filename, "w") as f:
             f.write(svg_content)
-        print("Success! status.svg generated.")
+        print(f"Success! {filename} generated.")
         return True
     except Exception as e:
-        print(f"Error writing status.svg: {e}")
+        print(f"Error writing {filename}: {e}")
         return False

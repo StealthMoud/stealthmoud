@@ -1,7 +1,7 @@
 import urllib.request
 import re
 
-def generate_svg(username="stealthmoud"):
+def generate_svg(username="stealthmoud", filename="contributions.svg"):
     # Fech public contribution HTML page and parse it
     url = f"https://github.com/users/{username}/contributions"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -166,10 +166,10 @@ def generate_svg(username="stealthmoud"):
     # Write to file
     svg_content = "\n".join(svg)
     try:
-        with open("contributions.svg", "w") as f:
+        with open(filename, "w") as f:
             f.write(svg_content)
-        print("Success! contributions.svg generated.")
+        print(f"Success! {filename} generated.")
         return True
     except Exception as e:
-        print(f"Error writing contributions.svg: {e}")
+        print(f"Error writing {filename}: {e}")
         return False
