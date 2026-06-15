@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://ghchart.rshah.org/6366f1/stealthmoud" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://ghchart.rshah.org/40c463/stealthmoud" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
