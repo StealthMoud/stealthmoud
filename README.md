@@ -33,18 +33,14 @@
       <img src="https://github-readme-stats.vercel.app/api?username=stealthmoud&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9&count_private=true&include_all_commits=true" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=stealthmoud&hide_border=true&background=0d1117&stroke=6366f1&ring=6366f1&fire=818cf8&currStreakLabel=6366f1&sideNums=c9d1d9&sideLabels=c9d1d9&dates=c9d1d9" width="100%" alt="Streak Stats" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" width="100%" alt="Top Languages" />
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=stealthmoud&custom_title=Contribution%20Activity&bg_color=0d1117&color=6366f1&line=818cf8&point=ffffff&area_color=6366f1&title_color=6366f1&area=true&hide_border=true" width="100%" alt="Activity Graph" />
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=stealthmoud&hide_border=true&background=0d1117&stroke=6366f1&ring=6366f1&fire=818cf8&currStreakLabel=6366f1&sideNums=c9d1d9&sideLabels=c9d1d9&dates=c9d1d9&v=3" width="100%" alt="Streak Stats" />
     </td>
   </tr>
 </table>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" width="60%" alt="Top Languages" />
+</div>
 
 <div align="center">
 
