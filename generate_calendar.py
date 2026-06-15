@@ -152,13 +152,17 @@ def fetch_streak():
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     try:
         with urllib.request.urlopen(req) as response:
-            content = response.read()
-            with open("streak.svg", "wb") as f:
+            content = response.read().decode('utf-8')
+            
+            # Post-process to fix buggy current streak text animation which causes color issues in some browsers
+            content = content.replace("animation: currstreak 0.6s linear forwards", "opacity: 0; animation: fadein 0.5s linear forwards 0.9s")
+            
+            with open("streak.svg", "w") as f:
                 f.write(content)
-        print("Success! streak.svg generated.")
+        print("Success! streak.svg generated and post-processed.")
         return True
     except Exception as e:
-        print(f"Error fetching streak stats: {e}")
+        print(f"Error fetching/processing streak stats: {e}")
         return False
 
 if __name__ == "__main__":

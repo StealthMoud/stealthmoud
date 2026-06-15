@@ -33,7 +33,7 @@
       <img src="https://github-readme-stats.vercel.app/api?username=stealthmoud&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9&count_private=true&include_all_commits=true" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak.svg?v=2" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak.svg?v=4" width="100%" alt="Streak Stats" />
     </td>
   </tr>
 </table>
