@@ -175,7 +175,7 @@ def generate_status_svg(latest_commit_msg):
     svg.append(f'  <text x="15" y="68" class="term-lbl">TIMEZONE     :</text>')
     svg.append(f'  <text x="120" y="68" class="term-val">Europe/Rome (UTC+2)</text>')
     
-    svg.append(f'  <text x="15" y="86" class="term-lbl">LOCAL TIME   :</text>')
+    svg.append(f'  <text x="15" y="86" class="term-lbl">SYSTEM SYNC  :</text>')
     svg.append(f'  <text x="120" y="86" class="term-val">{date_str} {time_str}</text>')
     svg.append('  <rect x="238" y="77" width="2" height="10" class="cursor"/>')  # Blinking cursor right next to date-time
     
