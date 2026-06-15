@@ -117,6 +117,18 @@ class SecurityResearcher:
       </a>
     </td>
   </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/StealthMoud/BrowserPasswordExporter">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=BrowserPasswordExporter&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="BrowserPasswordExporter Pin" />
+      </a>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/StealthMoud/Tarsius">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=Tarsius&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="Tarsius Pin" />
+      </a>
+    </td>
+  </tr>
 </table>
 
 ---
