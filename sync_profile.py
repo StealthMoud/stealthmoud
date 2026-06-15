@@ -17,7 +17,8 @@ def main():
     update_readme_commits(commits)
     
     latest_msg = commits[0][1] if commits else "initial setup"
-    generate_status_svg(latest_msg)
+    latest_repo = commits[0][0] if commits else None
+    generate_status_svg(latest_msg, latest_repo)
     
     print("Profile synchronization completed successfully.")
 

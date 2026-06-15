@@ -70,7 +70,115 @@ def update_readme_commits(commits):
     except Exception as e:
         print(f"Error updating README.md: {e}")
 
-def generate_status_svg(latest_commit_msg):
+def get_real_uptime():
+    # Try Linux proc
+    try:
+        with open("/proc/uptime", "r") as f:
+            uptime_seconds = float(f.read().split()[0])
+        uptime_days = int(uptime_seconds // 86400)
+        uptime_hours = int((uptime_seconds % 86400) // 3600)
+        uptime_mins = int((uptime_seconds % 3600) // 60)
+        return f"{uptime_days}d {uptime_hours}h {uptime_mins}m"
+    except Exception:
+        pass
+        
+    # Try macOS sysctl
+    try:
+        import subprocess
+        res = subprocess.run(["sysctl", "-n", "kern.boottime"], capture_output=True, text=True)
+        sec_match = re.search(r"sec = (\d+)", res.stdout)
+        if sec_match:
+            boot_time = float(sec_match.group(1))
+            now_epoch = datetime.datetime.now(datetime.timezone.utc).timestamp()
+            uptime_seconds = now_epoch - boot_time
+            uptime_days = int(uptime_seconds // 86400)
+            uptime_hours = int((uptime_seconds % 86400) // 3600)
+            uptime_mins = int((uptime_seconds % 3600) // 60)
+            return f"{uptime_days}d {uptime_hours}h {uptime_mins}m"
+    except Exception:
+        pass
+        
+    # Fallback to datetime baseline
+    now = datetime.datetime.now()
+    return f"{now.day}d {now.hour}h {now.minute}m"
+
+def get_real_cpu_mem():
+    cpu_str = "0.0%"
+    mem_str = "0.0 GB / 0.0 GB"
+    
+    # 1. Try Linux proc file system
+    try:
+        # Memory metrics parsing
+        with open("/proc/meminfo", "r") as f:
+            meminfo = f.read()
+        mem_total_match = re.search(r"MemTotal:\s+(\d+)\s+kB", meminfo)
+        mem_free_match = re.search(r"MemFree:\s+(\d+)\s+kB", meminfo)
+        buffers_match = re.search(r"Buffers:\s+(\d+)\s+kB", meminfo)
+        cached_match = re.search(r"Cached:\s+(\d+)\s+kB", meminfo)
+        if mem_total_match and mem_free_match:
+            total = int(mem_total_match.group(1)) / 1024 / 1024
+            free = int(mem_free_match.group(1)) / 1024 / 1024
+            buffers = int(buffers_match.group(1) if buffers_match else 0) / 1024 / 1024
+            cached = int(cached_match.group(1) if cached_match else 0) / 1024 / 1024
+            used = total - free - buffers - cached
+            mem_str = f"{used:.2f} GB / {total:.1f} GB"
+            
+        # CPU loading
+        with open("/proc/loadavg", "r") as f:
+            load = f.read().split()
+        import os
+        cpu_count = os.cpu_count() or 2
+        cpu_pct = (float(load[0]) / cpu_count) * 100
+        cpu_str = f"{min(cpu_pct, 100.0):.1f}%"
+        return cpu_str, mem_str
+    except Exception:
+        pass
+        
+    # 2. Try macOS system commands
+    try:
+        import subprocess
+        import os
+        # Total Memory
+        res = subprocess.run(["sysctl", "-n", "hw.memsize"], capture_output=True, text=True)
+        total_bytes = int(res.stdout.strip())
+        total_gb = total_bytes / 1024 / 1024 / 1024
+        
+        # vm_stat page details
+        res = subprocess.run(["vm_stat"], capture_output=True, text=True)
+        lines = res.stdout.split("\n")
+        page_size = 4096
+        free_pages = 0
+        inactive_pages = 0
+        speculative_pages = 0
+        for line in lines:
+            if "page size of" in line:
+                page_size = int(re.search(r"page size of (\d+) bytes", line).group(1))
+            elif "Pages free:" in line:
+                free_pages = int(line.split()[-1].replace(".", ""))
+            elif "Pages inactive:" in line:
+                inactive_pages = int(line.split()[-1].replace(".", ""))
+            elif "Pages speculative:" in line:
+                speculative_pages = int(line.split()[-1].replace(".", ""))
+        used_gb = total_gb - ((free_pages + inactive_pages + speculative_pages) * page_size / 1024 / 1024 / 1024)
+        mem_str = f"{max(used_gb, 0.1):.2f} GB / {total_gb:.1f} GB"
+        
+        # CPU load
+        res = subprocess.run(["sysctl", "-n", "vm.loadavg"], capture_output=True, text=True)
+        load_val = float(res.stdout.split()[1])
+        cpu_count = os.cpu_count() or 4
+        cpu_pct = (load_val / cpu_count) * 100
+        cpu_str = f"{min(cpu_pct, 100.0):.1f}%"
+        return cpu_str, mem_str
+    except Exception:
+        pass
+        
+    # Fallback to simulated variables if hardware checks fail
+    now = datetime.datetime.now()
+    cpu_sim = f"{(now.minute * 7 + now.second) % 18 + 7.2:.1f}%"
+    mem_sim = f"{4.2 + ((now.minute * 9) % 30) / 10.0:.2f} GB / 16.0 GB"
+    return cpu_sim, mem_sim
+
+def generate_status_svg(latest_commit_msg, latest_repo=None):
     now = datetime.datetime.now(datetime.timezone.utc)
     # Adjust to Europe/Rome timezone (UTC+2)
     local_now = now + datetime.timedelta(hours=2)
@@ -90,25 +198,25 @@ def generate_status_svg(latest_commit_msg):
     time_str = local_now.strftime("%H:%M:%S")
     date_str = local_now.strftime("%Y-%m-%d")
 
-    # Uptime simulation
-    uptime_days = local_now.day
-    uptime_str = f"{uptime_days}d {local_now.hour}h {local_now.minute}m"
+    # Get real hardware metrics
+    uptime_str = get_real_uptime()
+    cpu_val, mem_val = get_real_cpu_mem()
 
-    # CPU and memory variations
-    cpu_val = f"{(local_now.minute * 7 + local_now.second) % 18 + 7.2:.1f}%"
-    mem_val = f"{4.2 + ((local_now.minute * 9) % 30) / 10.0:.2f} GB / 16.0 GB"
-
-    # Rotating tasks depending on the day of the week
-    targets = [
-        "Web App PenTesting [OWASP-T10]",
-        "JWT Exploit Research [active]",
-        "Automated CVE-2025 Payload Scan",
-        "Blind SQL Injection Mapping",
-        "Exploit Payload Development",
-        "CTF Challenge Playground",
-        "Red Team Infra Configuration"
-    ]
-    current_target = targets[local_now.weekday()]
+    # Dynamic target based on latest repository action
+    if latest_repo:
+        current_target = f"Working on {latest_repo}"
+    else:
+        # Rotating targets depending on the day of the week
+        targets = [
+            "Web App PenTesting [OWASP-T10]",
+            "JWT Exploit Research [active]",
+            "Automated CVE-2025 Payload Scan",
+            "Blind SQL Injection Mapping",
+            "Exploit Payload Development",
+            "CTF Challenge Playground",
+            "Red Team Infra Configuration"
+        ]
+        current_target = targets[local_now.weekday()]
 
     # Dimensions: 495x195 (exactly matches streak card)
     width = 495
