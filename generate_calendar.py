@@ -148,7 +148,7 @@ def generate_svg():
 
 def fetch_streak():
     username = "stealthmoud"
-    url = f"https://streak-stats.demolab.com/?user={username}&hide_border=true&background=0d1117&stroke=6366f1&ring=6366f1&fire=818cf8&currStreakLabel=6366f1&sideNums=c9d1d9&sideLabels=c9d1d9&dates=c9d1d9"
+    url = f"https://streak-stats.demolab.com/?user={username}&hide_border=true&background=0d1117&stroke=6366f1&ring=6366f1&fire=818cf8&currStreakLabel=6366f1&currStreakNum=ffffff&sideNums=ffffff&sideLabels=c9d1d9&dates=c9d1d9"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     try:
         with urllib.request.urlopen(req) as response:
