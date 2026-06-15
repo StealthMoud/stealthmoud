@@ -91,7 +91,7 @@ def generate_status_svg(latest_commit_msg):
     date_str = local_now.strftime("%Y-%m-%d")
 
     # Uptime simulation
-    uptime_days = (day_of_year % 14) + 2
+    uptime_days = local_now.day
     uptime_str = f"{uptime_days}d {local_now.hour}h {local_now.minute}m"
 
     # CPU and memory variations
