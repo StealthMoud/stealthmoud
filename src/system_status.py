@@ -71,7 +71,24 @@ def update_readme_commits(commits):
         print(f"Error updating README.md: {e}")
 
 def get_real_uptime():
-    # Try Linux proc
+    # Try to calculate repository age from first git commit
+    try:
+        import subprocess
+        cmd = ["git", "log", "--reverse", "--format=%ct"]
+        res = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        lines = res.stdout.strip().split("\n")
+        if lines and lines[0]:
+            first_commit_ts = int(lines[0].strip())
+            now_ts = datetime.datetime.now(datetime.timezone.utc).timestamp()
+            uptime_seconds = now_ts - first_commit_ts
+            uptime_days = int(uptime_seconds // 86400)
+            uptime_hours = int((uptime_seconds % 86400) // 3600)
+            uptime_mins = int((uptime_seconds % 3600) // 60)
+            return f"{uptime_days}d {uptime_hours}h {uptime_mins}m"
+    except Exception:
+        pass
+
+    # Try Linux proc if git query fails
     try:
         with open("/proc/uptime", "r") as f:
             uptime_seconds = float(f.read().split()[0])
@@ -82,7 +99,7 @@ def get_real_uptime():
     except Exception:
         pass
         
-    # Try macOS sysctl
+    # Try macOS sysctl if previous fails
     try:
         import subprocess
         res = subprocess.run(["sysctl", "-n", "kern.boottime"], capture_output=True, text=True)
@@ -312,7 +329,7 @@ def generate_status_svg(latest_commit_msg, latest_repo=None):
     svg.append('  </g>')
     
     svg.append(f'  <text x="26" y="185" class="term-val">Active: {current_target}</text>')
-    svg.append(f'  <text x="{width - 90}" y="185" class="term-lbl">Uptime: {uptime_str}</text>')
+    svg.append(f'  <text x="{width - 15}" y="185" class="term-lbl" text-anchor="end">Uptime: {uptime_str}</text>')
     
     svg.append('</svg>')
     
