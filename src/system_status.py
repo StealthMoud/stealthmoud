@@ -266,12 +266,16 @@ def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.sv
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none">')
     
-    # Gradient for card border
+    # Gradient definitions for border and progress bar
     svg.append('  <defs>')
     svg.append('    <linearGradient id="status-card-border" x1="0%" y1="0%" x2="100%" y2="100%">')
     svg.append('      <stop offset="0%" stop-color="#30363D" />')
     svg.append('      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4" />')
     svg.append('      <stop offset="100%" stop-color="#30363D" />')
+    svg.append('    </linearGradient>')
+    svg.append('    <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="0%">')
+    svg.append('      <stop offset="0%" stop-color="#6366f1" />')
+    svg.append('      <stop offset="100%" stop-color="#9a93ff" />')
     svg.append('    </linearGradient>')
     svg.append('  </defs>')
 
@@ -285,7 +289,32 @@ def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.sv
     svg.append(f'    .term-val {{ font-family: {font_family}; font-size: 11px; fill: {text_color}; }}')
     svg.append(f'    .term-cmd {{ font-family: {font_family}; font-size: 11px; fill: {accent_color}; font-weight: bold; }}')
     svg.append(f'    .term-bar {{ font-family: {font_family}; font-size: 11px; fill: {accent_color}; }}')
-    svg.append(f'    .window-title {{ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size: 10px; fill: {sub_color}; }}')
+    svg.append(f'    .window-title {{ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size: 10px; fill: {sub_color}; animation: fade-in 0.5s ease-out 0.2s both; }}')
+    svg.append('    .win-btn {')
+    svg.append('      animation: slide-down 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2) both;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: center;')
+    svg.append('    }')
+    svg.append('    .window-divider {')
+    svg.append('      animation: scale-x 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) 0.25s both;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: center;')
+    svg.append('    }')
+    svg.append('    .term-line {')
+    svg.append('      animation: term-slide 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1) both;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: left center;')
+    svg.append('    }')
+    svg.append('    .bar-fill {')
+    svg.append('      animation: bar-grow 1s cubic-bezier(0.1, 0.8, 0.2, 1) 0.6s both;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: left center;')
+    svg.append('    }')
+    svg.append('    .bottom-bar {')
+    svg.append('      animation: slide-up 0.5s ease-out 0.9s both;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: bottom center;')
+    svg.append('    }')
     svg.append('    .cursor {')
     svg.append('      animation: blink 1.2s step-end infinite;')
     svg.append('      fill: #6366f1;')
@@ -302,52 +331,78 @@ def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.sv
     svg.append('      50% { opacity: 1; transform: scale(1.15); }')
     svg.append('      100% { opacity: 0.4; transform: scale(0.95); }')
     svg.append('    }')
+    svg.append('    @keyframes slide-down {')
+    svg.append('      from { opacity: 0; transform: translateY(-4px); }')
+    svg.append('      to { opacity: 1; transform: translateY(0); }')
+    svg.append('    }')
+    svg.append('    @keyframes slide-up {')
+    svg.append('      from { opacity: 0; transform: translateY(4px); }')
+    svg.append('      to { opacity: 1; transform: translateY(0); }')
+    svg.append('    }')
+    svg.append('    @keyframes fade-in {')
+    svg.append('      from { opacity: 0; }')
+    svg.append('      to { opacity: 1; }')
+    svg.append('    }')
+    svg.append('    @keyframes scale-x {')
+    svg.append('      from { transform: scaleX(0); }')
+    svg.append('      to { transform: scaleX(1); }')
+    svg.append('    }')
+    svg.append('    @keyframes term-slide {')
+    svg.append('      from { opacity: 0; transform: translateX(-8px); }')
+    svg.append('      to { opacity: 1; transform: translateX(0); }')
+    svg.append('    }')
+    svg.append('    @keyframes bar-grow {')
+    svg.append('      from { transform: scaleX(0); }')
+    svg.append('      to { transform: scaleX(1); }')
+    svg.append('    }')
     svg.append('  </style>')
     
-    # Window Header (Mac terminal-style)
-    svg.append('  <circle cx="15" cy="15" r="4" fill="#f87171" opacity="0.8"/>')
-    svg.append('  <circle cx="27" cy="15" r="4" fill="#fbbf24" opacity="0.8"/>')
-    svg.append('  <circle cx="39" cy="15" r="4" fill="#34d399" opacity="0.8"/>')
+    # Window Header (Mac terminal-style with staggered slide-down)
+    svg.append('  <circle cx="15" cy="15" r="4" fill="#f87171" opacity="0.8" class="win-btn" style="animation-delay: 0.05s;"/>')
+    svg.append('  <circle cx="27" cy="15" r="4" fill="#fbbf24" opacity="0.8" class="win-btn" style="animation-delay: 0.1s;"/>')
+    svg.append('  <circle cx="39" cy="15" r="4" fill="#34d399" opacity="0.8" class="win-btn" style="animation-delay: 0.15s;"/>')
     svg.append(f'  <text x="60" y="18" class="window-title">system_monitor.sh</text>')
-    svg.append(f'  <line x1="0" y1="28" x2="{width}" y2="28" stroke="{border_color}" stroke-width="1"/>')
+    svg.append(f'  <line x1="0" y1="28" x2="{width}" y2="28" stroke="{border_color}" stroke-width="1" class="window-divider"/>')
     
     # Command prompt
-    svg.append(f'  <text x="15" y="47" class="term-cmd">$ ./stealthmoud --status</text>')
+    svg.append(f'  <text x="15" y="47" class="term-cmd term-line" style="animation-delay: 0.25s;">$ ./stealthmoud --status</text>')
     
-    # Terminal text
-    svg.append(f'  <text x="15" y="68" class="term-lbl">TIMEZONE     :</text>')
-    svg.append(f'  <text x="120" y="68" class="term-val">Europe/Rome (UTC+2)</text>')
+    # Terminal text lines (staggered entries)
+    svg.append(f'  <text x="15" y="68" class="term-lbl term-line" style="animation-delay: 0.35s;">TIMEZONE     :</text>')
+    svg.append(f'  <text x="120" y="68" class="term-val term-line" style="animation-delay: 0.35s;">Europe/Rome (UTC+2)</text>')
     
-    svg.append(f'  <text x="15" y="86" class="term-lbl">SYSTEM SYNC  :</text>')
-    svg.append(f'  <text x="120" y="86" class="term-val">{date_str} {time_str}</text>')
-    svg.append('  <rect x="238" y="77" width="2" height="10" class="cursor"/>')  # Blinking cursor right next to date-time
+    svg.append(f'  <text x="15" y="86" class="term-lbl term-line" style="animation-delay: 0.45s;">SYSTEM SYNC  :</text>')
+    svg.append(f'  <text x="120" y="86" class="term-val term-line" style="animation-delay: 0.45s;">{date_str} {time_str}</text>')
+    svg.append('  <rect x="238" y="77" width="2" height="10" class="cursor"/>')  # Blinking cursor
     
-    svg.append(f'  <text x="15" y="104" class="term-lbl">YEAR PROGRESS:</text>')
-    svg.append(f'  <text x="120" y="104" class="term-bar">{bar}</text>')
-    svg.append(f'  <text x="260" y="104" class="term-val">{progress:.2f}%</text>')
+    svg.append(f'  <text x="15" y="104" class="term-lbl term-line" style="animation-delay: 0.55s;">YEAR PROGRESS:</text>')
+    # Modern glowing progress bar instead of ASCII block text
+    svg.append(f'  <rect x="120" y="97" width="130" height="8" rx="4" fill="#161b22" stroke="#30363D" stroke-width="0.8" class="term-line" style="animation-delay: 0.55s;"/>')
+    svg.append(f'  <rect x="120" y="97" width="{130 * progress / 100}" height="8" rx="4" fill="url(#progress-gradient)" class="bar-fill"/>')
+    svg.append(f'  <text x="260" y="104" class="term-val term-line" style="animation-delay: 0.55s;">{progress:.2f}%</text>')
     
     # Shorten commit message if too long for terminal
     term_commit = latest_commit_msg
     if len(term_commit) > 35:
         term_commit = term_commit[:32] + "..."
         
-    svg.append(f'  <text x="15" y="122" class="term-lbl">LAST UPDATE  :</text>')
-    svg.append(f'  <text x="120" y="122" class="term-val">{term_commit}</text>')
+    svg.append(f'  <text x="15" y="122" class="term-lbl term-line" style="animation-delay: 0.65s;">LAST UPDATE  :</text>')
+    svg.append(f'  <text x="120" y="122" class="term-val term-line" style="animation-delay: 0.65s;">{term_commit}</text>')
     
-    svg.append(f'  <text x="15" y="140" class="term-lbl">CPU / MEM    :</text>')
-    svg.append(f'  <text x="120" y="140" class="term-val">{cpu_val} | {mem_val}</text>')
+    svg.append(f'  <text x="15" y="140" class="term-lbl term-line" style="animation-delay: 0.75s;">CPU / MEM    :</text>')
+    svg.append(f'  <text x="120" y="140" class="term-val term-line" style="animation-delay: 0.75s;">{cpu_val} | {mem_val}</text>')
     
     # Bottom status bar
-    svg.append(f'  <rect x="0" y="170" width="{width}" height="25" fill="#161b22" opacity="0.3"/>')
-    svg.append(f'  <line x1="0" y1="170" x2="{width}" y2="170" stroke="{border_color}" stroke-width="1"/>')
+    svg.append(f'  <rect x="0" y="170" width="{width}" height="25" fill="#161b22" opacity="0.3" class="bottom-bar"/>')
+    svg.append(f'  <line x1="0" y1="170" x2="{width}" y2="170" stroke="{border_color}" stroke-width="1" class="bottom-bar"/>')
     
     # Pulsing status heartbeat dot
-    svg.append('  <g style="transform-origin: 15px 182px; transform-box: fill-box;" class="pulse-dot">')
+    svg.append('  <g style="transform-origin: 15px 182px; transform-box: fill-box;" class="pulse-dot bottom-bar">')
     svg.append('    <circle cx="15" cy="182" r="3.5" fill="#34d399"/>')
     svg.append('  </g>')
     
-    svg.append(f'  <text x="26" y="185" class="term-val">Active: {current_target}</text>')
-    svg.append(f'  <text x="{width - 15}" y="185" class="term-lbl" text-anchor="end">Uptime: {uptime_str}</text>')
+    svg.append(f'  <text x="26" y="185" class="term-val bottom-bar" style="animation-delay: 0.95s;">Active: {current_target}</text>')
+    svg.append(f'  <text x="{width - 15}" y="185" class="term-lbl bottom-bar" text-anchor="end" style="animation-delay: 0.95s;">Uptime: {uptime_str}</text>')
     
     svg.append('</svg>')
     
