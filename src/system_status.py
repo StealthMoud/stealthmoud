@@ -3,11 +3,20 @@ import re
 import json
 import datetime
 import subprocess
+import os
 
 def fetch_recent_commits(username="stealthmoud"):
-    # Fech recent public commits from API with local git fallback
-    url = f"https://api.github.com/users/{username}/events/public"
+    # Fech recent commits from API with local git fallback
+    token = os.getenv("GH_PAT")
+    if token:
+        url = f"https://api.github.com/users/{username}/events"
+    else:
+        url = f"https://api.github.com/users/{username}/events/public"
+        
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    if token:
+        req.add_header("Authorization", f"Bearer {token}")
+        
     commits_list = []
     try:
         with urllib.request.urlopen(req, timeout=5) as response:

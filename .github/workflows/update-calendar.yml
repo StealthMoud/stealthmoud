@@ -24,6 +24,8 @@ jobs:
 
       - name: Sync Profile Metrics
         run: python sync_profile.py
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: Commit and Push Changes
         run: |
