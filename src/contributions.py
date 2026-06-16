@@ -1,5 +1,6 @@
 import urllib.request
 import re
+import datetime
 
 def generate_svg(username="stealthmoud", filename="contributions.svg"):
     # Fech public contribution HTML page and parse it
@@ -107,7 +108,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     # Background and border
     svg.append(f'  <rect width="{svg_width}" height="{svg_height}" rx="6" fill="{bg_color}" stroke="url(#card-border)" stroke-width="1.2"/>')
 
-    # Font styles and hover animations
+    # Font styles and spring-like hover and wave animations
     font_family = '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif'
     svg.append('  <style>')
     svg.append(f'    .lbl {{ font-family: {font_family}; font-size: 9px; fill: {text_color}; }}')
@@ -116,6 +117,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     svg.append('      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), fill 0.2s, stroke 0.2s;')
     svg.append('      transform-box: fill-box;')
     svg.append('      transform-origin: center;')
+    svg.append('      animation: wave 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) both;')
     svg.append('    }')
     svg.append('    .contrib-day:hover {')
     svg.append('      transform: scale(1.35);')
@@ -124,6 +126,38 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     svg.append('      fill: #8f7aff !important;')
     svg.append('      filter: url(#neon-glow);')
     svg.append('      cursor: pointer;')
+    svg.append('    }')
+    svg.append('    .contrib-today {')
+    svg.append('      stroke: #9a93ff;')
+    svg.append('      stroke-width: 1.5;')
+    svg.append('      animation: today-pulse 2s infinite ease-in-out, wave 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) both;')
+    svg.append('    }')
+    svg.append('    .today-indicator {')
+    svg.append('      animation: indicator-glow 1.5s infinite ease-in-out;')
+    svg.append('      transform-box: fill-box;')
+    svg.append('      transform-origin: center;')
+    svg.append('      filter: url(#neon-glow);')
+    svg.append('    }')
+    svg.append('    @keyframes wave {')
+    svg.append('      0% { opacity: 0; transform: scale(0.3) translateY(4px); }')
+    svg.append('      70% { transform: scale(1.05); }')
+    svg.append('      100% { opacity: 1; transform: scale(1) translateY(0); }')
+    svg.append('    }')
+    svg.append('    @keyframes today-pulse {')
+    svg.append('      0%, 100% {')
+    svg.append('        stroke-opacity: 0.5;')
+    svg.append('        stroke-width: 1;')
+    svg.append('        filter: drop-shadow(0 0 2px rgba(154, 147, 255, 0.4));')
+    svg.append('      }')
+    svg.append('      50% {')
+    svg.append('        stroke-opacity: 1;')
+    svg.append('        stroke-width: 2;')
+    svg.append('        filter: drop-shadow(0 0 6px rgba(154, 147, 255, 0.9));')
+    svg.append('      }')
+    svg.append('    }')
+    svg.append('    @keyframes indicator-glow {')
+    svg.append('      0%, 100% { opacity: 0.5; transform: scale(0.8); }')
+    svg.append('      50% { opacity: 1; transform: scale(1.3); }')
     svg.append('    }')
     svg.append('  </style>')
 
@@ -137,6 +171,11 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     svg.append('  <text x="10" y="73" class="lbl">Wed</text>')
     svg.append('  <text x="10" y="99" class="lbl">Fri</text>')
 
+    # Detect current day to highlight today
+    now = datetime.datetime.now(datetime.timezone.utc)
+    local_now = now + datetime.timedelta(hours=2) # Europe/Rome offset
+    today_row = (local_now.weekday() + 1) % 7
+
     # 3. Calendar squares
     for day_idx in range(7):
         y_pos = 28 + day_idx * 13
@@ -148,7 +187,18 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
             else:
                 level = 0
             color = colors.get(level, colors[0])
-            svg.append(f'  <rect x="{x_pos}" y="{y_pos}" width="10" height="10" rx="2.2" fill="{color}" class="contrib-day"/>')
+            
+            is_today = (day_idx == today_row and col_idx == len(grid[day_idx]) - 1)
+            classes = "contrib-day"
+            if is_today:
+                classes += " contrib-today"
+                
+            delay = min(col_idx * 0.012, 0.65)
+            svg.append(f'  <rect x="{x_pos}" y="{y_pos}" width="10" height="10" rx="2.2" fill="{color}" class="{classes}" style="animation-delay: {delay:.3f}s;"/>')
+            
+            if is_today:
+                # Add small pulsing neon target dot at top-right of today block
+                svg.append(f'  <circle cx="{x_pos + 10}" cy="{y_pos}" r="2" fill="#9a93ff" class="today-indicator"/>')
 
     # 4. Total count text (bottom left)
     svg.append(f'  <text x="32" y="146" class="lbl">{total_contribs} contributions in the last year</text>')
