@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781602462.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781614869.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781602462.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781614869.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781602462.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781614869.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **Spelt** — `feat: integrate Tatoeba API for dynamic context-aware exa...` [#72edcc3](https://github.com/StealthMoud/Spelt/commit/72edcc3228dfca7bc8b4c535af7c531a85b27bbf)
-- **stealthmoud** — `fix CPU and memory calculation` [#8e1ac00](https://github.com/StealthMoud/stealthmoud/commit/8e1ac00ac0ebb994cce07ba00af1b19fdaa668a8)
-- **stealthmoud** — `fetch full history to calculate repository age` [#a7662cb](https://github.com/StealthMoud/stealthmoud/commit/a7662cbf36e03716f1644a4b8fd42bd079844a16)
-- **stealthmoud** — `fix status parser and inline cursor` [#c12c891](https://github.com/StealthMoud/stealthmoud/commit/c12c891db2b0773856107cd2bf528b009f169cc2)
-- **Spelt** — `feat: update fallback example generator with advanced voc...` [#5843a96](https://github.com/StealthMoud/Spelt/commit/5843a963c2ab0e721a9f20df8b494b001ac4945c)
+- **goalOS-data** — `Add item to focus.json: focus-352f769d-ef33-4adb-83df-41f...` [#b25406b](https://github.com/StealthMoud/goalOS-data/commit/b25406bbd97cf7682ceb68b344ed77c4c9159ca0)
+- **goalOS-data** — `Update: devices.json` [#60e6fd8](https://github.com/StealthMoud/goalOS-data/commit/60e6fd8923290e9fa91ecd92d1b568b49f4b82c7)
+- **Spelt** — `fix sandbox update message for existing words` [#ab206cf](https://github.com/StealthMoud/Spelt/commit/ab206cf5989f2875a9a05c19ebaf7d583517e674)
+- **Spelt** — `fix spelling error tracking and log reviews on mastered` [#7453c53](https://github.com/StealthMoud/Spelt/commit/7453c537543e77dcf9c1c9d6dae5c6f70b8d3bf4)
+- **Spelt** — `add oxford fallback for pronunciation scraping` [#d19829c](https://github.com/StealthMoud/Spelt/commit/d19829c31a2f42ab8006cbe86dcad88f275d002e)
 
 <!-- RECENT_COMMITS_END -->
 
