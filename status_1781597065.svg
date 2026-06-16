@@ -39,20 +39,20 @@
   <text x="15" y="68" class="term-lbl">TIMEZONE     :</text>
   <text x="120" y="68" class="term-val">Europe/Rome (UTC+2)</text>
   <text x="15" y="86" class="term-lbl">SYSTEM SYNC  :</text>
-  <text x="120" y="86" class="term-val">2026-06-15 19:48:57</text>
+  <text x="120" y="86" class="term-val">2026-06-16 10:04:29</text>
   <rect x="238" y="77" width="2" height="10" class="cursor"/>
   <text x="15" y="104" class="term-lbl">YEAR PROGRESS:</text>
   <text x="120" y="104" class="term-bar">█████████░░░░░░░░░░░</text>
-  <text x="260" y="104" class="term-val">45.48%</text>
+  <text x="260" y="104" class="term-val">45.75%</text>
   <text x="15" y="122" class="term-lbl">LAST UPDATE  :</text>
-  <text x="120" y="122" class="term-val">implement automatic camo cache b...</text>
+  <text x="120" y="122" class="term-val">implement dynamic SVG filename c...</text>
   <text x="15" y="140" class="term-lbl">CPU / MEM    :</text>
-  <text x="120" y="140" class="term-val">37.5% | 14.94 GB / 24.0 GB</text>
+  <text x="120" y="140" class="term-val">39.1% | 15.24 GB / 24.0 GB</text>
   <rect x="0" y="170" width="495" height="25" fill="#161b22" opacity="0.3"/>
   <line x1="0" y1="170" x2="495" y2="170" stroke="#30363D" stroke-width="1"/>
   <g style="transform-origin: 15px 182px; transform-box: fill-box;" class="pulse-dot">
     <circle cx="15" cy="182" r="3.5" fill="#34d399"/>
   </g>
   <text x="26" y="185" class="term-val">Active: Working on stealthmoud</text>
-  <text x="480" y="185" class="term-lbl" text-anchor="end">Uptime: 199d 4h 0m</text>
+  <text x="480" y="185" class="term-lbl" text-anchor="end">Uptime: 199d 18h 15m</text>
 </svg>

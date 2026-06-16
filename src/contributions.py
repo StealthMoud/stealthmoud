@@ -72,16 +72,16 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     svg_width = 780
     svg_height = 165
 
-    # Premium Indigo HSL Theme Palette
+    # Premium Indigo HSL Theme Palette with high-contast step scaling
     bg_color = "#0D1117"
     border_color = "#30363D"
     text_color = "#8B949E"
     colors = {
-        0: "#161B22",  # Level 0
-        1: "#221c4e",  # Level 1 (Sleek dark indigo)
-        2: "#3d3290",  # Level 2 (Medium violet-indigo)
-        3: "#6366f1",  # Level 3 (Accent indigo)
-        4: "#8f7aff",  # Level 4 (High intensity glow indigo)
+        0: "#161B22",  # Level 0 (GitHub empty grid)
+        1: "#2d2b63",  # Level 1 (Vibrant low activity indigo)
+        2: "#4f49be",  # Level 2 (Vibrant medium activity indigo)
+        3: "#746df3",  # Level 3 (Accent indigo)
+        4: "#9a93ff",  # Level 4 (Bright glowing indigo)
     }
 
     svg = []
