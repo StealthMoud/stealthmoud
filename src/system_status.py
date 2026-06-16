@@ -23,19 +23,33 @@ def fetch_recent_commits(username="stealthmoud"):
             events = json.loads(response.read().decode())
             for event in events:
                 if event.get("type") == "PushEvent":
-                    repo_name = event.get("repo", {}).get("name", "").replace(f"{username}/", "")
+                    repo_full_name = event.get("repo", {}).get("name", "")
+                    repo_name = re.sub(rf"^{username}/", "", repo_full_name, flags=re.IGNORECASE)
+                    
                     payload = event.get("payload", {})
-                    commits = payload.get("commits", [])
-                    for commit in commits:
-                        message = commit.get("message", "").split("\n")[0]
-                        if len(message) > 60:
-                            message = message[:57] + "..."
-                        sha = commit.get("sha", "")
-                        commits_list.append((repo_name, message, sha))
-                        if len(commits_list) >= 5:
-                            break
-                if len(commits_list) >= 5:
-                    break
+                    sha = payload.get("head")
+                    if not sha:
+                        continue
+                        
+                    # Fetch commit details to get the message (since GitHub Events API removed commits payload)
+                    try:
+                        commit_url = f"https://api.github.com/repos/{repo_full_name}/commits/{sha}"
+                        commit_req = urllib.request.Request(commit_url, headers={"User-Agent": "Mozilla/5.0"})
+                        if token:
+                            commit_req.add_header("Authorization", f"Bearer {token}")
+                        with urllib.request.urlopen(commit_req, timeout=3) as commit_res:
+                            commit_data = json.loads(commit_res.read().decode())
+                            message = commit_data.get("commit", {}).get("message", "").split("\n")[0]
+                            if len(message) > 60:
+                                message = message[:57] + "..."
+                            commits_list.append((repo_name, message, sha))
+                    except Exception as ce:
+                        print(f"Error fetching commit details for {repo_full_name}@{sha}: {ce}")
+                        # Fallback if commit API details fetch fails
+                        commits_list.append((repo_name, "pushed changes", sha))
+                        
+                    if len(commits_list) >= 5:
+                        break
     except Exception as e:
         print(f"Error fetching commits from API: {e}")
         
@@ -381,8 +395,7 @@ def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.sv
     svg.append(f'  <text x="120" y="68" class="term-val term-line" style="animation-delay: 0.35s;">Europe/Rome (UTC+2)</text>')
     
     svg.append(f'  <text x="15" y="86" class="term-lbl term-line" style="animation-delay: 0.45s;">SYSTEM SYNC  :</text>')
-    svg.append(f'  <text x="120" y="86" class="term-val term-line" style="animation-delay: 0.45s;">{date_str} {time_str}</text>')
-    svg.append('  <rect x="238" y="77" width="2" height="10" class="cursor"/>')  # Blinking cursor
+    svg.append(f'  <text x="120" y="86" class="term-val term-line" style="animation-delay: 0.45s;">{date_str} {time_str}<tspan fill="{accent_color}" class="cursor">█</tspan></text>')
     
     svg.append(f'  <text x="15" y="104" class="term-lbl term-line" style="animation-delay: 0.55s;">YEAR PROGRESS:</text>')
     # Modern glowing progress bar instead of ASCII block text
