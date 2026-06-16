@@ -166,28 +166,60 @@ def get_real_cpu_mem():
     
     # 1. Try Linux proc file system
     try:
-        # Memory metrics parsing
+        # Memory metrics parsing using MemAvailable for accuracy
         with open("/proc/meminfo", "r") as f:
             meminfo = f.read()
         mem_total_match = re.search(r"MemTotal:\s+(\d+)\s+kB", meminfo)
         mem_free_match = re.search(r"MemFree:\s+(\d+)\s+kB", meminfo)
+        mem_avail_match = re.search(r"MemAvailable:\s+(\d+)\s+kB", meminfo)
         buffers_match = re.search(r"Buffers:\s+(\d+)\s+kB", meminfo)
         cached_match = re.search(r"Cached:\s+(\d+)\s+kB", meminfo)
-        if mem_total_match and mem_free_match:
+        
+        if mem_total_match:
             total = int(mem_total_match.group(1)) / 1024 / 1024
-            free = int(mem_free_match.group(1)) / 1024 / 1024
-            buffers = int(buffers_match.group(1) if buffers_match else 0) / 1024 / 1024
-            cached = int(cached_match.group(1) if cached_match else 0) / 1024 / 1024
-            used = total - free - buffers - cached
-            mem_str = f"{used:.2f} GB / {total:.1f} GB"
+            if mem_avail_match:
+                avail = int(mem_avail_match.group(1)) / 1024 / 1024
+                used = total - avail
+            elif mem_free_match:
+                free = int(mem_free_match.group(1)) / 1024 / 1024
+                buffers = int(buffers_match.group(1) if buffers_match else 0) / 1024 / 1024
+                cached = int(cached_match.group(1) if cached_match else 0) / 1024 / 1024
+                used = total - free - buffers - cached
+            else:
+                used = 0.0
+            mem_str = f"{max(used, 0.0):.2f} GB / {total:.1f} GB"
             
-        # CPU loading
-        with open("/proc/loadavg", "r") as f:
-            load = f.read().split()
-        import os
-        cpu_count = os.cpu_count() or 2
-        cpu_pct = (float(load[0]) / cpu_count) * 100
-        cpu_str = f"{min(cpu_pct, 100.0):.1f}%"
+        # CPU usage via /proc/stat (real-time utilization over 100ms delta)
+        try:
+            def get_cpu_times():
+                with open("/proc/stat", "r") as f:
+                    line = f.readline().split()
+                # Sum columns excluding "cpu" label
+                total_time = sum(map(float, line[1:]))
+                idle_time = float(line[4]) # idle column index 4
+                return total_time, idle_time
+
+            t1_total, t1_idle = get_cpu_times()
+            import time
+            time.sleep(0.1)
+            t2_total, t2_idle = get_cpu_times()
+
+            total_delta = t2_total - t1_total
+            idle_delta = t2_idle - t1_idle
+            if total_delta > 0:
+                cpu_pct = (total_delta - idle_delta) / total_delta * 100
+                cpu_str = f"{min(max(cpu_pct, 0.0), 100.0):.1f}%"
+            else:
+                cpu_str = "0.0%"
+        except Exception:
+            # Fallback to loadavg
+            with open("/proc/loadavg", "r") as f:
+                load = f.read().split()
+            import os
+            cpu_count = os.cpu_count() or 2
+            cpu_pct = (float(load[0]) / cpu_count) * 100
+            cpu_str = f"{min(cpu_pct, 100.0):.1f}%"
+            
         return cpu_str, mem_str
     except Exception:
         pass
@@ -205,27 +237,44 @@ def get_real_cpu_mem():
         res = subprocess.run(["vm_stat"], capture_output=True, text=True)
         lines = res.stdout.split("\n")
         page_size = 4096
-        free_pages = 0
-        inactive_pages = 0
-        speculative_pages = 0
+        stats = {}
         for line in lines:
             if "page size of" in line:
                 page_size = int(re.search(r"page size of (\d+) bytes", line).group(1))
-            elif "Pages free:" in line:
-                free_pages = int(line.split()[-1].replace(".", ""))
-            elif "Pages inactive:" in line:
-                inactive_pages = int(line.split()[-1].replace(".", ""))
-            elif "Pages speculative:" in line:
-                speculative_pages = int(line.split()[-1].replace(".", ""))
-        used_gb = total_gb - ((free_pages + inactive_pages + speculative_pages) * page_size / 1024 / 1024 / 1024)
-        mem_str = f"{max(used_gb, 0.1):.2f} GB / {total_gb:.1f} GB"
+            else:
+                match = re.search(r"Pages\s+([^:]+):\s+(\d+)", line)
+                if match:
+                    key, val = match.groups()
+                    stats[key.strip()] = int(val.replace(".", ""))
+                    
+        # Real Apple used memory formula: active + wired + occupied by compressor
+        active_pages = stats.get("active", 0)
+        wired_pages = stats.get("wired down", 0)
+        compressor_pages = stats.get("occupied by compressor", 0)
         
-        # CPU load
-        res = subprocess.run(["sysctl", "-n", "vm.loadavg"], capture_output=True, text=True)
-        load_val = float(res.stdout.split()[1])
-        cpu_count = os.cpu_count() or 4
-        cpu_pct = (load_val / cpu_count) * 100
-        cpu_str = f"{min(cpu_pct, 100.0):.1f}%"
+        used_gb = (active_pages + wired_pages + compressor_pages) * page_size / 1024 / 1024 / 1024
+        mem_str = f"{used_gb:.2f} GB / {total_gb:.1f} GB"
+        
+        # CPU usage via top (real-time utilization)
+        try:
+            res = subprocess.run(["top", "-l", "1"], capture_output=True, text=True)
+            for line in res.stdout.split("\n"):
+                if "CPU usage:" in line:
+                    matches = re.findall(r"(\d+\.\d+)%\s+idle", line)
+                    if matches:
+                        idle_pct = float(matches[0])
+                        cpu_pct = 100.0 - idle_pct
+                        cpu_str = f"{min(max(cpu_pct, 0.0), 100.0):.1f}%"
+                        break
+        except Exception:
+            # Fallback to sysctl loadavg
+            res = subprocess.run(["sysctl", "-n", "vm.loadavg"], capture_output=True, text=True)
+            loads = re.findall(r"\d+\.\d+", res.stdout)
+            load_val = float(loads[0]) if loads else 0.5
+            cpu_count = os.cpu_count() or 4
+            cpu_pct = (load_val / cpu_count) * 100
+            cpu_str = f"{min(cpu_pct, 100.0):.1f}%"
+            
         return cpu_str, mem_str
     except Exception:
         pass
