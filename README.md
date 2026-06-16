@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781629286.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781643392.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781629286.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781643392.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781629286.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781643392.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **Spelt** — `add stats timeframe filter` [#de12c80](https://github.com/StealthMoud/Spelt/commit/de12c80af71fe9b079559668152d1c0f3f6843fb)
+- **goalOS-data** — `Add item to focus.json: focus-c19e91f4-f607-4116-b87c-afb...` [#5c030e3](https://github.com/StealthMoud/goalOS-data/commit/5c030e3ce524aed20b792f9743836ea4e501413e)
+- **goalOS-data** — `Update: devices.json` [#db898b5](https://github.com/StealthMoud/goalOS-data/commit/db898b5faf59560d8ee06450d72856946726789b)
+- **Spelt** — `update leech list logic` [#b1ee992](https://github.com/StealthMoud/Spelt/commit/b1ee9928167367fe8046434386ce05ef8f5bdb88)
 - **Spelt** — `fix sandbox focus shortcuts` [#e90d233](https://github.com/StealthMoud/Spelt/commit/e90d233794a18c36698b1200ae81ea44a699a6d8)
-- **Spelt** — `prevent auto mastering in sandbox` [#828ff1b](https://github.com/StealthMoud/Spelt/commit/828ff1b3544170ce2cc62427697fd8909d5ab7e1)
-- **goalOS-data** — `Add item to focus.json: focus-fdb60878-57e0-4ed7-bf9e-852...` [#b66761c](https://github.com/StealthMoud/goalOS-data/commit/b66761c4e179ecb17bb70039015da9b2ede9bb74)
-- **LifePlan** — `refactor: replace inline mermaid flowchart with static SV...` [#2002d42](https://github.com/StealthMoud/LifePlan/commit/2002d426e2f3e7cd625106f6a203e3c0b0c2553e)
-- **goalOS-data** — `Add item to focus.json: focus-352f769d-ef33-4adb-83df-41f...` [#b25406b](https://github.com/StealthMoud/goalOS-data/commit/b25406bbd97cf7682ceb68b344ed77c4c9159ca0)
 
 <!-- RECENT_COMMITS_END -->
 
