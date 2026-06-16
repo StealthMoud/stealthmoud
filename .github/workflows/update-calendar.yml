@@ -3,6 +3,9 @@ name: Update Profile Metrics
 on:
   schedule:
     - cron: "0 */6 * * *" # Run every 6 hours to keep status and commits real-time
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
