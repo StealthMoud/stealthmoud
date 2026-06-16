@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781614869.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781629286.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781614869.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781629286.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781614869.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781629286.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **Spelt** — `fix sandbox focus shortcuts` [#e90d233](https://github.com/StealthMoud/Spelt/commit/e90d233794a18c36698b1200ae81ea44a699a6d8)
+- **Spelt** — `prevent auto mastering in sandbox` [#828ff1b](https://github.com/StealthMoud/Spelt/commit/828ff1b3544170ce2cc62427697fd8909d5ab7e1)
+- **goalOS-data** — `Add item to focus.json: focus-fdb60878-57e0-4ed7-bf9e-852...` [#b66761c](https://github.com/StealthMoud/goalOS-data/commit/b66761c4e179ecb17bb70039015da9b2ede9bb74)
+- **LifePlan** — `refactor: replace inline mermaid flowchart with static SV...` [#2002d42](https://github.com/StealthMoud/LifePlan/commit/2002d426e2f3e7cd625106f6a203e3c0b0c2553e)
 - **goalOS-data** — `Add item to focus.json: focus-352f769d-ef33-4adb-83df-41f...` [#b25406b](https://github.com/StealthMoud/goalOS-data/commit/b25406bbd97cf7682ceb68b344ed77c4c9159ca0)
-- **goalOS-data** — `Update: devices.json` [#60e6fd8](https://github.com/StealthMoud/goalOS-data/commit/60e6fd8923290e9fa91ecd92d1b568b49f4b82c7)
-- **Spelt** — `fix sandbox update message for existing words` [#ab206cf](https://github.com/StealthMoud/Spelt/commit/ab206cf5989f2875a9a05c19ebaf7d583517e674)
-- **Spelt** — `fix spelling error tracking and log reviews on mastered` [#7453c53](https://github.com/StealthMoud/Spelt/commit/7453c537543e77dcf9c1c9d6dae5c6f70b8d3bf4)
-- **Spelt** — `add oxford fallback for pronunciation scraping` [#d19829c](https://github.com/StealthMoud/Spelt/commit/d19829c31a2f42ab8006cbe86dcad88f275d002e)
 
 <!-- RECENT_COMMITS_END -->
 
