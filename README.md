@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781694214.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1781710938.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781694214.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1781710938.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781694214.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1781710938.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **Spelt** — `add stats timeframe filter` [#de12c80](https://github.com/StealthMoud/Spelt/commit/de12c80af71fe9b079559668152d1c0f3f6843fb)
-- **goalOS-data** — `Add item to focus.json: focus-c19e91f4-f607-4116-b87c-afb...` [#5c030e3](https://github.com/StealthMoud/goalOS-data/commit/5c030e3ce524aed20b792f9743836ea4e501413e)
-- **goalOS-data** — `Update: devices.json` [#db898b5](https://github.com/StealthMoud/goalOS-data/commit/db898b5faf59560d8ee06450d72856946726789b)
-- **Spelt** — `update leech list logic` [#b1ee992](https://github.com/StealthMoud/Spelt/commit/b1ee9928167367fe8046434386ce05ef8f5bdb88)
-- **Spelt** — `fix sandbox focus shortcuts` [#e90d233](https://github.com/StealthMoud/Spelt/commit/e90d233794a18c36698b1200ae81ea44a699a6d8)
+- **goalOS-data** — `Add item to focus.json: focus-12ab846d-dfbb-4a3c-8bbd-b88...` [#042a6a6](https://github.com/StealthMoud/goalOS-data/commit/042a6a678f3a41d35ba753d293ce4522d158beb8)
+- **Spelt** — `handle network errors gracefully` [#b8c3af8](https://github.com/StealthMoud/Spelt/commit/b8c3af8c75b05e52f2c275ca209e0ae449b79d92)
+- **Spelt** — `handle network errors gracefully` [#b8c3af8](https://github.com/StealthMoud/Spelt/commit/b8c3af8c75b05e52f2c275ca209e0ae449b79d92)
+- **Spelt** — `add pronunciation play in modal` [#c5f449c](https://github.com/StealthMoud/Spelt/commit/c5f449c125080e04c6fea236f7fdbb14fb5e90bf)
+- **goalOS-data** — `Update: devices.json` [#ca64170](https://github.com/StealthMoud/goalOS-data/commit/ca64170eb238416681b493984db943d070eb6bee)
 
 <!-- RECENT_COMMITS_END -->
 
