@@ -1,18 +1,28 @@
 import urllib.request
 import re
 import datetime
+import time
 
 def generate_svg(username="stealthmoud", filename="contributions.svg"):
     # Fech public contribution HTML page and parse it
     url = f"https://github.com/users/{username}/contributions"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
 
-    try:
-        with urllib.request.urlopen(req, timeout=5) as response:
-            html = response.read().decode()
-    except Exception as e:
-        print(f"Error fetching contributions: {e}")
-        return False
+    html = None
+    max_retries = 3
+    for attempt in range(1, max_retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as response:
+                html = response.read().decode()
+                break
+        except Exception as e:
+            print(f"Attempt {attempt}/{max_retries} failed to fetch contributions: {e}")
+            if attempt < max_retries:
+                time.sleep(2 * attempt)
+            else:
+                print(f"All {max_retries} attempts to fetch contributions failed.")
+                return False
+
 
     # Extract total contributions text
     total_contribs_match = re.search(

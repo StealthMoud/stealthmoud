@@ -68,25 +68,24 @@ def fetch_recent_commits(username="stealthmoud"):
     return commits_list
 
 def update_readme_commits(commits, contributions_file, streak_file, status_file):
-    if not commits:
-        return
-    
-    formatted_commits = ["### System Logs"]
-    for repo, msg, sha in commits:
-        short_sha = sha[:7]
-        commit_url = f"https://github.com/StealthMoud/{repo}/commit/{sha}"
-        formatted_commits.append(f"- **{repo}** — `{msg}` [#{short_sha}]({commit_url})")
-    
-    commits_text = "\n".join(formatted_commits)
-    
     try:
         with open("README.md", "r") as f:
             content = f.read()
         
-        # 1. Update recent commits section
-        pattern = r"<!-- RECENT_COMMITS_START -->.*?<!-- RECENT_COMMITS_END -->"
-        replacement = f"<!-- RECENT_COMMITS_START -->\n\n{commits_text}\n\n<!-- RECENT_COMMITS_END -->"
-        new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+        new_content = content
+        
+        # 1. Update recent commits section if we have commits
+        if commits:
+            formatted_commits = ["### System Logs"]
+            for repo, msg, sha in commits:
+                short_sha = sha[:7]
+                commit_url = f"https://github.com/StealthMoud/{repo}/commit/{sha}"
+                formatted_commits.append(f"- **{repo}** — `{msg}` [#{short_sha}]({commit_url})")
+            
+            commits_text = "\n".join(formatted_commits)
+            pattern = r"<!-- RECENT_COMMITS_START -->.*?<!-- RECENT_COMMITS_END -->"
+            replacement = f"<!-- RECENT_COMMITS_START -->\n\n{commits_text}\n\n<!-- RECENT_COMMITS_END -->"
+            new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
         
         # 2. Cache-bust the SVG links by updating filenames
         new_content = re.sub(
