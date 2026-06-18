@@ -47,13 +47,24 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
 
     # Pars level grid from html
     grid = []  # 7 rows of 53 weeks
+    date_to_coords = {}
+    latest_date = ""
+    latest_coords = (0, 0)
     for day_index, tr_block in enumerate(tr_blocks):
         cells = re.findall(r"<td[^>]*class=\"[^\"]*ContributionCalendar-day[^\"]*\"[^>]*>", tr_block)
         row_levels = []
-        for cell in cells:
+        for col_idx, cell in enumerate(cells):
             level_match = re.search(r'data-level="(\d+)"', cell)
             level = int(level_match.group(1)) if level_match else 0
             row_levels.append(level)
+            
+            date_match = re.search(r'data-date="([^"]+)"', cell)
+            if date_match:
+                date_str = date_match.group(1)
+                date_to_coords[date_str] = (day_index, col_idx)
+                if date_str > latest_date:
+                    latest_date = date_str
+                    latest_coords = (day_index, col_idx)
         grid.append(row_levels)
 
     # Verify grid dimensions
@@ -184,7 +195,12 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     # Detect current day to highlight today
     now = datetime.datetime.now(datetime.timezone.utc)
     local_now = now + datetime.timedelta(hours=2) # Europe/Rome offset
-    today_row = (local_now.weekday() + 1) % 7
+    local_date_str = local_now.strftime("%Y-%m-%d")
+
+    if local_date_str in date_to_coords:
+        today_row, today_col = date_to_coords[local_date_str]
+    else:
+        today_row, today_col = latest_coords
 
     # 3. Calendar squares
     for day_idx in range(7):
@@ -198,7 +214,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
                 level = 0
             color = colors.get(level, colors[0])
             
-            is_today = (day_idx == today_row and col_idx == len(grid[day_idx]) - 1)
+            is_today = (day_idx == today_row and col_idx == today_col)
             classes = "contrib-day"
             if is_today:
                 classes += " contrib-today"
