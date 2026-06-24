@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782338764.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782345403.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782338764.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782345403.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782338764.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782345403.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Update: devices.json` [#8a5fb1e](https://github.com/StealthMoud/goalOS-data/commit/8a5fb1e22a3df49e7a9de40733fd9b48bb5df586)
-- **goalOS-data** — `Add item to focus.json: focus-00041e80-37cf-41fb-bb33-c45...` [#287e01d](https://github.com/StealthMoud/goalOS-data/commit/287e01d97d4245f0b0f117aded7f1141a5bd7eae)
-- **LifePlan** — `add cambridge 10 test 1 passages 2 and 3 study guide files` [#264baeb](https://github.com/StealthMoud/LifePlan/commit/264baeb92b8ae2064da049c6d4346a5bb229fa83)
-- **Spelt** — `add pronunciation buttons for example sentences` [#38371b5](https://github.com/StealthMoud/Spelt/commit/38371b5760a174892ce271429d46a2f9edfb4d67)
-- **Spelt** — `add selection lookup and t shortcut key for example trans...` [#44b4ced](https://github.com/StealthMoud/Spelt/commit/44b4cedb377288e77323917d5310cbd7f0433eca)
+- **goalOS-data** — `Add item to focus.json: focus-b91e778d-3a1b-4e49-b943-3b3...` [#ab05239](https://github.com/StealthMoud/goalOS-data/commit/ab052398799dbf8543cc1be3f5e5f23f4a1d7893)
+- **Spelt** — `feat: replace text input with dropdown select for CEFR le...` [#db60c06](https://github.com/StealthMoud/Spelt/commit/db60c0650782166db3a8ba3a3b8cbccec3fa2ef5)
+- **Spelt** — `feat: import getLocalDateString from shared storage in st...` [#d90cf07](https://github.com/StealthMoud/Spelt/commit/d90cf07e8e606a74853fcccd31f70796ccd3f504)
+- **Spelt** — `fix(sandbox,stats): validate sandbox suggestions against ...` [#1b0e158](https://github.com/StealthMoud/Spelt/commit/1b0e158b33290fdf466b2cbe452259ccc15a378c)
+- **Spelt** — `Integrate CEFR levels in Sandbox and Practice, and add di...` [#8c848c6](https://github.com/StealthMoud/Spelt/commit/8c848c6591b3782c7e2004998e2aa8a12508ae22)
 
 <!-- RECENT_COMMITS_END -->
 
