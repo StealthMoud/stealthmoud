@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782852584.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782857239.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782852584.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782857239.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782852584.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782857239.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Add item to focus.json: focus-65ce42d9-2a87-445d-9124-0fe...` [#b4ac936](https://github.com/StealthMoud/goalOS-data/commit/b4ac9367854c952b6c0850d8f38e65a03f68389d)
-- **Spelt** — `fix: align edit modal Auto button logic with optimized re...` [#60ec8cf](https://github.com/StealthMoud/Spelt/commit/60ec8cfc18023f6797c3a628d9b622ed5ddfa4e2)
-- **Spelt** — `fix: resolve background retranslation race conditions and...` [#53b887e](https://github.com/StealthMoud/Spelt/commit/53b887ec39fd81be6fc429a88bec134e98132447)
-- **Spelt** — `fix: keep due counts consistent across tabs and delegate ...` [#f83ebad](https://github.com/StealthMoud/Spelt/commit/f83ebad9e5f2d4c8b5b2f460b714a0261f40b6ed)
-- **Spelt** — `fix: resolve background retranslation not updating levels...` [#6017e2d](https://github.com/StealthMoud/Spelt/commit/6017e2d4eefe0cb6379ad31000bcb6073da3207c)
+- **goalOS-data** — `Add item to focus.json: focus-74ba249c-bd79-4697-a23a-159...` [#999a3b4](https://github.com/StealthMoud/goalOS-data/commit/999a3b4dda2f0e0a64d27f9a063721bb1680f9f0)
+- **Spelt** — `feat: play multi-word pronunciations via Google TTS and a...` [#6a91a59](https://github.com/StealthMoud/Spelt/commit/6a91a59593c3b7263d3f7b50251303aaea4aafb6)
+- **Spelt** — `fix: default legacy and auto-created words to spelling mo...` [#727d15c](https://github.com/StealthMoud/Spelt/commit/727d15c8c9fe99cbbcf94781df166f41a4490884)
+- **Spelt** — `feat: add practiceTarget property to separate and filter ...` [#8256e07](https://github.com/StealthMoud/Spelt/commit/8256e079ef552d8c173ba0e5baf5d48b61402741)
+- **Spelt** — `feat: add meaning practice mode, independent SRS tracks, ...` [#4e92522](https://github.com/StealthMoud/Spelt/commit/4e925225a0780d02c7764501f3f79ec12a323cb9)
 
 <!-- RECENT_COMMITS_END -->
 
