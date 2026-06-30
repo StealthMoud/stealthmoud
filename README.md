@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782777119.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782785226.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782777119.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782785226.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782777119.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782785226.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Add item to focus.json: focus-7b836b61-9cab-41f0-a2b9-506...` [#c16b466](https://github.com/StealthMoud/goalOS-data/commit/c16b466fa48d049da3692f9cb3bd6f264e65b3e3)
-- **Spelt** — `feat: make UK pronunciation the default one` [#7c0e4e7](https://github.com/StealthMoud/Spelt/commit/7c0e4e7b2def726042e67501daaea5dc8c2fa675)
-- **Spelt** — `fix: practice queue race conditions and sync stale HTML t...` [#2d5989c](https://github.com/StealthMoud/Spelt/commit/2d5989c449aaab1d220da8963e964eb65ba5a743)
-- **goalOS-data** — `Add item to focus.json: focus-f478bcdd-affe-44f0-b7a8-f31...` [#da04d5f](https://github.com/StealthMoud/goalOS-data/commit/da04d5f056ee3f46c954bb89fc413f70462642fd)
-- **goalOS-data** — `Update: devices.json` [#35fed9c](https://github.com/StealthMoud/goalOS-data/commit/35fed9c8042f1a5c9fd2e4d105374b167363a5dc)
+- **Spelt** — `feat: add definition pronunciation + upgrade TTS to Googl...` [#5ac2c84](https://github.com/StealthMoud/Spelt/commit/5ac2c84b9367689bffd83266ed7386bc6abfc4f5)
+- **Spelt** — `refactor: rewrite SRS algorithm — Hard can shrink interva...` [#6979a1d](https://github.com/StealthMoud/Spelt/commit/6979a1d72ed8ba5a3a93d6b836c9337321e4d8ab)
+- **Spelt** — `fix: re-graduate cards with crushed intervals through fix...` [#d54101d](https://github.com/StealthMoud/Spelt/commit/d54101db520a055d6934fce7d35858561bee53a1)
+- **Spelt** — `fix: only apply error-weight penalty on incorrect answers` [#64cabe3](https://github.com/StealthMoud/Spelt/commit/64cabe3486bc2d29a1ba93b95770a21faf482511)
+- **goalOS-data** — `Update: devices.json` [#68379b5](https://github.com/StealthMoud/goalOS-data/commit/68379b5c550e1367110f0e27123749e913c76b60)
 
 <!-- RECENT_COMMITS_END -->
 
