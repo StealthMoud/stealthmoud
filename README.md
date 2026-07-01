@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782863810.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782874154.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -38,10 +38,10 @@
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782863810.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782874154.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782863810.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782874154.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Add item to focus.json: focus-7c1c70d6-898a-417b-bf28-fc8...` [#2950c0a](https://github.com/StealthMoud/goalOS-data/commit/2950c0a818764b4697ac11e718b00bf1b4d90c16)
-- **Spelt** — `fix: resolve ReferenceError on frontMeaningContent in sho...` [#7cf5ec6](https://github.com/StealthMoud/Spelt/commit/7cf5ec6a002b3e6762a8bc8372b9cec9a6d01260)
-- **Spelt** — `feat: rename Meaning mode to Recall, add context clue exa...` [#4007fcf](https://github.com/StealthMoud/Spelt/commit/4007fcfe915c447f8fc10f3f46e78888137d4ddd)
-- **goalOS-data** — `Add item to focus.json: focus-0a083b34-0fa4-479a-84cd-2f9...` [#550fc73](https://github.com/StealthMoud/goalOS-data/commit/550fc7322111cfb5265806538549cadf13eab00b)
-- **goalOS-data** — `Add item to focus.json: focus-74ba249c-bd79-4697-a23a-159...` [#999a3b4](https://github.com/StealthMoud/goalOS-data/commit/999a3b4dda2f0e0a64d27f9a063721bb1680f9f0)
+- **Spelt** — `add spelt_sessions and spelt_sandbox_activity metadata to...` [#05982aa](https://github.com/StealthMoud/Spelt/commit/05982aab52d8a322b658e4db4c60bc0fd2650953)
+- **Spelt** — `consolidate settings into single Import button with smart...` [#f165542](https://github.com/StealthMoud/Spelt/commit/f165542576ce3811c71c216a64977b8e494325af)
+- **Spelt** — `fix: deactivate auto-play pronunciation in Recall mode` [#6044717](https://github.com/StealthMoud/Spelt/commit/60447173008c600cf58f942083e959818b956f6d)
+- **LifePlan** — `add syntax_patterns.json files for all three Test 1 readings` [#eeb6696](https://github.com/StealthMoud/LifePlan/commit/eeb6696453676f1973826610ee895e9f00d12d38)
+- **Spelt** — `fix CSP inline script violation by loading mock_chrome.js...` [#5d6aa6a](https://github.com/StealthMoud/Spelt/commit/5d6aa6a91d872386652da1f561ede9d19943acae)
 
 <!-- RECENT_COMMITS_END -->
 
