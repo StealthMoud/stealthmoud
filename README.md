@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782958252.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782973705.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1782958252.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1782973705.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1782958252.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1782973705.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782958252.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782973705.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782958252.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782973705.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **Spelt** — `fix: resolve vault.js and other modules missing exports i...` [#3fbdc24](https://github.com/StealthMoud/Spelt/commit/3fbdc24c4c7484baca9087e3798725564612e57d)
-- **Spelt** — `feat: deep AI integration across all Spelt extension tabs` [#c9ec0ce](https://github.com/StealthMoud/Spelt/commit/c9ec0ce38fce9de09bba36a2eb67715bb5809e9b)
-- **Spelt** — `feat: migrate background database refresh button to Gemin...` [#f972d89](https://github.com/StealthMoud/Spelt/commit/f972d89f1369fd92b4582759de3cc8990079b331)
-- **Spelt** — `fix: add robust fallback and manual JSON extraction for G...` [#e7a52d3](https://github.com/StealthMoud/Spelt/commit/e7a52d330555e2dc3605d92382d0f598e235a27d)
-- **Spelt** — `fix: cache models list in chrome local storage to populat...` [#29fdf29](https://github.com/StealthMoud/Spelt/commit/29fdf29a851e395a8346958e3068dd4228112b48)
+- **Spelt** — `fix: catch fetch exceptions and HTTP errors in model fall...` [#98555f7](https://github.com/StealthMoud/Spelt/commit/98555f756dec9bbea8b2437a79204e45092bf556)
+- **Spelt** — `feat: improve stats AI insights readability, add data cha...` [#7fbf6db](https://github.com/StealthMoud/Spelt/commit/7fbf6dbf1b7618088b8644459f48a3f4b2171d44)
+- **goalOS-data** — `Add item to focus.json: focus-e4ee6e8f-2940-4ab2-b53f-58b...` [#aaa30c6](https://github.com/StealthMoud/goalOS-data/commit/aaa30c67413e382d60ece035d9383fd293b5fe55)
+- **Spelt** — `style: update Settings UI to Preferred Model and clarify ...` [#4b269e2](https://github.com/StealthMoud/Spelt/commit/4b269e2d17beed9c48924210a51c214b511d7019)
+- **Spelt** — `feat: make AI feedback selectable/responsive and add inte...` [#389378b](https://github.com/StealthMoud/Spelt/commit/389378baf77fefdd531c04fdc24b524aaf23edc5)
 
 <!-- RECENT_COMMITS_END -->
 

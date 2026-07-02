@@ -28,7 +28,7 @@
   <circle cx="30" cy="86" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
   <circle cx="30" cy="86" r="1.5" fill="#6366f1"/>
   <text x="48" y="90" class="stat-label" style="animation: fadein 0.5s ease-out 0.15s both;">Total Commits:</text>
-  <text x="215" y="90" class="stat-value" style="animation: fadein 0.5s ease-out 0.15s both;">1,139</text>
+  <text x="215" y="90" class="stat-value" style="animation: fadein 0.5s ease-out 0.15s both;">3,390</text>
   <circle cx="30" cy="111" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
   <circle cx="30" cy="111" r="1.5" fill="#6366f1"/>
   <text x="48" y="115" class="stat-label" style="animation: fadein 0.5s ease-out 0.20s both;">Total PRs:</text>
@@ -43,5 +43,5 @@
   <text x="215" y="165" class="stat-value" style="animation: fadein 0.5s ease-out 0.30s both;">0</text>
   <circle cx="385" cy="105" r="40" stroke="#161b22" stroke-width="6" fill="none"/>
   <circle cx="385" cy="105" r="40" stroke="url(#grade-circle-grad)" stroke-width="6" fill="none" stroke-dasharray="251.2" stroke-dashoffset="50" stroke-linecap="round" class="grade-circle"/>
-  <text x="385" y="113" text-anchor="middle" class="grade-text">A</text>
+  <text x="385" y="113" text-anchor="middle" class="grade-text">S</text>
 </svg>
