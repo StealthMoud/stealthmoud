@@ -67,7 +67,7 @@ def fetch_recent_commits(username="stealthmoud"):
             
     return commits_list
 
-def update_readme_commits(commits, contributions_file, streak_file, status_file):
+def update_readme_commits(commits, contributions_file, streak_file, status_file, stats_file, languages_file):
     try:
         with open("README.md", "r") as f:
             content = f.read()
@@ -101,6 +101,18 @@ def update_readme_commits(commits, contributions_file, streak_file, status_file)
         new_content = re.sub(
             r'src="https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/status(?:_[^"]+)?\.svg(?:\?v=\d+)?"',
             f'src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/{status_file}"',
+            new_content
+        )
+        # Custom Stats Card replacement (from Vercel URL or our raw github URL)
+        new_content = re.sub(
+            r'src="(?:https://github-readme-stats\.vercel\.app/api\?username=stealthmoud[^"]*|https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/stats(?:_[^"]+)?\.svg(?:\?v=\d+)?)"',
+            f'src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/{stats_file}"',
+            new_content
+        )
+        # Custom Languages Card replacement (from Vercel URL or our raw github URL)
+        new_content = re.sub(
+            r'src="(?:https://github-readme-stats\.vercel\.app/api/top-langs/[^"]*|https://raw\.githubusercontent\.com/StealthMoud/stealthmoud/main/languages(?:_[^"]+)?\.svg(?:\?v=\d+)?)"',
+            f'src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/{languages_file}"',
             new_content
         )
         

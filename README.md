@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782957847.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1782958252.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api?username=stealthmoud&show_icons=true&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9&count_private=true&include_all_commits=true" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1782958252.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stealthmoud&layout=compact&hide_border=true&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&langs_count=8" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1782958252.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782957847.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1782958252.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782957847.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1782958252.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **Spelt** — `fix: resolve vault.js and other modules missing exports i...` [#3fbdc24](https://github.com/StealthMoud/Spelt/commit/3fbdc24c4c7484baca9087e3798725564612e57d)
+- **Spelt** — `feat: deep AI integration across all Spelt extension tabs` [#c9ec0ce](https://github.com/StealthMoud/Spelt/commit/c9ec0ce38fce9de09bba36a2eb67715bb5809e9b)
 - **Spelt** — `feat: migrate background database refresh button to Gemin...` [#f972d89](https://github.com/StealthMoud/Spelt/commit/f972d89f1369fd92b4582759de3cc8990079b331)
 - **Spelt** — `fix: add robust fallback and manual JSON extraction for G...` [#e7a52d3](https://github.com/StealthMoud/Spelt/commit/e7a52d330555e2dc3605d92382d0f598e235a27d)
 - **Spelt** — `fix: cache models list in chrome local storage to populat...` [#29fdf29](https://github.com/StealthMoud/Spelt/commit/29fdf29a851e395a8346958e3068dd4228112b48)
-- **Spelt** — `fix: adjust select element styling and explicit option co...` [#db1c4b2](https://github.com/StealthMoud/Spelt/commit/db1c4b252a918bf8dcb2b33e07c7af18d3845731)
-- **Spelt** — `feat: implement dynamic Gemini model discovery and verifi...` [#012f860](https://github.com/StealthMoud/Spelt/commit/012f860a881823244787bfacf314629f8e98484d)
 
 <!-- RECENT_COMMITS_END -->
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none">
+  <defs>
+    <linearGradient id="stats-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#30363D" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#30363D" />
+    </linearGradient>
+    <linearGradient id="grade-circle-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#9a93ff" />
+    </linearGradient>
+  </defs>
+  <rect width="495" height="195" rx="6" fill="#0D1117" stroke="url(#stats-card-border)" stroke-width="1.2"/>
+  <style>
+    .title { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size: 14px; font-weight: bold; fill: #6366f1; animation: fadein 0.5s ease-out both; }
+    .stat-label { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size: 11.5px; fill: #c9d1d9; font-weight: 500; }
+    .stat-value { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size: 11.5px; fill: #ffffff; font-weight: bold; }
+    .grade-circle { transform-box: fill-box; transform-origin: center; animation: spin-draw 1.2s cubic-bezier(0.4, 0, 0.2, 1) both; }
+    .grade-text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 800; fill: #ffffff; text-shadow: 0 0 8px rgba(99, 102, 241, 0.6); }
+    @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes spin-draw { from { stroke-dashoffset: 251; transform: rotate(-90deg); } to { stroke-dashoffset: 50; transform: rotate(270deg); } }
+  </style>
+  <text x="25" y="35" class="title">Mahmoud Mohseni's GitHub Stats</text>
+  <circle cx="30" cy="61" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="61" r="1.5" fill="#6366f1"/>
+  <text x="48" y="65" class="stat-label" style="animation: fadein 0.5s ease-out 0.10s both;">Total Stars Earned:</text>
+  <text x="215" y="65" class="stat-value" style="animation: fadein 0.5s ease-out 0.10s both;">15</text>
+  <circle cx="30" cy="86" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="86" r="1.5" fill="#6366f1"/>
+  <text x="48" y="90" class="stat-label" style="animation: fadein 0.5s ease-out 0.15s both;">Total Commits:</text>
+  <text x="215" y="90" class="stat-value" style="animation: fadein 0.5s ease-out 0.15s both;">1,139</text>
+  <circle cx="30" cy="111" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="111" r="1.5" fill="#6366f1"/>
+  <text x="48" y="115" class="stat-label" style="animation: fadein 0.5s ease-out 0.20s both;">Total PRs:</text>
+  <text x="215" y="115" class="stat-value" style="animation: fadein 0.5s ease-out 0.20s both;">0</text>
+  <circle cx="30" cy="136" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="136" r="1.5" fill="#6366f1"/>
+  <text x="48" y="140" class="stat-label" style="animation: fadein 0.5s ease-out 0.25s both;">Total Issues:</text>
+  <text x="215" y="140" class="stat-value" style="animation: fadein 0.5s ease-out 0.25s both;">0</text>
+  <circle cx="30" cy="161" r="5" stroke="#6366f1" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="161" r="1.5" fill="#6366f1"/>
+  <text x="48" y="165" class="stat-label" style="animation: fadein 0.5s ease-out 0.30s both;">Contributed to (last year):</text>
+  <text x="215" y="165" class="stat-value" style="animation: fadein 0.5s ease-out 0.30s both;">0</text>
+  <circle cx="385" cy="105" r="40" stroke="#161b22" stroke-width="6" fill="none"/>
+  <circle cx="385" cy="105" r="40" stroke="url(#grade-circle-grad)" stroke-width="6" fill="none" stroke-dasharray="251.2" stroke-dashoffset="50" stroke-linecap="round" class="grade-circle"/>
+  <text x="385" y="113" text-anchor="middle" class="grade-text">A</text>
+</svg>
