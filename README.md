@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1783037148.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1783053270.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1783037148.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1783053270.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1783037148.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1783053270.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1783037148.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1783053270.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1783037148.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1783053270.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **Spelt** — `fix: remove global rate limit cooldown logic so fallback ...` [#8a409ae](https://github.com/StealthMoud/Spelt/commit/8a409aee1c5b9b2ac2832d2448170ccb9d3e92bd)
-- **Spelt** — `fix: persist AI rate-limit cooldowns and bad models list ...` [#389a781](https://github.com/StealthMoud/Spelt/commit/389a781391a3349fefc50531e4d2b5de2fb21fda)
-- **Spelt** — `fix: immediately clear rate-limit cooldown for the specif...` [#883c090](https://github.com/StealthMoud/Spelt/commit/883c09079b89415288737ff6d015dc650f11b61e)
-- **Spelt** — `fix: persist AI rate-limit cooldowns and bad models list ...` [#389a781](https://github.com/StealthMoud/Spelt/commit/389a781391a3349fefc50531e4d2b5de2fb21fda)
-- **Spelt** — `pref: change default audio pronunciation accent from UK t...` [#553feb8](https://github.com/StealthMoud/Spelt/commit/553feb852af18d938fd10db14707e2678945619c)
+- **Spelt** — `fix: dynamically display target language label instead of...` [#d6e1399](https://github.com/StealthMoud/Spelt/commit/d6e1399c92c630b46b23ca425b25555aecc652b1)
+- **Spelt** — `Fix: prevent space and audio shortcuts from triggering in...` [#90e1b5f](https://github.com/StealthMoud/Spelt/commit/90e1b5f8aff46b1105b071c46c785f9f9a039cec)
+- **goalOS-data** — `Update: devices.json` [#f12c4a5](https://github.com/StealthMoud/goalOS-data/commit/f12c4a5535d9f318494a045b11871f6dd080be14)
+- **goalOS-data** — `Add item to focus.json: focus-ec37f4f8-5e45-407b-852f-13c...` [#f5caa90](https://github.com/StealthMoud/goalOS-data/commit/f5caa90cab3ec8a48923bfb3d191e583c336584f)
+- **Spelt** — `Refactor: update settings JS to handle new Gemini UI clas...` [#a2b22b1](https://github.com/StealthMoud/Spelt/commit/a2b22b1a717d80cc16cb793f49c119a348d27163)
 
 <!-- RECENT_COMMITS_END -->
 
