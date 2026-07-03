@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1783074287.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1783083065.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1783074287.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1783083065.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1783074287.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1783083065.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1783074287.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1783083065.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1783074287.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1783083065.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **Spelt** — `fix: dynamically display target language label instead of...` [#d6e1399](https://github.com/StealthMoud/Spelt/commit/d6e1399c92c630b46b23ca425b25555aecc652b1)
-- **Spelt** — `Fix: prevent space and audio shortcuts from triggering in...` [#90e1b5f](https://github.com/StealthMoud/Spelt/commit/90e1b5f8aff46b1105b071c46c785f9f9a039cec)
-- **goalOS-data** — `Update: devices.json` [#f12c4a5](https://github.com/StealthMoud/goalOS-data/commit/f12c4a5535d9f318494a045b11871f6dd080be14)
-- **goalOS-data** — `Add item to focus.json: focus-ec37f4f8-5e45-407b-852f-13c...` [#f5caa90](https://github.com/StealthMoud/goalOS-data/commit/f5caa90cab3ec8a48923bfb3d191e583c336584f)
-- **Spelt** — `Refactor: update settings JS to handle new Gemini UI clas...` [#a2b22b1](https://github.com/StealthMoud/Spelt/commit/a2b22b1a717d80cc16cb793f49c119a348d27163)
+- **Spelt** — `feat: add integrity check and repair functionality with U...` [#462da52](https://github.com/StealthMoud/Spelt/commit/462da529eaf6315e045e899072d01d00b573497b)
+- **goalOS-data** — `Add item to focus.json: focus-1dbf0b93-acbd-4839-96ee-64c...` [#5c91088](https://github.com/StealthMoud/goalOS-data/commit/5c910885486740ef65150f2564427ecff0cc72df)
+- **Spelt** — `feat: add filter options for practice types including spe...` [#84da7e6](https://github.com/StealthMoud/Spelt/commit/84da7e693c6695d0436c267583ff2195bd8b9038)
+- **Spelt** — `feat: add syntax practice type with automated migration l...` [#9d62cf7](https://github.com/StealthMoud/Spelt/commit/9d62cf795ebd6b8f4d24d14a369a2792bdb283e8)
+- **goalOS-data** — `Update: devices.json` [#4a40c40](https://github.com/StealthMoud/goalOS-data/commit/4a40c4071dc148f18d8d3128f756bc69b53d7bca)
 
 <!-- RECENT_COMMITS_END -->
 
