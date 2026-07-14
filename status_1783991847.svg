@@ -92,7 +92,7 @@
   <text x="15" y="68" class="term-lbl term-line" style="animation-delay: 0.35s;">TIMEZONE     :</text>
   <text x="120" y="68" class="term-val term-line" style="animation-delay: 0.35s;">Europe/Rome (UTC+2)</text>
   <text x="15" y="86" class="term-lbl term-line" style="animation-delay: 0.45s;">SYSTEM SYNC  :</text>
-  <text x="120" y="86" class="term-val term-line" style="animation-delay: 0.45s;">2026-07-14 01:41:31<tspan fill="#6366f1" class="cursor">█</tspan></text>
+  <text x="120" y="86" class="term-val term-line" style="animation-delay: 0.45s;">2026-07-14 03:17:38<tspan fill="#6366f1" class="cursor">█</tspan></text>
   <text x="15" y="104" class="term-lbl term-line" style="animation-delay: 0.55s;">YEAR PROGRESS:</text>
   <rect x="120" y="97" width="130" height="8" rx="4" fill="#161b22" stroke="#30363D" stroke-width="0.8" class="term-line" style="animation-delay: 0.55s;"/>
   <rect x="120" y="97" width="69.45205479452055" height="8" rx="4" fill="url(#progress-gradient)" class="bar-fill"/>
@@ -107,5 +107,5 @@
     <circle cx="15" cy="182" r="3.5" fill="#34d399"/>
   </g>
   <text x="26" y="185" class="term-val bottom-bar" style="animation-delay: 0.95s;">Active: Working on goalOS-data</text>
-  <text x="480" y="185" class="term-lbl bottom-bar" text-anchor="end" style="animation-delay: 0.95s;">Uptime: 227d 9h 52m</text>
+  <text x="480" y="185" class="term-lbl bottom-bar" text-anchor="end" style="animation-delay: 0.95s;">Uptime: 227d 11h 29m</text>
 </svg>
