@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1784055547.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1784059836.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1784055547.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1784059836.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1784055547.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1784059836.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1784055547.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1784059836.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1784055547.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1784059836.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **Spelt** — `feat: add optional flash model prioritization to Gemini r...` [#1b48360](https://github.com/StealthMoud/Spelt/commit/1b48360d117abd3bdbad3ec53a42599e1b6b5764)
+- **goalOS-data** — `Update: devices.json` [#44ad81e](https://github.com/StealthMoud/goalOS-data/commit/44ad81eb0aa027e549f21e2b571f6398371076d8)
 - **goalOS-data** — `Update: devices.json` [#32d3fde](https://github.com/StealthMoud/goalOS-data/commit/32d3fdec95de12cd2a08919a9a7fcccc511ef346)
 - **goalOS-data** — `Add item to focus.json: focus-6b8ba60a-cea9-48bd-b800-4a5...` [#4982b44](https://github.com/StealthMoud/goalOS-data/commit/4982b443339ce62383f4f9e121491f49a5b218a1)
 - **LifePlan** — `refactor: update IELTS reading passage autopsy with perso...` [#53699eb](https://github.com/StealthMoud/LifePlan/commit/53699eb3537c63b65e892650c9ae1440752e1b98)
-- **LifePlan** — `feat: add academic reading deconstruction resources for C...` [#7b05fe2](https://github.com/StealthMoud/LifePlan/commit/7b05fe229ac62532f25afb10ccbd2142fc2155e9)
-- **goalOS-data** — `Add item to focus.json: focus-06b9b77c-bc39-48c3-a09c-5db...` [#f3b32cd](https://github.com/StealthMoud/goalOS-data/commit/f3b32cdb8ac4b7531e2f2686d38817079a92b9a0)
 
 <!-- RECENT_COMMITS_END -->
 
