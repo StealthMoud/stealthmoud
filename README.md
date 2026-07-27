@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785156508.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785173794.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785156508.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785173794.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785156508.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785173794.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785156508.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785173794.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785156508.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785173794.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Update: devices.json` [#1bee62a](https://github.com/StealthMoud/goalOS-data/commit/1bee62abf717ebf346bd0724c4701c5a023bcecc)
-- **goalOS-data** — `Update: devices.json` [#31d0105](https://github.com/StealthMoud/goalOS-data/commit/31d01055e609dbff618c3b710ecdf860eb1bf052)
-- **goalOS-data** — `Update: devices.json` [#a0b1e21](https://github.com/StealthMoud/goalOS-data/commit/a0b1e21257f4cffd3298824069a385ec22bc213f)
-- **goalOS-data** — `Add item to focus.json: focus-e9437423-d6db-4a04-b072-d6b...` [#e47dd41](https://github.com/StealthMoud/goalOS-data/commit/e47dd41e456ff92cfddcb50a890010b9987b992e)
-- **goalOS-data** — `Add item to focus.json: focus-1708ed52-6fc2-424c-a632-8a0...` [#d3aaf49](https://github.com/StealthMoud/goalOS-data/commit/d3aaf492eab601bc0555c57ce5a4bf3bf0d21f6f)
+- **goalOS-data** — `Update: devices.json` [#d7ffd60](https://github.com/StealthMoud/goalOS-data/commit/d7ffd60fcb51adce224ba7fd3498d8ead3aacd86)
+- **stealthmoud** — `polish sync tooling: fix typos, dedupe cleanup logic, add...` [#064e86c](https://github.com/StealthMoud/stealthmoud/commit/064e86cefe023369f98d4bcf05a9771ee48fa6a2)
+- **goalOS** — `fix(plan): complete final 3 improvement plan items` [#d8f196c](https://github.com/StealthMoud/goalOS/commit/d8f196c978bcef9cfdb0f66c30ff5004b6c57319)
+- **goalOS-data** — `Update: devices.json` [#ba73810](https://github.com/StealthMoud/goalOS-data/commit/ba73810b9008d84ad6461461daf4ebae9fcfca57)
+- **goalOS-data** — `Add item to focus.json: focus-b84098f8-bc7d-46f4-afe7-39f...` [#3a847c7](https://github.com/StealthMoud/goalOS-data/commit/3a847c7a56b48f886e621b563396415c321f8b03)
 
 <!-- RECENT_COMMITS_END -->
 
