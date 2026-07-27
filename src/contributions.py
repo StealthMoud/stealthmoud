@@ -1,10 +1,13 @@
+"""Renders the animated contribution calendar SVG shown at the top of the profile."""
+
 import urllib.request
 import re
 import datetime
 import time
 
+
 def generate_svg(username="stealthmoud", filename="contributions.svg"):
-    # Fech public contribution HTML page and parse it
+    """Fetch the public contribution calendar page and render it as a themed SVG."""
     url = f"https://github.com/users/{username}/contributions"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
 
@@ -22,7 +25,6 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
             else:
                 print(f"All {max_retries} attempts to fetch contributions failed.")
                 return False
-
 
     # Extract total contributions text
     total_contribs_match = re.search(
@@ -45,7 +47,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
         print(f"Error: Expected 7 rows in table body, found {len(tr_blocks)}.")
         return False
 
-    # Pars level grid from html
+    # Parse the level grid from the HTML
     grid = []  # 7 rows of 53 weeks
     date_to_coords = {}
     latest_date = ""
@@ -94,7 +96,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     svg_width = 780
     svg_height = 165
 
-    # Premium Indigo HSL Theme Palette with high-contast step scaling
+    # Indigo theme palette with a high-contrast step scale per activity level
     bg_color = "#0D1117"
     border_color = "#30363D"
     text_color = "#8B949E"
@@ -109,7 +111,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" fill="none">')
     
-    # Custom glow defnition for hover
+    # Glow filter used on hover and today's indicator
     svg.append('  <defs>')
     svg.append('    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">')
     svg.append('      <feGaussianBlur stdDeviation="3" result="blur" />')
@@ -244,7 +246,7 @@ def generate_svg(username="stealthmoud", filename="contributions.svg"):
     try:
         with open(filename, "w") as f:
             f.write(svg_content)
-        print(f"Success! {filename} generated.")
+        print(f"Generated {filename}.")
         return True
     except Exception as e:
         print(f"Error writing {filename}: {e}")

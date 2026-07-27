@@ -1,6 +1,7 @@
+"""Aggregates GitHub statistics and renders the stats and top-languages cards."""
+
 import urllib.request
 import json
-import re
 import os
 import sys
 
@@ -29,6 +30,7 @@ LANGUAGE_COLORS = {
 }
 
 def fetch_stats_data(username="stealthmoud"):
+    """Aggregate star, commit, PR, issue, and per-language byte totals across owned, non-fork repos."""
     token = os.getenv("GH_PAT")
     headers = {"User-Agent": "Mozilla/5.0"}
     if token:
@@ -133,7 +135,7 @@ def fetch_stats_data(username="stealthmoud"):
     }
 
 def calculate_grade(stats):
-    # Standard grade calculation based on stars, commits, PRs, and issues
+    """Map a weighted score of stars, commits, PRs, and issues to a letter grade."""
     commits = stats.get("commits", 0)
     stars = stats.get("stars", 0)
     prs = stats.get("prs", 0)
@@ -159,9 +161,10 @@ def calculate_grade(stats):
         return "C"
 
 def generate_stats_svg(stats, filename="stats.svg"):
+    """Render the stats summary card (stars, commits, PRs, issues, and grade badge)."""
     grade = calculate_grade(stats)
-    
-    # dimensions matching 495x195
+
+    # Dimensions match the streak and status cards for a uniform grid layout
     width = 495
     height = 195
     
@@ -208,19 +211,19 @@ def generate_stats_svg(stats, filename="stats.svg"):
     
     # Stats entries
     stats_list = [
-        ("Total Stars Earned:", stats.get("stars", 0), "M 25,65 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0 M 22,65 L 28,65 M 25,62 L 25,68"), # star icon simpl
-        ("Total Commits:", stats.get("commits", 0), "M 25,90 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0 M 23,87 L 27,93 M 27,87 L 23,93"), # commit icon simpl
-        ("Total PRs:", stats.get("prs", 0), "M 25,115 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0 M 25,109 L 25,121"), # pr icon simpl
-        ("Total Issues:", stats.get("issues", 0), "M 25,140 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0"), # issue icon simpl
-        ("Contributed to (last year):", 0, "M 25,165 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0") # contrib icon simpl
+        ("Total Stars Earned:", stats.get("stars", 0)),
+        ("Total Commits:", stats.get("commits", 0)),
+        ("Total PRs:", stats.get("prs", 0)),
+        ("Total Issues:", stats.get("issues", 0)),
+        ("Contributed to (last year):", 0),
     ]
-    
-    # Draw Stats rows
+
+    # Draw stat rows
     y_start = 65
     y_step = 25
-    for idx, (label, val, icon_path) in enumerate(stats_list):
+    for idx, (label, val) in enumerate(stats_list):
         y_pos = y_start + idx * y_step
-        # Icon representation (small simple visual indicators)
+        # Ring-and-dot marker in front of each row
         svg.append(f'  <circle cx="30" cy="{y_pos - 4}" r="5" stroke="{accent_color}" stroke-width="1" fill="none"/>')
         svg.append(f'  <circle cx="30" cy="{y_pos - 4}" r="1.5" fill="{accent_color}"/>')
         
@@ -241,17 +244,18 @@ def generate_stats_svg(stats, filename="stats.svg"):
     
     with open(filename, "w") as f:
         f.write("\n".join(svg))
-    print(f"Stats SVG written successfully to {filename}")
+    print(f"Generated {filename}.")
     return True
 
+
 def generate_languages_svg(stats, filename="languages.svg"):
-    # Sort and calculate percentages
+    """Render the top-languages card as a segmented bar with a per-language legend."""
     languages = stats.get("languages", {})
     total_bytes = sum(languages.values())
-    
+
     sorted_langs = sorted(languages.items(), key=lambda x: x[1], reverse=True)
-    
-    # dimensions matching 495x195
+
+    # Dimensions match the streak and status cards for a uniform grid layout
     width = 495
     height = 195
     
@@ -344,7 +348,7 @@ def generate_languages_svg(stats, filename="languages.svg"):
     
     with open(filename, "w") as f:
         f.write("\n".join(svg))
-    print(f"Languages SVG written successfully to {filename}")
+    print(f"Generated {filename}.")
     return True
 
 if __name__ == "__main__":

@@ -1,3 +1,5 @@
+"""Builds the recent-activity log and the terminal-style system status SVG."""
+
 import urllib.request
 import re
 import json
@@ -5,8 +7,9 @@ import datetime
 import subprocess
 import os
 
+
 def fetch_recent_commits(username="stealthmoud"):
-    # Fech recent commits from API with local git fallback
+    """Fetch the user's most recent push events, falling back to local git history."""
     token = os.getenv("GH_PAT")
     if token:
         url = f"https://api.github.com/users/{username}/events"
@@ -68,6 +71,7 @@ def fetch_recent_commits(username="stealthmoud"):
     return commits_list
 
 def update_readme_commits(commits, contributions_file, streak_file, status_file, stats_file, languages_file):
+    """Rewrite README.md with the latest commit log and cache-busted asset filenames."""
     try:
         with open("README.md", "r") as f:
             content = f.read()
@@ -118,12 +122,15 @@ def update_readme_commits(commits, contributions_file, streak_file, status_file,
         
         with open("README.md", "w") as f:
             f.write(new_content)
-        print("Success! README.md updated with recent commits and cache-busted SVG paths.")
+        print("README.md updated with recent commits and cache-busted SVG paths.")
     except Exception as e:
         print(f"Error updating README.md: {e}")
 
+
 def get_real_uptime():
-    # Try to calculate repository age from first git commit
+    """Return a human-readable uptime string, preferring repository age over host uptime."""
+    # Repository age (time since the first commit) is the most meaningful
+    # "uptime" for a profile status card, so it takes priority over host uptime.
     try:
         import subprocess
         cmd = ["git", "log", "--reverse", "--format=%ct"]
@@ -172,6 +179,7 @@ def get_real_uptime():
     return f"{now.day}d {now.hour}h {now.minute}m"
 
 def get_real_cpu_mem():
+    """Return current CPU utilization and memory usage, trying Linux then macOS APIs."""
     cpu_str = "0.0%"
     mem_str = "0.0 GB / 0.0 GB"
     
@@ -297,11 +305,12 @@ def get_real_cpu_mem():
     return cpu_sim, mem_sim
 
 def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.svg"):
+    """Render the terminal-style status card showing time, year progress, and system load."""
     now = datetime.datetime.now(datetime.timezone.utc)
     # Adjust to Europe/Rome timezone (UTC+2)
     local_now = now + datetime.timedelta(hours=2)
     
-    # Calculate year progress percentge
+    # Calculate year progress percentage
     day_of_year = local_now.timetuple().tm_yday
     year = local_now.year
     is_leap = (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0))
@@ -492,7 +501,7 @@ def generate_status_svg(latest_commit_msg, latest_repo=None, filename="status.sv
     try:
         with open(filename, "w") as f:
             f.write(svg_content)
-        print(f"Success! {filename} generated.")
+        print(f"Generated {filename}.")
         return True
     except Exception as e:
         print(f"Error writing {filename}: {e}")
