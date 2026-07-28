@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785260139.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785265750.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785260139.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785265750.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785260139.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785265750.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785260139.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785265750.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785260139.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785265750.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **gym-bot** — `fix(api): stop swallowing DB errors when saving a connect...` [#be8fac3](https://github.com/StealthMoud/gym-bot/commit/be8fac3da690fe63e91ca724386a93e8022d6f0c)
+- **Spelt** — `fix practice bottom sheet DOM nesting and sparkle button ...` [#a423f1e](https://github.com/StealthMoud/Spelt/commit/a423f1e9474a2d07cb4df567c6142375d759d1a1)
+- **Spelt** — `fix AI hint bottom sheet DOM nesting and sparkle button d...` [#0406dff](https://github.com/StealthMoud/Spelt/commit/0406dffeeb98213b5e36d98be02e72ba0a7e88ef)
 - **gym-bot** — `fix: prevent overwriting state with empty defaults during...` [#1097dce](https://github.com/StealthMoud/gym-bot/commit/1097dcee71b3d22da84960934f34f2634f56ea11)
 - **gym-bot** — `feat(ui): redesign ActivityLog with terminal window contr...` [#5441090](https://github.com/StealthMoud/gym-bot/commit/5441090c28302477ad16096b62ca3ac1e70deb69)
-- **gym-bot** — `fix(auth): prevent account deletion on state sync and fix...` [#d6b98a8](https://github.com/StealthMoud/gym-bot/commit/d6b98a894ec9acf6cc363736a479c7e41a32692b)
-- **gym-bot** — `fix(ui): surface specific error message when fetching boo...` [#5f6c1b2](https://github.com/StealthMoud/gym-bot/commit/5f6c1b24aecdf09463de788acddfc35e744c1eab)
-- **gym-bot** — `fix(api): use Object.assign for typed Error status codes` [#caf3bdd](https://github.com/StealthMoud/gym-bot/commit/caf3bdd362ca3f7b6d33b64870c85c2c56059f0e)
 
 <!-- RECENT_COMMITS_END -->
 
