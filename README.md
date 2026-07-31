@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785505314.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785513320.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785505314.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785513320.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785505314.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785513320.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785505314.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785513320.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785505314.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785513320.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Add item to focus.json: focus-516e9365-b372-4405-bf0d-6b9...` [#bc6be83](https://github.com/StealthMoud/goalOS-data/commit/bc6be836b48c4fdfc7f2363c293d71681775fcf9)
-- **goalOS-data** — `Add item to focus.json: focus-787d7d14-416f-48d3-ac0b-8f6...` [#8e281be](https://github.com/StealthMoud/goalOS-data/commit/8e281bec6f81940379cb52b0952bde9f1226fe95)
-- **goalOS-data** — `Add item to focus.json: focus-fff9245d-4fb2-4dd0-b52f-079...` [#4a6e4a7](https://github.com/StealthMoud/goalOS-data/commit/4a6e4a706e42c825270a4f8c4d35a78477cac146)
-- **goalOS-data** — `Add item to focus.json: focus-d6267b4d-7543-4345-897f-32b...` [#a1745b3](https://github.com/StealthMoud/goalOS-data/commit/a1745b3c85c89128991821da59d63233aeab8fef)
-- **goalOS-data** — `Update: devices.json` [#823acf0](https://github.com/StealthMoud/goalOS-data/commit/823acf07cc344aa3ef66015d5ed9797b7a27472c)
+- **LifePlan** — `docs(dashboard): update links for reorganized GelIELTS dr...` [#a11c791](https://github.com/StealthMoud/LifePlan/commit/a11c791c9998086f616f8862ce47b94852ac880c)
+- **LifePlan** — `docs(practice): add detailed step-by-step practice guide ...` [#182c8d5](https://github.com/StealthMoud/LifePlan/commit/182c8d59233008d750a4f2c6857d512668d7841a)
+- **goalOS-data** — `Update: devices.json` [#1ffe56b](https://github.com/StealthMoud/goalOS-data/commit/1ffe56b1df3c94ba390f67118899e7f3cdd0c3e3)
+- **LifePlan** — `docs(dashboard): update study plan roadmap, mock test pro...` [#96aa020](https://github.com/StealthMoud/LifePlan/commit/96aa0202d6371cc804d21122e003fa0675e6b19b)
+- **LifePlan** — `docs(speaking): add GelIELTS speaking practice attempt an...` [#e7f7fd8](https://github.com/StealthMoud/LifePlan/commit/e7f7fd800d2f34fe86f382a9c3d7d90d3d87c6c0)
 
 <!-- RECENT_COMMITS_END -->
 
