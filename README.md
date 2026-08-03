@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785749031.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1785761436.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785749031.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1785761436.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785749031.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1785761436.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785749031.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1785761436.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785749031.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1785761436.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **goalOS-data** — `Update: devices.json` [#2ef4571](https://github.com/StealthMoud/goalOS-data/commit/2ef4571cb951eab5b7ca2f1af0f1a4f3b049533b)
-- **Spelt** — `add custom glassmorphic tooltip engine` [#50a7047](https://github.com/StealthMoud/Spelt/commit/50a7047f42981bc0495ae3c4f507e4fa6e28a2b8)
-- **Spelt** — `update header buttons` [#cea4bda](https://github.com/StealthMoud/Spelt/commit/cea4bda4b2dbffddbe01ed81bf719e6d803ecf6c)
-- **goalOS-data** — `Update: devices.json` [#fd91820](https://github.com/StealthMoud/goalOS-data/commit/fd91820e340f3253dd045a3d2131c16a8e2cfb98)
-- **goalOS-data** — `Add item to focus.json: focus-c407871b-199d-4856-b3a7-ce6...` [#690ee5b](https://github.com/StealthMoud/goalOS-data/commit/690ee5b47feb1e4bba073aa7deb746bf58e2f0e5)
+- **Spelt** — `fix(popout): center standalone extension window in screen...` [#26ca9ac](https://github.com/StealthMoud/Spelt/commit/26ca9ac846c9bda67c82655099f660a68255eb80)
+- **Spelt** — `fix(ai): update word input field when AI autofill returns...` [#31bb3bf](https://github.com/StealthMoud/Spelt/commit/31bb3bf52f4f620def377b937de82b7f763ab7fc)
+- **Spelt** — `fix(gemini): recover truncated JSON replies and fallback ...` [#c00325e](https://github.com/StealthMoud/Spelt/commit/c00325ec75763854df9eb89ea72decdd26515452)
+- **goalOS-data** — `Add item to focus.json: focus-bcca7be9-a440-40ee-92f3-ff8...` [#df99d78](https://github.com/StealthMoud/goalOS-data/commit/df99d78d3d8bf23c0f4f00f98245b47eecaec439)
+- **goalOS-data** — `Add item to focus.json: focus-5260a7e1-f82e-468e-8084-ec0...` [#71ae000](https://github.com/StealthMoud/goalOS-data/commit/71ae000f6398a6f32295f1249b27d5f1b87ae111)
 
 <!-- RECENT_COMMITS_END -->
 
