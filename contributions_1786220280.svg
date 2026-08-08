@@ -214,7 +214,7 @@
   <rect x="370" y="54" width="10" height="10" rx="2.2" fill="#161B22" class="contrib-day" style="animation-delay: 0.312s;"/>
   <rect x="383" y="54" width="10" height="10" rx="2.2" fill="#161B22" class="contrib-day" style="animation-delay: 0.324s;"/>
   <rect x="396" y="54" width="10" height="10" rx="2.2" fill="#161B22" class="contrib-day" style="animation-delay: 0.336s;"/>
-  <rect x="409" y="54" width="10" height="10" rx="2.2" fill="#4f49be" class="contrib-day" style="animation-delay: 0.348s;"/>
+  <rect x="409" y="54" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.348s;"/>
   <rect x="422" y="54" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.360s;"/>
   <rect x="435" y="54" width="10" height="10" rx="2.2" fill="#746df3" class="contrib-day" style="animation-delay: 0.372s;"/>
   <rect x="448" y="54" width="10" height="10" rx="2.2" fill="#4f49be" class="contrib-day" style="animation-delay: 0.384s;"/>
@@ -270,7 +270,7 @@
   <rect x="409" y="67" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.348s;"/>
   <rect x="422" y="67" width="10" height="10" rx="2.2" fill="#161B22" class="contrib-day" style="animation-delay: 0.360s;"/>
   <rect x="435" y="67" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.372s;"/>
-  <rect x="448" y="67" width="10" height="10" rx="2.2" fill="#746df3" class="contrib-day" style="animation-delay: 0.384s;"/>
+  <rect x="448" y="67" width="10" height="10" rx="2.2" fill="#4f49be" class="contrib-day" style="animation-delay: 0.384s;"/>
   <rect x="461" y="67" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.396s;"/>
   <rect x="474" y="67" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.408s;"/>
   <rect x="487" y="67" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.420s;"/>
@@ -451,7 +451,7 @@
   <rect x="695" y="106" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day" style="animation-delay: 0.612s;"/>
   <rect x="708" y="106" width="10" height="10" rx="2.2" fill="#9a93ff" class="contrib-day contrib-today" style="animation-delay: 0.624s;"/>
   <circle cx="718" cy="106" r="2" fill="#9a93ff" class="today-indicator"/>
-  <text x="32" y="146" class="lbl">4,880 contributions in the last year</text>
+  <text x="32" y="146" class="lbl">4,881 contributions in the last year</text>
   <text x="620" y="146" class="lbl">Less</text>
   <rect x="650" y="137" width="10" height="10" rx="2.2" fill="#161B22" class="contrib-day"/>
   <rect x="663" y="137" width="10" height="10" rx="2.2" fill="#2d2b63" class="contrib-day"/>
