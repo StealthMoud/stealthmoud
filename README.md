@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786303524.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786306856.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786303524.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786306856.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786303524.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786306856.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786303524.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786306856.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786303524.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786306856.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **ReLite** — `docs: sync README/releasing.md for v0.3.0` [#bf59968](https://github.com/StealthMoud/ReLite/commit/bf59968587d5b562aee2ff29a37fc4d67100a87d)
 - **hackframe** — `chore(hygiene): remove obsolete review roots and markers` [#805c5bb](https://github.com/StealthMoud/hackframe/commit/805c5bba8baf660c0f9d4b30122147f076cdb66a)
 - **ReLite** — `bench: revalidate ReLite Home memory for v0.2.0, update R...` [#5374176](https://github.com/StealthMoud/ReLite/commit/5374176192c60de7192d369b8181f29f4ed3af4c)
 - **hackframe** — `fix: deduplicate render monitor process tree` [#be5d91d](https://github.com/StealthMoud/hackframe/commit/be5d91d80c426bbfc1e676748ebc75f91088f9f4)
 - **hackframe** — `fix: tolerate slow native 4K frame initialization` [#b36ced5](https://github.com/StealthMoud/hackframe/commit/b36ced5746bbcad18689657b32fd1ce876d681da)
-- **hackframe** — `docs: record unified implementation plans and tracker` [#4455863](https://github.com/StealthMoud/hackframe/commit/4455863f9743148a70648e84e71faf93c3d21131)
 
 <!-- RECENT_COMMITS_END -->
 
