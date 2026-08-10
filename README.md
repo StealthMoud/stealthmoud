@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786365951.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786371227.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786365951.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786371227.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786365951.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786371227.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786365951.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786371227.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786365951.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786371227.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **AgentPort** — `fix(v2): complete V2 revision hash semantics, position-in...` [#3c24785](https://github.com/StealthMoud/AgentPort/commit/3c24785a9026f0174383b227d92915b900a236b9)
+- **goalOS-data** — `Add item to focus.json: focus-c0f49c1b-a815-4907-be22-60e...` [#4777bff](https://github.com/StealthMoud/goalOS-data/commit/4777bff99ff09af875b27be5724f6c8b18add121)
+- **ReLite** — `feat: add page reordering` [#8b1c609](https://github.com/StealthMoud/ReLite/commit/8b1c6093d49f91e0a41182011b0cb92ee03ed68e)
+- **AgentPort** — `fix(v2): gate items — Windows sync no-op, revision hash c...` [#f81cbe9](https://github.com/StealthMoud/AgentPort/commit/f81cbe9fceda38c87a73d3b04d0c5938ea8e95ed)
 - **ReLite** — `docs: v0.5.0 truth pass; release: bump version to 0.5.0` [#afea534](https://github.com/StealthMoud/ReLite/commit/afea5349486f83acde9d24b2ae07e2a51d065311)
-- **hackframe** — `docs: close hardening and object-library mission` [#7c72b4b](https://github.com/StealthMoud/hackframe/commit/7c72b4b6e0b7ee264f433b509d644bb7ba827d5f)
-- **AgentPort** — `fix(v2): complete Phase 0.5-5 release gate correctness fi...` [#ccfa48b](https://github.com/StealthMoud/AgentPort/commit/ccfa48b8ef048b3acca2f7d9877688627c6847e7)
-- **goalOS-data** — `Add item to focus.json: focus-fc1d3749-9096-4e57-b9ee-d6c...` [#55cad44](https://github.com/StealthMoud/goalOS-data/commit/55cad449afade4761defb3ab42031f7529750f4a)
-- **AgentPort** — `feat(v2): integrate Schema V2 end-to-end as primary produ...` [#ead5e38](https://github.com/StealthMoud/AgentPort/commit/ead5e389767a845beb45f43530330f3a2e40d3c1)
 
 <!-- RECENT_COMMITS_END -->
 
