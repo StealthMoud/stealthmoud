@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786371227.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786377066.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786371227.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786377066.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786371227.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786377066.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786371227.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786377066.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786371227.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786377066.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **ReLite** — `feat: add the Home<->Apps swipe gesture` [#8e96d3d](https://github.com/StealthMoud/ReLite/commit/8e96d3d343d716e8da733eff30fc5ae22042e5bb)
 - **AgentPort** — `fix(v2): complete V2 revision hash semantics, position-in...` [#3c24785](https://github.com/StealthMoud/AgentPort/commit/3c24785a9026f0174383b227d92915b900a236b9)
 - **goalOS-data** — `Add item to focus.json: focus-c0f49c1b-a815-4907-be22-60e...` [#4777bff](https://github.com/StealthMoud/goalOS-data/commit/4777bff99ff09af875b27be5724f6c8b18add121)
 - **ReLite** — `feat: add page reordering` [#8b1c609](https://github.com/StealthMoud/ReLite/commit/8b1c6093d49f91e0a41182011b0cb92ee03ed68e)
 - **AgentPort** — `fix(v2): gate items — Windows sync no-op, revision hash c...` [#f81cbe9](https://github.com/StealthMoud/AgentPort/commit/f81cbe9fceda38c87a73d3b04d0c5938ea8e95ed)
-- **ReLite** — `docs: v0.5.0 truth pass; release: bump version to 0.5.0` [#afea534](https://github.com/StealthMoud/ReLite/commit/afea5349486f83acde9d24b2ae07e2a51d065311)
 
 <!-- RECENT_COMMITS_END -->
 
