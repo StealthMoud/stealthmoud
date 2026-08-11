@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786404342.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1786410062.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786404342.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1786410062.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786404342.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1786410062.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786404342.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1786410062.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786404342.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1786410062.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **hackframe** — `fix(cli): resolve active render detection and remove stal...` [#7c6c279](https://github.com/StealthMoud/hackframe/commit/7c6c2793a6fdbf2d2199884483e7a9c394ab2358)
 - **hackframe** — `feat(render): implement source-first output reset` [#07cbe8e](https://github.com/StealthMoud/hackframe/commit/07cbe8e17ca9b3de163dd3d0c770e8d5c4237fbe)
 - **hackframe** — `chore: update default and example project slug references...` [#7576e81](https://github.com/StealthMoud/hackframe/commit/7576e813772647b90c8c557315af5bb8157aa16b)
 - **hackframe** — `refactor: modernize CLI monitor UI with improved border s...` [#3c778f6](https://github.com/StealthMoud/hackframe/commit/3c778f6b853ea0252e9b5454c3b0f6872d36f28e)
 - **AgentPort** — `docs: document AgentPort Sync Protocol V2` [#84e332c](https://github.com/StealthMoud/AgentPort/commit/84e332cea052f27ca53b5e4f3e15c689bf4af851)
-- **AgentPort** — `fix(v2): canonical typed revision projection, portable pr...` [#d5ebbab](https://github.com/StealthMoud/AgentPort/commit/d5ebbabf91f2c2d573ca113ee7980211e04ae67b)
 
 <!-- RECENT_COMMITS_END -->
 
