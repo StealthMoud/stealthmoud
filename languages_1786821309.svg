@@ -24,36 +24,36 @@
   </style>
   <text x="25" y="35" class="title">Most Used Languages</text>
   <rect x="25" y="52" width="445" height="10" rx="5" fill="#161b22" />
-  <rect x="25" y="52" width="192.4604910610212" height="10" fill="#f1e05a" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="217.4604910610212" y="52" width="158.65245062830718" height="10" fill="#555555" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="376.1129416893284" y="52" width="19.540646817016455" height="10" fill="#563d7c" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="395.6535885063449" y="52" width="14.973033034218437" height="10" fill="#3178c6" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="410.6266215405633" y="52" width="13.996904445418897" height="10" fill="#00add8" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="424.6235259859822" y="52" width="12.613476446239268" height="10" fill="#A97BFF" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="437.23700243222146" y="52" width="12.091846036920682" height="10" fill="#3572a5" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="449.32884846914214" y="52" width="10.649992376960858" height="10" fill="#4f5d95" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="25" y="52" width="207.70962962501076" height="10" fill="#f1e05a" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="232.70962962501076" y="52" width="149.07251118314042" height="10" fill="#555555" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="381.7821408081512" y="52" width="18.36072042769784" height="10" fill="#563d7c" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="400.14286123584907" y="52" width="14.068913689006752" height="10" fill="#3178c6" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="414.21177492485583" y="52" width="13.151726848250576" height="10" fill="#00add8" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="427.3635017731064" y="52" width="11.85183463062618" height="10" fill="#A97BFF" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="439.2153364037326" y="52" width="11.361701924080162" height="10" fill="#3572a5" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="450.5770383278127" y="52" width="10.006911972852881" height="10" fill="#4f5d95" class="bar-segment" mask="url(#bar-mask)" />
   <circle cx="30" cy="84" r="4.5" fill="#f1e05a" />
   <text x="44" y="88" class="lang-lbl">JavaScript</text>
-  <text x="119.0" y="88" class="lang-pct">43.25%</text>
+  <text x="119.0" y="88" class="lang-pct">46.68%</text>
   <circle cx="30" cy="108" r="4.5" fill="#555555" />
   <text x="44" y="112" class="lang-lbl">C</text>
-  <text x="51.5" y="112" class="lang-pct">35.65%</text>
+  <text x="51.5" y="112" class="lang-pct">33.50%</text>
   <circle cx="30" cy="132" r="4.5" fill="#563d7c" />
   <text x="44" y="136" class="lang-lbl">CSS</text>
-  <text x="66.5" y="136" class="lang-pct">4.39%</text>
+  <text x="66.5" y="136" class="lang-pct">4.13%</text>
   <circle cx="30" cy="156" r="4.5" fill="#3178c6" />
   <text x="44" y="160" class="lang-lbl">TypeScript</text>
-  <text x="119.0" y="160" class="lang-pct">3.36%</text>
+  <text x="119.0" y="160" class="lang-pct">3.16%</text>
   <circle cx="255" cy="84" r="4.5" fill="#00add8" />
   <text x="269" y="88" class="lang-lbl">Go</text>
-  <text x="284.0" y="88" class="lang-pct">3.15%</text>
+  <text x="284.0" y="88" class="lang-pct">2.96%</text>
   <circle cx="255" cy="108" r="4.5" fill="#A97BFF" />
   <text x="269" y="112" class="lang-lbl">Kotlin</text>
-  <text x="314.0" y="112" class="lang-pct">2.83%</text>
+  <text x="314.0" y="112" class="lang-pct">2.66%</text>
   <circle cx="255" cy="132" r="4.5" fill="#3572a5" />
   <text x="269" y="136" class="lang-lbl">Python</text>
-  <text x="314.0" y="136" class="lang-pct">2.72%</text>
+  <text x="314.0" y="136" class="lang-pct">2.55%</text>
   <circle cx="255" cy="156" r="4.5" fill="#4f5d95" />
   <text x="269" y="160" class="lang-lbl">PHP</text>
-  <text x="291.5" y="160" class="lang-pct">2.39%</text>
+  <text x="291.5" y="160" class="lang-pct">2.25%</text>
 </svg>
