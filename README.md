@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787152893.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787156402.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787152893.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787156402.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787152893.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787156402.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787152893.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787156402.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787152893.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787156402.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **hackframe** — `fix(project-006): polish Scene 1 hook visual execution — ...` [#5f4dcc8](https://github.com/StealthMoud/hackframe/commit/5f4dcc831fa13b1176ed455d0232719d244e9926)
+- **hackframe** — `fix(project-006): restore visual mass to Scene 1's fractu...` [#c862157](https://github.com/StealthMoud/hackframe/commit/c862157f8e70cbdade816245d7ea9dd602e77598)
 - **hackframe** — `feat(project-006): rebuild Scene 1 hook visual as a real ...` [#73095be](https://github.com/StealthMoud/hackframe/commit/73095be5de7785c4b6dae0b2573055f29a3e0fd7)
 - **hackframe** — `feat(project-006): rebuild Scene 1 hook from scratch (sec...` [#2fa1d43](https://github.com/StealthMoud/hackframe/commit/2fa1d432efc3dd908b29f2c6c91adc81658e29a2)
 - **hackframe** — `feat(project-006): redesign Scene 1 opening as a retentio...` [#ae12a81](https://github.com/StealthMoud/hackframe/commit/ae12a8145a8e816fcb3a2567e7146dc0487431ce)
-- **hackframe** — `fix(project-006): correct Scene 6 route endpoints and Sce...` [#6121537](https://github.com/StealthMoud/hackframe/commit/61215378e3c803172b5f07af877b8b58e61e86d3)
-- **hackframe** — `fix(project-006): correct continuous-motion visual gaps f...` [#d2c2440](https://github.com/StealthMoud/hackframe/commit/d2c2440cfcb054c2f70d560d7c1797ed23db9c35)
 
 <!-- RECENT_COMMITS_END -->
 
