@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787100094.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787105558.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787100094.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787105558.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787100094.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787105558.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787100094.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787105558.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787100094.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787105558.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **hackframe** — `feat(006): migrate to one continuous-motion production vi...` [#9ada20a](https://github.com/StealthMoud/hackframe/commit/9ada20a7f567f0a6b239f416d4e4d94442b320dc)
+- **hackframe** — `fix(media): harden continuous-motion architecture per ext...` [#91fcb40](https://github.com/StealthMoud/hackframe/commit/91fcb406be8cd32376d92df9e4e3c480667aa698)
+- **hackframe** — `feat(media): add continuous-motion architecture for persi...` [#a30e36e](https://github.com/StealthMoud/hackframe/commit/a30e36e2a97e0dba990c99529d0b7446f079168c)
 - **hackframe** — `fix(cli): keep dashboard server process resident until si...` [#1a96217](https://github.com/StealthMoud/hackframe/commit/1a962176a8d89474acce67aea8577fd4bd8fcf63)
 - **hackframe** — `feat(control-center): add real-time SSE streaming, in-bro...` [#2165c3d](https://github.com/StealthMoud/hackframe/commit/2165c3d8bae21b0c2a2067851094636dffb7b274)
-- **hackframe** — `feat(projects): complete 006-010 editorial visual familie...` [#ee9e356](https://github.com/StealthMoud/hackframe/commit/ee9e3564a2e49b9cbef32aade83690de8ad119ac)
-- **hackframe** — `feat(scheduler): extend local automation to YouTube Repor...` [#5ab70d0](https://github.com/StealthMoud/hackframe/commit/5ab70d0089fa16a07c729fa6ae6ec2b49815d628)
-- **hackframe** — `docs(youtube): complete P005 scheduled API batch` [#6f867ef](https://github.com/StealthMoud/hackframe/commit/6f867ef6d4b07b608370b806c9a4e02fc7d85e6d)
 
 <!-- RECENT_COMMITS_END -->
 
