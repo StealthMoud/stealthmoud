@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787181264.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787186489.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787181264.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787186489.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787181264.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787186489.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787181264.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787186489.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787181264.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787186489.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **hackframe** — `feat(youtube): add read-only YouTube analytics MCP server` [#2cb6b13](https://github.com/StealthMoud/hackframe/commit/2cb6b13adfbfcee3b5f20b0cbb825aac175848f5)
-- **hackframe** — `fix(project-006): polish Scene 3 local-knowledge labels w...` [#47999f5](https://github.com/StealthMoud/hackframe/commit/47999f530d184fe0862da06c7dd79114623ccf8b)
-- **hackframe** — `feat(project-006): redesign Scene 4 with sync-anchored pa...` [#28355c3](https://github.com/StealthMoud/hackframe/commit/28355c3a6c0e598eca5bddd2a989b4e4706a94e2)
-- **hackframe** — `feat(project-006): redesign Scene 5 Exit Boundary with sy...` [#fe91bba](https://github.com/StealthMoud/hackframe/commit/fe91bba195ad1f308aa772dc8f10f1d5fb4432e7)
-- **hackframe** — `fix(project-006): synchronize Scene 4 semantic text discl...` [#cbca51c](https://github.com/StealthMoud/hackframe/commit/cbca51c387d891c7b75536014191977b751c88ee)
+- **hackframe** — `feat(project-006): integrate visual-mode diversification ...` [#b1117e1](https://github.com/StealthMoud/hackframe/commit/b1117e1496d07f405241f54370a4959f01c38f30)
+- **hackframe** — `fix(project-006): wrap B-roll Video in Remotion Sequence ...` [#41952bd](https://github.com/StealthMoud/hackframe/commit/41952bd9b4a4edc8e34cb48be992ba4781565439)
+- **hackframe** — `feat(agents): add HackFrame-native task-scale routing and...` [#390ac94](https://github.com/StealthMoud/hackframe/commit/390ac94fd759d4a2aafc2a1b982e29b70c4a31cb)
+- **hackframe** — `fix(youtube): correct publication-state misclassification...` [#f716827](https://github.com/StealthMoud/hackframe/commit/f716827c2d97ec132b29678cbe4c5ef471d9d791)
+- **hackframe** — `feat(project-006): redesign Scene 6 Onion Services with s...` [#f6fda36](https://github.com/StealthMoud/hackframe/commit/f6fda36cf0184e12d067edd2ab95c6d9bf853979)
 
 <!-- RECENT_COMMITS_END -->
 
