@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787246401.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787250257.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787246401.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787250257.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787246401.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787250257.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787246401.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787250257.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787246401.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787250257.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **akhe-chera** — `feat: render short 001 visual narration preview` [#820f04e](https://github.com/StealthMoud/akhe-chera/commit/820f04eeb67b4ff26a7d56abd23849d2ff676f44)
+- **akhe-chera** — `feat: polish short 001 timing and captions` [#8ae4363](https://github.com/StealthMoud/akhe-chera/commit/8ae4363533f0a9dbd6a466117f3a8d385399a8ba)
+- **akhe-chera** — `chore: keep generated project media out of git` [#c4b3ebe](https://github.com/StealthMoud/akhe-chera/commit/c4b3ebeb65121fe3583354d88589f99b71f79004)
 - **akhe-chera** — `Add proper-name prosody rule for Aghaye Chera` [#0a1dd34](https://github.com/StealthMoud/akhe-chera/commit/0a1dd340d39a0583720b09b933a5de292c06e499)
 - **akhe-chera** — `Merge pull request #2 from StealthMoud/voice-bible-v1` [#2c0ccd8](https://github.com/StealthMoud/akhe-chera/commit/2c0ccd8e3cf23ddf6900a7f87e51531f8987b8bf)
-- **akhe-chera** — `docs: save ElevenLabs voice design prompt` [#17157f5](https://github.com/StealthMoud/akhe-chera/commit/17157f5c784c8c3146ae34b6e5f6d173196b4549)
-- **akhe-chera** — `Add Persian TTS pronunciation dictionary` [#b4048b4](https://github.com/StealthMoud/akhe-chera/commit/b4048b4e319b689472ac5d24fe7989d0fef90d1f)
-- **akhe-chera** — `Merge pull request #1 from StealthMoud/voice-bible-v1` [#7a8f12d](https://github.com/StealthMoud/akhe-chera/commit/7a8f12d2900ff996a43638a87af55368cd0f72a2)
 
 <!-- RECENT_COMMITS_END -->
 
