@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787311044.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787315237.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787311044.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787315237.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787311044.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787315237.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787311044.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787315237.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787311044.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787315237.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **akhe-chera** — `docs(brand): add canonical ElevenLabs Voice Design prompt...` [#be0b42d](https://github.com/StealthMoud/akhe-chera/commit/be0b42d7940498ba607bc96418f998508e64aee9)
+- **akhe-chera** — `docs: require all agents to work directly on main` [#9b3b4b0](https://github.com/StealthMoud/akhe-chera/commit/9b3b4b0f47bb3f2125c81ac361e5eff700d70145)
 - **akhe-chera** — `feat: scaffold Short 003 production assets` [#d7fd983](https://github.com/StealthMoud/akhe-chera/commit/d7fd983160aa9e542159e65b6a6bbc75c2084b12)
 - **akhe-chera** — `chore: bind short 002 native 4k master` [#2f1127e](https://github.com/StealthMoud/akhe-chera/commit/2f1127e344937af23e8732d648a2699ff69daa1f)
 - **akhe-chera** — `chore: pause master rendering and YouTube publishing` [#29c3e1f](https://github.com/StealthMoud/akhe-chera/commit/29c3e1f663e1b0b329707b4b93d869bb02e0a86e)
-- **akhe-chera** — `feat: add proxy-first native 4k render pipeline` [#08a2b4d](https://github.com/StealthMoud/akhe-chera/commit/08a2b4d710b0223f3305136536e6d0bd0a7876e7)
-- **akhe-chera** — `fix: require measured master stream metadata` [#caf09a9](https://github.com/StealthMoud/akhe-chera/commit/caf09a92c708d1e00368aa75b46ffb2b554f01bf)
 
 <!-- RECENT_COMMITS_END -->
 
