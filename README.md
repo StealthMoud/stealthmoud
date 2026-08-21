@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787267831.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787273050.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787267831.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787273050.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787267831.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787273050.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787267831.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787273050.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787267831.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787273050.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **akhe-chera** — `fix: enforce Persian TTS pronunciation rules` [#9e4bbba](https://github.com/StealthMoud/akhe-chera/commit/9e4bbbaec197c2bf2d54fa2a09036fc7533adadd)
 - **akhe-chera** — `feat: finish short 001 sound design` [#bfd7602](https://github.com/StealthMoud/akhe-chera/commit/bfd76028500ccf7e68571b8a226be513752a0b73)
 - **akhe-chera** — `docs: record the caption/narration sync method` [#c840d63](https://github.com/StealthMoud/akhe-chera/commit/c840d63168a8ad180df5fb28d71e9fd2705999b5)
 - **akhe-chera** — `chore: prepare short 001 upload package` [#da3e770](https://github.com/StealthMoud/akhe-chera/commit/da3e770f87e679ef3fd1436632deee58530270d2)
 - **akhe-chera** — `fix: align short 001 captions using ASR word timestamps` [#7a8e25c](https://github.com/StealthMoud/akhe-chera/commit/7a8e25ccaea408d746c1be80a593188e434c1a2a)
-- **akhe-chera** — `fix: resync short 001 captions to actual narration pauses` [#2472511](https://github.com/StealthMoud/akhe-chera/commit/24725115a3336746b8b3a0e071cdc42a90142ad9)
 
 <!-- RECENT_COMMITS_END -->
 
