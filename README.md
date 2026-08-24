@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787560617.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787567318.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787560617.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787567318.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787560617.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787567318.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787560617.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787567318.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787560617.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787567318.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
-- **Syntax-Sphere** — `fix: close final Syntax Sphere production gaps` [#9c6cca3](https://github.com/StealthMoud/Syntax-Sphere/commit/9c6cca3eba79caa7ed9369be889e0934edacb0a5)
-- **Syntax-Sphere** — `fix: freeze Syntax Sphere production pipeline` [#d3c1604](https://github.com/StealthMoud/Syntax-Sphere/commit/d3c16049e63ce095658f020bfcc7307fceb74810)
-- **Syntax-Sphere** — `fix: finish Syntax Sphere production pipeline hardening` [#527de5d](https://github.com/StealthMoud/Syntax-Sphere/commit/527de5d15db96d3770ef4c5e4b4c2ce6af22350d)
-- **Syntax-Sphere** — `feat: complete audio-first production hardening, timeline...` [#0d0cf08](https://github.com/StealthMoud/Syntax-Sphere/commit/0d0cf08d8c74af8ce73f2c57b78bac671376908e)
-- **Syntax-Sphere** — `feat: implement audio-first production pipeline and end-t...` [#7cdc191](https://github.com/StealthMoud/Syntax-Sphere/commit/7cdc1911dbbe9c1e9716f147acc8dc563291a0e4)
+- **Syntax-Sphere** — `Pin primary sources for Short 002` [#fc871a6](https://github.com/StealthMoud/Syntax-Sphere/commit/fc871a67e2b69287ac2ae656dde34f8f3cdc3da1)
+- **Syntax-Sphere** — `add TTS-safe semantic blocks for long 001` [#8f24286](https://github.com/StealthMoud/Syntax-Sphere/commit/8f242865b549ba3dc8b33ee902b3c3ba64df4c1e)
+- **Syntax-Sphere** — `Pin primary sources for Short 003 malloc research` [#087c510](https://github.com/StealthMoud/Syntax-Sphere/commit/087c510c90017d8eec256926206bb441e9dd8fe5)
+- **Syntax-Sphere** — `Add TTS-safe derivative for Short 002` [#5e586f6](https://github.com/StealthMoud/Syntax-Sphere/commit/5e586f6aecb15eb29d21f59c8f422bd72eb62c67)
+- **Syntax-Sphere** — `research(long-002): complete zero-indexing research pass` [#b559b08](https://github.com/StealthMoud/Syntax-Sphere/commit/b559b08c1774f22bb0a6f1c8d98534bc9f283a3b)
 
 <!-- RECENT_COMMITS_END -->
 
