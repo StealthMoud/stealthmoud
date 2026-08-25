@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787675107.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1787678587.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787675107.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1787678587.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787675107.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1787678587.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787675107.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1787678587.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787675107.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1787678587.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **Syntax-Sphere** — `production(long-002): balance visual plan imagery` [#1039685](https://github.com/StealthMoud/Syntax-Sphere/commit/10396857c9fe2762e5326ea0a0bc102e8b68a96a)
+- **Syntax-Sphere** — `short 005: accept narration and build captions` [#31ec6aa](https://github.com/StealthMoud/Syntax-Sphere/commit/31ec6aafd9c6b9bb982be01867be4b45ec66ee7c)
 - **Syntax-Sphere** — `short 005: fix SQLite pronunciation and narration pacing` [#43f5364](https://github.com/StealthMoud/Syntax-Sphere/commit/43f53644248ce5c2ea45e90d3f9f3c03e2efc750)
 - **Syntax-Sphere** — `short 003: accept narration and build visual plan` [#53352bf](https://github.com/StealthMoud/Syntax-Sphere/commit/53352bfac2213f052eb408a6d6bf769befba5260)
 - **Syntax-Sphere** — `fix(tts): ignore markdown emphasis in equivalence` [#f2ed361](https://github.com/StealthMoud/Syntax-Sphere/commit/f2ed36102a4af1109db323baa9272a2c9f5fe5ee)
-- **Syntax-Sphere** — `short 001: accept narration and rebuild timing` [#b9580f8](https://github.com/StealthMoud/Syntax-Sphere/commit/b9580f8ee1ad077059627c1249919872c76b1d0f)
-- **Syntax-Sphere** — `short 005: tighten causal wording and regenerate narration` [#f4020b2](https://github.com/StealthMoud/Syntax-Sphere/commit/f4020b28d66d1d7a757b2db6904cb74c28269df7)
 
 <!-- RECENT_COMMITS_END -->
 
