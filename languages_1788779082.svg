@@ -24,20 +24,20 @@
   </style>
   <text x="25" y="35" class="title">Most Used Languages</text>
   <rect x="25" y="52" width="445" height="10" rx="5" fill="#161b22" />
-  <rect x="25" y="52" width="237.1378590339973" height="10" fill="#f1e05a" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="262.1378590339973" y="52" width="118.05628638720735" height="10" fill="#555555" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="380.19414542120467" y="52" width="23.422684775133966" height="10" fill="#3178c6" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="403.61683019633864" y="52" width="17.539265894623504" height="10" fill="#563d7c" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="421.15609609096214" y="52" width="11.354851626227898" height="10" fill="#3572a5" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="432.51094771719005" y="52" width="10.415361081399642" height="10" fill="#00add8" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="442.9263087985897" y="52" width="9.385926166146646" height="10" fill="#A97BFF" class="bar-segment" mask="url(#bar-mask)" />
-  <rect x="452.3122349647363" y="52" width="7.924860568474168" height="10" fill="#4f5d95" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="25" y="52" width="237.30836651952907" height="10" fill="#f1e05a" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="262.30836651952905" y="52" width="117.95063126643217" height="10" fill="#555555" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="380.25899778596124" y="52" width="23.401722514973766" height="10" fill="#3178c6" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="403.660720300935" y="52" width="17.539088909629317" height="10" fill="#563d7c" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="421.1998092105643" y="52" width="11.34468953950921" height="10" fill="#3572a5" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="432.5444987500735" y="52" width="10.406039796895039" height="10" fill="#00add8" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="442.9505385469685" y="52" width="9.37752618006358" height="10" fill="#A97BFF" class="bar-segment" mask="url(#bar-mask)" />
+  <rect x="452.3280647270321" y="52" width="7.917768171058395" height="10" fill="#4f5d95" class="bar-segment" mask="url(#bar-mask)" />
   <circle cx="30" cy="84" r="4.5" fill="#f1e05a" />
   <text x="44" y="88" class="lang-lbl">JavaScript</text>
-  <text x="119.0" y="88" class="lang-pct">53.29%</text>
+  <text x="119.0" y="88" class="lang-pct">53.33%</text>
   <circle cx="30" cy="108" r="4.5" fill="#555555" />
   <text x="44" y="112" class="lang-lbl">C</text>
-  <text x="51.5" y="112" class="lang-pct">26.53%</text>
+  <text x="51.5" y="112" class="lang-pct">26.51%</text>
   <circle cx="30" cy="132" r="4.5" fill="#3178c6" />
   <text x="44" y="136" class="lang-lbl">TypeScript</text>
   <text x="119.0" y="136" class="lang-pct">5.26%</text>
