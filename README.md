@@ -22,7 +22,7 @@
 ## Active Contributions & Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1788896454.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
+  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1788905468.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
 </div>
 
 <br />
@@ -30,18 +30,18 @@
 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1788896454.svg" width="100%" alt="GitHub Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1788905468.svg" width="100%" alt="GitHub Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1788896454.svg" width="100%" alt="Top Languages" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1788905468.svg" width="100%" alt="Top Languages" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1788896454.svg" width="100%" alt="Streak Stats" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1788905468.svg" width="100%" alt="Streak Stats" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1788896454.svg" width="100%" alt="System Status" />
+      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1788905468.svg" width="100%" alt="System Status" />
     </td>
   </tr>
 </table>
@@ -61,11 +61,11 @@
 <!-- RECENT_COMMITS_START -->
 
 ### System Logs
+- **akhe-chera** — `Upload and schedule Long 013 YouTube release` [#49174c9](https://github.com/StealthMoud/akhe-chera/commit/49174c998ee4e5d158f08142238769a10467bd7c)
+- **akhe-chera** — `Lock Long 014 accepted audio and align canonical captions` [#b4177ed](https://github.com/StealthMoud/akhe-chera/commit/b4177edfc228779f15c5a47944f86d5efb64120d)
+- **akhe-chera** — `long014: add targeted pronunciation review and test extract` [#70ef5a8](https://github.com/StealthMoud/akhe-chera/commit/70ef5a81961d9005b104a158d5eb4b4eae4cea87)
 - **akhe-chera** — `long014: split narration into smaller retryable chunks` [#f2e954f](https://github.com/StealthMoud/akhe-chera/commit/f2e954f91265f1da753bd7b786ffae60d8f3ea5f)
 - **akhe-chera** — `long014: prepare eyesight research and ElevenLabs narrati...` [#9ab29f7](https://github.com/StealthMoud/akhe-chera/commit/9ab29f786b61f507a08cccac2b651247cecb9357)
-- **akhe-chera** — `Accept Long 012 replacement master after exact-proxy appr...` [#f70c119](https://github.com/StealthMoud/akhe-chera/commit/f70c119c5976935165e1aa861be099ae2ab68a35)
-- **akhe-chera** — `Prepare Long 013 C-v2 thumbnail manual review` [#7bbeeb5](https://github.com/StealthMoud/akhe-chera/commit/7bbeeb5299106fbf3f4167cb41e65fb962a713d7)
-- **akhe-chera** — `Fix Long 012 native edge coverage` [#59fd6cb](https://github.com/StealthMoud/akhe-chera/commit/59fd6cbe8026886cf6846417b029b3c13f6ddfbe)
 
 <!-- RECENT_COMMITS_END -->
 
