@@ -2,22 +2,34 @@
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/hero-dark-mobile.svg">
   <source media="(max-width: 600px)" srcset="assets/hero-light-mobile.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img src="assets/hero-light.svg" width="100%" alt="StealthMoud — Mahmoud Mohseni. Web security, backend systems, and open source. Understand the system. Test the assumptions.">
+  <img src="assets/hero-light.svg" width="100%" alt="StealthMoud — Mahmoud Mohseni. Web security, backend systems, and open source. Follow the input. Question the trust.">
 </picture>
 
 <p align="center">
-  <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
-  <a href="#at-the-workbench">At the workbench</a> &nbsp; / &nbsp;
-  <a href="#connect">Connect</a>
+  <a href="#whoami"><code>./whoami</code></a> &nbsp; / &nbsp;
+  <a href="#selected-work"><code>./lab</code></a> &nbsp; / &nbsp;
+  <a href="#at-the-workbench"><code>./toolbox</code></a> &nbsp; / &nbsp;
+  <a href="#connect"><code>./connect</code></a>
 </p>
 
-### Hey, I'm Mahmoud.
+<a id="whoami"></a>
 
-I build security tools and backend applications. I'm interested in what happens between a request and a response: how an application handles identity, trusts input, and decides who gets access.
+### `$ whoami`
 
-My repositories explore both sides of that work — reproducing vulnerabilities in a lab and building applications with authentication and access controls.
+I'm **Mahmoud Mohseni**, aka **StealthMoud**. I build security tools and backend applications. I'm drawn to the places where trust breaks: inputs, identities, sessions, and access controls.
 
-## Selected work
+My projects move between investigating how applications fail and building systems with authentication and access controls. Curiosity starts the investigation; reproducible evidence makes it useful.
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/flow-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="assets/flow-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/flow-dark.svg">
+  <img src="assets/flow-light.svg" width="100%" alt="The research loop: scope the work, inspect the request, reproduce the behavior, and document the evidence.">
+</picture>
+
+<a id="selected-work"></a>
+
+## `~/lab` Selected work
 
 ### [Tarsius](https://github.com/StealthMoud/Tarsius)
 
@@ -32,13 +44,13 @@ A Node.js project that crawls pages and forms, runs vulnerability checks, and pr
 <table>
   <tr>
     <td width="50%" valign="top">
-      <sub>REPRODUCE / INVESTIGATE</sub>
+      <sub>CVE RESEARCH</sub>
       <h3><a href="https://github.com/StealthMoud/react-server-cve-lab">React Server CVE Lab ↗</a></h3>
       <p>A controlled environment for studying source exposure and denial of service in React Server Components.</p>
       <p><code>Python</code> <code>React</code> <code>Security research</code></p>
     </td>
     <td width="50%" valign="top">
-      <sub>BUILD / PROTECT</sub>
+      <sub>ACCESS CONTROL</sub>
       <h3><a href="https://github.com/StealthMoud/secure-note">SecureNote ↗</a></h3>
       <p>A note-sharing application exploring authentication, TOTP two-factor verification, roles, and per-note permissions.</p>
       <p><code>TypeScript</code> <code>Next.js</code> <code>Express</code></p>
@@ -46,13 +58,13 @@ A Node.js project that crawls pages and forms, runs vulnerability checks, and pr
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <sub>INSPECT / UNDERSTAND</sub>
+      <sub>VULNERABILITY ANALYSIS</sub>
       <h3><a href="https://github.com/StealthMoud/CVE-2025-55182-Scanner">React RCE Toolkit ↗</a></h3>
       <p>Testing tools and a technical walkthrough of CVE-2025-55182, focused on understanding the request-to-execution path.</p>
       <p><code>Shell</code> <code>React Server Components</code></p>
     </td>
     <td width="50%" valign="top">
-      <sub>BUILD / EXPERIMENT</sub>
+      <sub>IDENTITY TOOLS</sub>
       <h3><a href="https://github.com/StealthMoud/authenticator">Authenticator ↗</a></h3>
       <p>A local-first Chrome extension for TOTP and HOTP codes, QR import, and optional sync to a private GitHub repository.</p>
       <p><code>JavaScript</code> <code>Chrome extension</code></p>
@@ -69,7 +81,9 @@ A Node.js project that crawls pages and forms, runs vulnerability checks, and pr
 
 </details>
 
-## At the workbench
+<a id="at-the-workbench"></a>
+
+## `~/toolbox` At the workbench
 
 | Area | What interests me |
 | :--- | :--- |
@@ -92,7 +106,9 @@ A Node.js project that crawls pages and forms, runs vulnerability checks, and pr
   <p><sub>From the public GitHub contribution calendar; refreshed daily. GitHub may include anonymized private contributions when enabled.</sub></p>
 </details>
 
-## Connect
+<a id="connect"></a>
+
+## `$ connect`
 
 Interested in application security, backend engineering, or a project here? Let's talk.
 
@@ -100,4 +116,8 @@ Interested in application security, backend engineering, or a project here? Let'
 
 ---
 
-<sub>Mahmoud Mohseni · StealthMoud &nbsp; / &nbsp; Built with curiosity. Backed by code.</sub>
+<sub><code>[ end of transmission ]</code> &nbsp; Mahmoud Mohseni / StealthMoud</sub>
+
+<!-- PROFILE_REFRESH:START -->
+<sub>Automated maintenance: awaiting first scheduled run (Europe/Rome).</sub>
+<!-- PROFILE_REFRESH:END -->

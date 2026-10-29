@@ -64,11 +64,11 @@ def fetch_calendar(username):
 
 def render_calendar(calendar, theme="dark"):
     if theme == "dark":
-        bg, text, muted, line = "#0c1b25", "#edf5f4", "#9fb7c3", "#28434f"
-        colors = ["#17313d", "#1c625f", "#278e86", "#48b5aa", "#85e2d5"]
+        bg, text, muted, line = "#070d0a", "#e3f0e5", "#9aafa0", "#294431"
+        colors = ["#142719", "#2d4821", "#48712a", "#76ac3a", "#b6f45a"]
     elif theme == "light":
-        bg, text, muted, line = "#f1f6f6", "#153543", "#4e6977", "#c2d5d9"
-        colors = ["#e0ebed", "#b6dcd6", "#75bdb1", "#348e83", "#07665f"]
+        bg, text, muted, line = "#f0f5ec", "#183721", "#526b57", "#b2c9ad"
+        colors = ["#dfe9d8", "#b9d694", "#85b75b", "#5e8d27", "#3e6c08"]
     else:
         raise ValueError("Unknown calendar theme")
 

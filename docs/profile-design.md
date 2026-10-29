@@ -5,19 +5,23 @@ security and backend projects. Selected work comes before activity statistics.
 
 ## Visual direction
 
-An application-security workbench: a request crosses a trust boundary, then branches
-into identity, input, and access checks. This is an illustration, not live telemetry.
-The diagram is original SVG artwork. A single 4.5-second packet animation stops
-automatically and respects reduced-motion preferences.
+A hacker research console: phosphor typography, clipped terminal corners, a custom
+SM monogram, and a radar that inspects identity, input, and state. The header is
+explicitly labeled a local lab simulation; its graphics are not live telemetry.
 
-- Deep blue `#0c1b25`, off-white `#edf5f4`, teal `#69d6cd`, copper `#f1b184`.
-- Light variant: pale blue `#f1f6f6`, ink `#153543`, teal `#087e80`, copper `#a85226`.
-- Trebuchet / Segoe UI for the wordmark and headline; system monospace for labels.
-- Separate mobile compositions keep the main text readable at small widths.
+- Dark: near-black `#070d0a`, phosphor `#b6f45a`, cyan `#6ae5f1`, text `#e3f0e5`.
+- Light: pale green `#f0f5ec`, ink `#183721`, green `#3e6c08`, cyan `#086d80`.
+- System monospace throughout the artwork; no font downloads.
+- A 12-second loop types a local-scope command, highlights the three inspection
+  stages in sequence, and rotates the radar. A small wordmark glitch appears once
+  per loop. A separate research-flow strip highlights scope, inspection,
+  reproduction, and documentation in order.
+- Desktop and mobile compositions have dedicated SVGs. All looping motion stops
+  under `prefers-reduced-motion: reduce`, leaving complete, readable content.
 - Native Markdown and HTML keep the biography, project descriptions, and contact
-  links selectable and accessible. No external fonts, badges, trackers, or image services.
+  links selectable. No external badges, trackers, image services, or SVG scripts.
 
-Rebuild the four header images with `python3 scripts/render_brand.py`.
+Rebuild all eight header and workflow images with `python3 scripts/render_brand.py`.
 
 ## References reviewed
 
@@ -39,14 +43,33 @@ supporting evidence. Public professional contact links were preserved.
 
 ## Activity updater
 
-`python3 sync_profile.py` fetches only GitHub's unauthenticated public contribution
-calendar. It writes stable `assets/activity-dark.svg` and `assets/activity-light.svg`
-paths. It never reads a token, private events, repository lists, or commit messages,
-and it never rewrites README.md. The calendar may include anonymized private
-contributions if the owner chooses to show them on GitHub.
+`python3 sync_profile.py` records one maintenance update per Europe/Rome calendar
+day. GitHub Actions checks at **01:23, 07:23, 13:23, and 19:23 Europe/Rome**, allowing
+later checks to retry after a missed or failed run. Successful same-day checks are
+no-ops and do not create additional commits.
 
-The daily workflow commits only changed calendar assets. A missing or malformed
-calendar fails the run and preserves the last successful assets; no fallback counts
-are invented. Legacy metrics modules in `src/` are no longer called by the updater.
+The script fetches only GitHub's unauthenticated public contribution calendar and
+writes `assets/activity-dark.svg` and `assets/activity-light.svg`. It updates only
+the marked `PROFILE_REFRESH` block in README.md, preserving the authored content.
+It never reads a token, private events, repository lists, or commit messages.
+The calendar may include anonymized private contributions if the owner enables them.
 
+If the calendar is unavailable or malformed, the last successful images stay in
+place and the README honestly records that the old snapshot was retained. Missing,
+duplicated, or reversed README markers fail without editing the profile. Dates are
+the actual current day; the script does not backdate commits or fabricate metrics.
+
+At the owner's request, automated commits use author
+`StealthMoud <152169815+StealthMoud@users.noreply.github.com>`, with
+`github-actions[bot]` as committer and an explicit automated-maintenance commit
+message. The workflow pushes only README.md and the two calendar assets to main.
+
+These commits are intended to qualify under GitHub's
+[contribution criteria](https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference).
+They do not establish manual coding activity. GitHub
+[may delay or drop scheduled jobs](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule),
+so an uninterrupted streak cannot be guaranteed. The repository must remain active,
+the workflow enabled, and the author email associated with the account.
+
+Legacy metrics modules in `src/` are no longer called by the updater.
 Validate with `python3 -m unittest discover -s tests -v`.
