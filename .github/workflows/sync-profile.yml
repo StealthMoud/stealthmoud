@@ -1,39 +1,46 @@
-name: Update Profile Metrics
+name: Refresh public contribution calendar
 
 on:
   schedule:
-    - cron: "0 * * * *" # Run every hour to keep status and commits real-time
+    - cron: "17 6 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: profile-calendar
+  cancel-in-progress: false
+
 jobs:
-  update-metrics:
+  update-calendar:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
-      - name: Sync Profile Metrics
+      - name: Check updater
+        run: python -m unittest discover -s tests -v
+
+      - name: Refresh public calendar
         run: python sync_profile.py
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "StealthMoud"
-          git config --global user.email "stealthmoud@users.noreply.github.com"
-          git add .
-          if git diff --quiet && git diff --staged --quiet; then
-            echo "No changes in profile metrics."
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/activity-dark.svg assets/activity-light.svg
+          if git diff --staged --quiet; then
+            echo "Public calendar unchanged."
           else
-            git commit -m "refresh profile metrics and status monitor"
+            git commit -m "Refresh public contribution calendar"
+            git pull --rebase origin main
             git push origin main
           fi

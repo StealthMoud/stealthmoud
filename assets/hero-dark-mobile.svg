@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="560" viewBox="0 0 640 560" role="img" aria-labelledby="title desc">
+  <title id="title">StealthMoud — Mahmoud Mohseni</title>
+  <desc id="desc">Web security, backend systems, and open source. Understand the system. Test the assumptions. A request diagram illustrates identity, input, and access checks across a trust boundary.</desc>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#24404c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <style>
+    .wordmark { font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; font-weight: 700; letter-spacing: -4px; fill: #edf5f4; }
+    .tagline { font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; fill: #edf5f4; }
+    .label { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #9fb7c3; }
+    .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #edf5f4; }
+    .trace { fill: none; stroke: #28434f; stroke-width: 1.5; }
+    .panel { fill: #102530; stroke: #28434f; stroke-width: 1.5; }
+    .mark { fill: none; stroke: #69d6cd; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .packet { animation: inspect 4.5s ease-in-out 1; }
+    @keyframes inspect { 0% { transform: translateX(-10px); opacity: 0; } 20% { opacity: 1; } 65% { transform: translateX(45px); } 100% { transform: translateX(0); } }
+    @media (prefers-reduced-motion: reduce) { .packet { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="638" height="558" rx="16" fill="#0c1b25" stroke="#28434f"/>
+  <rect x="340" y="17" width="280" height="526" fill="url(#grid)" opacity="0.55"/>
+  <path d="M25 1H615" stroke="#69d6cd" stroke-width="2"/>
+  <path d="M485 1H615" stroke="#f1b184" stroke-width="2"/>
+
+  <path d="m36 42 12-10m-12 10 12 10m21-20 12 10-12 10m-9-23-9 26" class="mark"/>
+  <text x="99" y="49" class="label" font-size="16" letter-spacing="2">MAHMOUD MOHSENI</text>
+  <text x="34" y="151" class="wordmark" font-size="76">StealthMoud<tspan fill="#69d6cd">.</tspan></text>
+  <text x="37" y="211" class="tagline" font-size="30">Understand the system.</text>
+  <text x="37" y="252" class="tagline" font-size="30">Test the assumptions.</text>
+  <path d="M37 310H603" class="trace"/>
+  <text x="37" y="350" class="label" font-size="18">WEB SECURITY / BACKEND SYSTEMS</text>
+  <g transform="translate(37 390)">
+    <rect width="566" height="111" rx="10" class="panel"/>
+    <text x="22" y="35" class="label" font-size="16" letter-spacing="2">FOLLOW THE REQUEST</text>
+    <path d="M104 72H218M320 72H416" class="trace"/>
+    <text x="22" y="79" class="mono" font-size="21">input</text>
+    <text x="224" y="79" class="mono" font-size="21" style="fill:#69d6cd">inspect</text>
+    <text x="422" y="79" class="mono" font-size="21">verify</text>
+    <path d="M166 51V94M377 51V94" stroke="#f1b184" stroke-dasharray="3 4"/>
+    <circle cx="166" cy="72" r="5" fill="#f1b184"/>
+    <circle cx="377" cy="72" r="5" fill="#f1b184"/>
+  </g>
+  <text x="37" y="538" class="label" font-size="16" letter-spacing="2">SECURITY RESEARCH &amp; OPEN SOURCE</text>
+</svg>

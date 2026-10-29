@@ -1,215 +1,103 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/hero-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="assets/hero-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <img src="assets/hero-light.svg" width="100%" alt="StealthMoud — Mahmoud Mohseni. Web security, backend systems, and open source. Understand the system. Test the assumptions.">
+</picture>
 
-<!-- Header Banner -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4338ca,6d28d9,1e1b4b&height=200&section=header&text=StealthMoud&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Security%20Researcher%20%7C%20Penetration%20Tester%20%7C%20OWASP%20Certified&descAlignY=55&descAlign=50&descSize=18" alt="StealthMoud Banner" />
-
-<!-- Typing SVG -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2500&pause=1000&color=6366F1&background=0D111700&center=true&vCenter=true&random=false&width=1000&height=80&lines=Security+Researcher+%26+Penetration+Tester;OWASP+Top+10+Certified;Voorivex+Academy+Rank+%23152;CVE+Researcher+%26+Exploit+Developer" alt="Typing SVG" />
-</a>
-
-<!-- Profile Metrics -->
-<p>
-  <img src="https://komarev.com/ghpvc/?username=stealthmoud&label=Profile%20Views&color=6366f1&style=flat-square" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/stealthmoud?label=Followers&style=flat-square&color=6366f1&logo=github&logoColor=white" alt="Followers" />
-  <img src="https://img.shields.io/badge/Voorivex_Rank-152%2F12%2C613-6366f1?style=flat-square&logo=target&logoColor=white" alt="Voorivex Rank" />
+<p align="center">
+  <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
+  <a href="#at-the-workbench">At the workbench</a> &nbsp; / &nbsp;
+  <a href="#connect">Connect</a>
 </p>
 
-</div>
+### Hey, I'm Mahmoud.
 
----
+I build security tools and backend applications. I'm interested in what happens between a request and a response: how an application handles identity, trusts input, and decides who gets access.
 
-## Active Contributions & Activity
+My repositories explore both sides of that work — reproducing vulnerabilities in a lab and building applications with authentication and access controls.
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/contributions_1793260183.svg" alt="StealthMoud's Contribution Calendar" width="100%" />
-</div>
+## Selected work
 
-<br />
+### [Tarsius](https://github.com/StealthMoud/Tarsius)
 
-<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+**A web security scanner, from discovery to reporting.**
+
+A Node.js project that crawls pages and forms, runs vulnerability checks, and produces HTML, JSON, CSV, and text reports. Includes a local vulnerable application for exercising the scanner.
+
+`JavaScript` `Node.js` `Docker` `Web security`
+
+[Explore the code ↗](https://github.com/StealthMoud/Tarsius) · [Read the usage guide](https://github.com/StealthMoud/Tarsius/blob/main/docs/usage_guide.md)
+
+<table>
   <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/stats_1793260183.svg" width="100%" alt="GitHub Stats" />
+    <td width="50%" valign="top">
+      <sub>REPRODUCE / INVESTIGATE</sub>
+      <h3><a href="https://github.com/StealthMoud/react-server-cve-lab">React Server CVE Lab ↗</a></h3>
+      <p>A controlled environment for studying source exposure and denial of service in React Server Components.</p>
+      <p><code>Python</code> <code>React</code> <code>Security research</code></p>
     </td>
-    <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/languages_1793260183.svg" width="100%" alt="Top Languages" />
+    <td width="50%" valign="top">
+      <sub>BUILD / PROTECT</sub>
+      <h3><a href="https://github.com/StealthMoud/secure-note">SecureNote ↗</a></h3>
+      <p>A note-sharing application exploring authentication, TOTP two-factor verification, roles, and per-note permissions.</p>
+      <p><code>TypeScript</code> <code>Next.js</code> <code>Express</code></p>
     </td>
   </tr>
   <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/streak_1793260183.svg" width="100%" alt="Streak Stats" />
+    <td width="50%" valign="top">
+      <sub>INSPECT / UNDERSTAND</sub>
+      <h3><a href="https://github.com/StealthMoud/CVE-2025-55182-Scanner">React RCE Toolkit ↗</a></h3>
+      <p>Testing tools and a technical walkthrough of CVE-2025-55182, focused on understanding the request-to-execution path.</p>
+      <p><code>Shell</code> <code>React Server Components</code></p>
     </td>
-    <td width="50%" align="center" valign="top">
-      <img src="https://raw.githubusercontent.com/StealthMoud/stealthmoud/main/status_1793260183.svg" width="100%" alt="System Status" />
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-
-### GitHub Trophies
-
-![](https://github-profile-trophy.vercel.app/?username=stealthmoud&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7&title=Commits,Repositories,Stars,Followers,PullRequest,Issues,MultiLanguage)
-
-</div>
-
----
-
-## Recent System Updates
-
-<!-- RECENT_COMMITS_START -->
-
-### System Logs
-- **gym-bot** — `fix: show live scan progress and clarify timetable slots` [#6372d54](https://github.com/StealthMoud/gym-bot/commit/6372d5413ce329bdfd79ede711b8438aada9ee7d)
-- **burp-browser-colors** — `Record automatic detection integration results` [#23c1a4f](https://github.com/StealthMoud/burp-browser-colors/commit/23c1a4f05b3602c3375c7890eb642daad0e02d17)
-- **burp-browser-colors** — `Add passive automatic browser and website-session colors` [#3e307b4](https://github.com/StealthMoud/burp-browser-colors/commit/3e307b40392b8a9ebffb0ee6684bf914da9f4f7d)
-- **Tarsius** — `Fix scanner scope, sessions, detection and report handling` [#b50e9c4](https://github.com/StealthMoud/Tarsius/commit/b50e9c4311199107b5dbecd128fb9ff0cc2da433)
-- **goalOS-data** — `Update: devices.json` [#d230659](https://github.com/StealthMoud/goalOS-data/commit/d230659ae9ced8be5fcf88b8a3aac78b3d83b921)
-
-<!-- RECENT_COMMITS_END -->
-
----
-
-## About Me
-
-```python
-class SecurityResearcher:
-    def __init__(self):
-        self.name = "Mahmoud Mohseni"
-        self.alias = "StealthMoud"
-        self.role = "Penetration Tester & Security Engineer"
-        self.mindset = "Offensive Security"
-        self.motto = "In code we trust, in security we verify"
-        
-    def specializations(self):
-        return [
-            "Web Application Penetration Testing",
-            "SQL Injection & XSS Exploitation",
-            "API Security & JWT Attacks",
-            "CVE Research & Exploit Development",
-            "OWASP Top 10 Security Testing",
-            "CTF Competitions & Bug Bounty"
-        ]
-    
-    def current_status(self):
-        return {
-            "Status": "Active & Hunting",
-            "Focus": "CVE Research & Bug Bounty",
-            "Rank": "#152/12,613 on Voorivex",
-            "Learning": "Advanced Exploit Development"
-        }
-```
-
-### Certifications & Achievements
-
-| Certification / Achievement | Platform / Issuer | Year |
-|:---|:---:|:---:|
-| OWASP Top 10 Security Specialist | OWASP | 2024 |
-| Voorivex Academy | Rank #152 / 12,613 (Top 1.2%) | 2025 |
-| Bug Bounty & CVE Research | Independent | Active |
-
----
-
-## Featured Security Projects
-
-<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/StealthMoud/CVE-2025-55182-Scanner">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=CVE-2025-55182-Scanner&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="CVE-2025-55182-Scanner Pin" />
-      </a>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/StealthMoud/react-server-cve-lab">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=react-server-cve-lab&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="React Server CVE Lab Pin" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/StealthMoud/secure-note">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=secure-note&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="Secure Note Platform Pin" />
-      </a>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/StealthMoud/BlindSQLMapper">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=BlindSQLMapper&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="BlindSQLMapper Pin" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/StealthMoud/BrowserPasswordExporter">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=BrowserPasswordExporter&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="BrowserPasswordExporter Pin" />
-      </a>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <a href="https://github.com/StealthMoud/Tarsius">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=stealthmoud&repo=Tarsius&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=818cf8&text_color=c9d1d9" alt="Tarsius Pin" />
-      </a>
+    <td width="50%" valign="top">
+      <sub>BUILD / EXPERIMENT</sub>
+      <h3><a href="https://github.com/StealthMoud/authenticator">Authenticator ↗</a></h3>
+      <p>A local-first Chrome extension for TOTP and HOTP codes, QR import, and optional sync to a private GitHub repository.</p>
+      <p><code>JavaScript</code> <code>Chrome extension</code></p>
     </td>
   </tr>
 </table>
 
+<details>
+  <summary><strong>More experiments from the lab</strong></summary>
+
+- [BlindSQLMapper](https://github.com/StealthMoud/BlindSQLMapper) — Boolean-based SQL injection tooling and time-based detection experiments.
+- [SameSite Cookie Lab](https://github.com/StealthMoud/samesite-lab) — A local lab for comparing same-site and cross-site cookie behavior.
+- [All public repositories](https://github.com/StealthMoud?tab=repositories) — Security tools, browser extensions, and other things I build.
+
+</details>
+
+## At the workbench
+
+| Area | What interests me |
+| :--- | :--- |
+| **Application security** | Web and API testing, authentication, authorization, and input handling. |
+| **Security tooling** | Reproducible labs, scanners, and reports that make results easier to investigate. |
+| **Backend engineering** | Request flows, session handling, data access, and the boundaries between them. |
+
+**Languages** &nbsp; Python · JavaScript · TypeScript · Bash<br>
+**Tools & platforms** &nbsp; Burp Suite · Linux · Git · Docker · Node.js
+
+> Understand the intended behavior. Question the assumptions. Reproduce what you find.
+
+<details>
+  <summary><strong>Contribution activity</strong></summary>
+  <br>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+    <img src="assets/activity-light.svg" width="100%" alt="Contribution calendar from my public GitHub profile. The accessible calendar is also available on my GitHub overview.">
+  </picture>
+  <p><sub>From the public GitHub contribution calendar; refreshed daily. GitHub may include anonymized private contributions when enabled.</sub></p>
+</details>
+
+## Connect
+
+Interested in application security, backend engineering, or a project here? Let's talk.
+
+[Email](mailto:stealthmoud@proton.me) &nbsp; / &nbsp; [LinkedIn](https://www.linkedin.com/in/sayed-mahmoud-mohseni-7299b72a1/) &nbsp; / &nbsp; [X](https://x.com/StealthMoud)
+
 ---
 
-## Technical Arsenal
-
-### Offensive Security Tools
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-0d1117?style=flat-square&logo=burpsuite&logoColor=6366f1&labelColor=0d1117)
-![Metasploit](https://img.shields.io/badge/Metasploit-0d1117?style=flat-square&logo=metasploit&logoColor=6366f1&labelColor=0d1117)
-![SQLMap](https://img.shields.io/badge/SQLMap-0d1117?style=flat-square&logo=mysql&logoColor=6366f1&labelColor=0d1117)
-![Nmap](https://img.shields.io/badge/Nmap-0d1117?style=flat-square&logo=nmap&logoColor=6366f1&labelColor=0d1117)
-![Wireshark](https://img.shields.io/badge/Wireshark-0d1117?style=flat-square&logo=wireshark&logoColor=6366f1&labelColor=0d1117)
-![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-0d1117?style=flat-square&logo=owasp&logoColor=6366f1&labelColor=0d1117)
-
-### Languages & Scripting
-![Python](https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=6366f1&labelColor=0d1117)
-![Go](https://img.shields.io/badge/Go-0d1117?style=flat-square&logo=go&logoColor=6366f1&labelColor=0d1117)
-![TypeScript](https://img.shields.io/badge/TypeScript-0d1117?style=flat-square&logo=typescript&logoColor=6366f1&labelColor=0d1117)
-![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=flat-square&logo=javascript&logoColor=6366f1&labelColor=0d1117)
-![C](https://img.shields.io/badge/C-0d1117?style=flat-square&logo=c&logoColor=6366f1&labelColor=0d1117)
-![PHP](https://img.shields.io/badge/PHP-0d1117?style=flat-square&logo=php&logoColor=6366f1&labelColor=0d1117)
-![Bash](https://img.shields.io/badge/Bash-0d1117?style=flat-square&logo=gnubash&logoColor=6366f1&labelColor=0d1117)
-
-### Web Stacks & Databases
-![React](https://img.shields.io/badge/React-0d1117?style=flat-square&logo=react&logoColor=6366f1&labelColor=0d1117)
-![Next.js](https://img.shields.io/badge/Next.js-0d1117?style=flat-square&logo=nextdotjs&logoColor=6366f1&labelColor=0d1117)
-![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=flat-square&logo=nodedotjs&logoColor=6366f1&labelColor=0d1117)
-![Express](https://img.shields.io/badge/Express-0d1117?style=flat-square&logo=express&logoColor=6366f1&labelColor=0d1117)
-![Django](https://img.shields.io/badge/Django-0d1117?style=flat-square&logo=django&logoColor=6366f1&labelColor=0d1117)
-![Flask](https://img.shields.io/badge/Flask-0d1117?style=flat-square&logo=flask&logoColor=6366f1&labelColor=0d1117)
-![MongoDB](https://img.shields.io/badge/MongoDB-0d1117?style=flat-square&logo=mongodb&logoColor=6366f1&labelColor=0d1117)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0d1117?style=flat-square&logo=postgresql&logoColor=6366f1&labelColor=0d1117)
-![Redis](https://img.shields.io/badge/Redis-0d1117?style=flat-square&logo=redis&logoColor=6366f1&labelColor=0d1117)
-
----
-
-## Professional Engagements & Contact
-
-Available for remote penetration testing, vulnerability assessments, code audits, and private bug bounty engagements.
-
-<div align="center">
-
-```javascript
-const contact = {
-  email: "stealthmoud@proton.me",
-  discord: "stealthmoud",
-  availability: "Remote Worldwide"
-};
-```
-
-[![Email](https://img.shields.io/badge/ProtonMail-0d1117?style=flat-square&logo=protonmail&logoColor=6366f1&labelColor=0d1117)](mailto:stealthmoud@proton.me)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=flat-square&logo=linkedin&logoColor=6366f1&labelColor=0d1117)](https://linkedin.com/in/sayed-mahmoud-mohseni-7299b72a1/)
-[![Discord](https://img.shields.io/badge/Discord-0d1117?style=flat-square&logo=discord&logoColor=6366f1&labelColor=0d1117)](https://discord.gg/stealthmoud)
-[![X](https://img.shields.io/badge/X-0d1117?style=flat-square&logo=x&logoColor=6366f1&labelColor=0d1117)](https://x.com/StealthMoud)
-[![Instagram](https://img.shields.io/badge/Instagram-0d1117?style=flat-square&logo=instagram&logoColor=6366f1&labelColor=0d1117)](https://instagram.com/stealthmoud)
-
-<br>
-
-> *The best defense is a good offense. Understanding how systems break is the first step to building unbreakable ones.*
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4338ca,6d28d9,1e1b4b&height=100&section=footer" alt="Footer Banner" />
-
-</div>
+<sub>Mahmoud Mohseni · StealthMoud &nbsp; / &nbsp; Built with curiosity. Backed by code.</sub>

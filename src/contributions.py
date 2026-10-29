@@ -1,253 +1,109 @@
-"""Renders the animated contribution calendar SVG shown at the top of the profile."""
+"""Render the public GitHub contribution calendar without authenticated data."""
 
-import urllib.request
+from datetime import date, timedelta
+from html import escape
+from html.parser import HTMLParser
 import re
-import datetime
-import time
+import urllib.request
 
 
-def generate_svg(username="stealthmoud", filename="contributions.svg"):
-    """Fetch the public contribution calendar page and render it as a themed SVG."""
-    url = f"https://github.com/users/{username}/contributions"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+class CalendarParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.days = {}
+        self.heading = []
+        self.in_heading = False
 
-    html = None
-    max_retries = 3
-    for attempt in range(1, max_retries + 1):
-        try:
-            with urllib.request.urlopen(req, timeout=15) as response:
-                html = response.read().decode()
-                break
-        except Exception as e:
-            print(f"Attempt {attempt}/{max_retries} failed to fetch contributions: {e}")
-            if attempt < max_retries:
-                time.sleep(2 * attempt)
-            else:
-                print(f"All {max_retries} attempts to fetch contributions failed.")
-                return False
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "h2" and attrs.get("id") == "js-contribution-activity-description":
+            self.in_heading = True
+        if tag != "td" or "data-date" not in attrs:
+            return
+        day = date.fromisoformat(attrs["data-date"])
+        level = int(attrs["data-level"])
+        if level not in range(5) or day in self.days:
+            raise ValueError("Invalid or duplicate contribution day")
+        self.days[day] = level
 
-    # Extract total contributions text
-    total_contribs_match = re.search(
-        r'<h2[^>]*id="js-contribution-activity-description"[^>]*>\s*([\d,]+)\s+contributions\s+in\s+the\s+last\s+year',
-        html,
-        re.IGNORECASE
+    def handle_data(self, data):
+        if self.in_heading:
+            self.heading.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "h2":
+            self.in_heading = False
+
+
+def parse_calendar(document):
+    parser = CalendarParser()
+    parser.feed(document)
+    heading = " ".join(" ".join(parser.heading).split())
+    match = re.search(r"([\d,]+)\s+contributions?\s+in the last year", heading)
+    if not match:
+        raise ValueError("Public contribution total not found")
+    days = sorted(parser.days.items())
+    if not 350 <= len(days) <= 371:
+        raise ValueError("Expected a complete annual contribution calendar")
+    if (days[-1][0] - days[0][0]).days != len(days) - 1:
+        raise ValueError("Contribution calendar contains missing dates")
+    return {"total": int(match.group(1).replace(",", "")), "days": days}
+
+
+def fetch_calendar(username):
+    if not re.fullmatch(r"[A-Za-z0-9-]+", username):
+        raise ValueError("Invalid GitHub username")
+    request = urllib.request.Request(
+        f"https://github.com/users/{username}/contributions",
+        headers={"User-Agent": "StealthMoud-profile-calendar"},
     )
-    total_contribs = total_contribs_match.group(1) if total_contribs_match else "2,500+"
+    # Deliberately unauthenticated, even if the environment contains GH_PAT.
+    with urllib.request.urlopen(request, timeout=20) as response:
+        return parse_calendar(response.read().decode("utf-8"))
 
-    # Extract the table body (tbody)
-    tbody_match = re.search(r"<tbody>(.*?)</tbody>", html, re.DOTALL)
-    if not tbody_match:
-        print("Error: tbody not found in HTML.")
-        return False
-    tbody_content = tbody_match.group(1)
 
-    # Extract rows (tr)
-    tr_blocks = re.findall(r"<tr[^>]*>.*?</tr>", tbody_content, re.DOTALL)
-    if len(tr_blocks) != 7:
-        print(f"Error: Expected 7 rows in table body, found {len(tr_blocks)}.")
-        return False
-
-    # Parse the level grid from the HTML
-    grid = []  # 7 rows of 53 weeks
-    date_to_coords = {}
-    latest_date = ""
-    latest_coords = (0, 0)
-    for day_index, tr_block in enumerate(tr_blocks):
-        cells = re.findall(r"<td[^>]*class=\"[^\"]*ContributionCalendar-day[^\"]*\"[^>]*>", tr_block)
-        row_levels = []
-        for col_idx, cell in enumerate(cells):
-            level_match = re.search(r'data-level="(\d+)"', cell)
-            level = int(level_match.group(1)) if level_match else 0
-            row_levels.append(level)
-            
-            date_match = re.search(r'data-date="([^"]+)"', cell)
-            if date_match:
-                date_str = date_match.group(1)
-                date_to_coords[date_str] = (day_index, col_idx)
-                if date_str > latest_date:
-                    latest_date = date_str
-                    latest_coords = (day_index, col_idx)
-        grid.append(row_levels)
-
-    # Verify grid dimensions
-    num_weeks = len(grid[0])
-
-    # Extract month labels from thead
-    thead_match = re.search(r"<thead>(.*?)</thead>", html, re.DOTALL)
-    months_labels = []
-    if thead_match:
-        thead_content = thead_match.group(1)
-        td_labels = re.findall(
-            r"<td[^>]*class=\"[^\"]*ContributionCalendar-label[^\"]*\"[^>]*>.*?</td>",
-            thead_content,
-            re.DOTALL
-        )
-        col_offset = 0
-        for td in td_labels:
-            colspan_match = re.search(r'colspan="(\d+)"', td)
-            colspan = int(colspan_match.group(1)) if colspan_match else 1
-            text_match = re.search(r'<span aria-hidden="true"[^>]*>([^<]+)</span>', td)
-            if text_match:
-                month_text = text_match.group(1)
-                months_labels.append((col_offset, month_text))
-            col_offset += colspan
-
-    # Generate SVG Content
-    svg_width = 780
-    svg_height = 165
-
-    # Indigo theme palette with a high-contrast step scale per activity level
-    bg_color = "#0D1117"
-    border_color = "#30363D"
-    text_color = "#8B949E"
-    colors = {
-        0: "#161B22",  # Level 0 (GitHub empty grid)
-        1: "#2d2b63",  # Level 1 (Vibrant low activity indigo)
-        2: "#4f49be",  # Level 2 (Vibrant medium activity indigo)
-        3: "#746df3",  # Level 3 (Accent indigo)
-        4: "#9a93ff",  # Level 4 (Bright glowing indigo)
-    }
-
-    svg = []
-    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" fill="none">')
-    
-    # Glow filter used on hover and today's indicator
-    svg.append('  <defs>')
-    svg.append('    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">')
-    svg.append('      <feGaussianBlur stdDeviation="3" result="blur" />')
-    svg.append('      <feMerge>')
-    svg.append('        <feMergeNode in="blur" />')
-    svg.append('        <feMergeNode in="SourceGraphic" />')
-    svg.append('      </feMerge>')
-    svg.append('    </filter>')
-    # Gradient for card border
-    svg.append('    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">')
-    svg.append('      <stop offset="0%" stop-color="#30363D" />')
-    svg.append('      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4" />')
-    svg.append('      <stop offset="100%" stop-color="#30363D" />')
-    svg.append('    </linearGradient>')
-    svg.append('  </defs>')
-
-    # Background and border
-    svg.append(f'  <rect width="{svg_width}" height="{svg_height}" rx="6" fill="{bg_color}" stroke="url(#card-border)" stroke-width="1.2"/>')
-
-    # Font styles and spring-like hover and wave animations
-    font_family = '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif'
-    svg.append('  <style>')
-    svg.append(f'    .lbl {{ font-family: {font_family}; font-size: 9px; fill: {text_color}; }}')
-    svg.append(f'    .title {{ font-family: {font_family}; font-size: 11px; font-weight: 600; fill: #ffffff; }}')
-    svg.append('    .contrib-day {')
-    svg.append('      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), fill 0.2s, stroke 0.2s;')
-    svg.append('      transform-box: fill-box;')
-    svg.append('      transform-origin: center;')
-    svg.append('      animation: wave 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) both;')
-    svg.append('    }')
-    svg.append('    .contrib-day:hover {')
-    svg.append('      transform: scale(1.35);')
-    svg.append('      stroke: #8f7aff;')
-    svg.append('      stroke-width: 1;')
-    svg.append('      fill: #8f7aff !important;')
-    svg.append('      filter: url(#neon-glow);')
-    svg.append('      cursor: pointer;')
-    svg.append('    }')
-    svg.append('    .contrib-today {')
-    svg.append('      stroke: #9a93ff;')
-    svg.append('      stroke-width: 1.5;')
-    svg.append('      animation: today-pulse 2s infinite ease-in-out, wave 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) both;')
-    svg.append('    }')
-    svg.append('    .today-indicator {')
-    svg.append('      animation: indicator-glow 1.5s infinite ease-in-out;')
-    svg.append('      transform-box: fill-box;')
-    svg.append('      transform-origin: center;')
-    svg.append('      filter: url(#neon-glow);')
-    svg.append('    }')
-    svg.append('    @keyframes wave {')
-    svg.append('      0% { opacity: 0; transform: scale(0.3) translateY(4px); }')
-    svg.append('      70% { transform: scale(1.05); }')
-    svg.append('      100% { opacity: 1; transform: scale(1) translateY(0); }')
-    svg.append('    }')
-    svg.append('    @keyframes today-pulse {')
-    svg.append('      0%, 100% {')
-    svg.append('        stroke-opacity: 0.5;')
-    svg.append('        stroke-width: 1;')
-    svg.append('        filter: drop-shadow(0 0 2px rgba(154, 147, 255, 0.4));')
-    svg.append('      }')
-    svg.append('      50% {')
-    svg.append('        stroke-opacity: 1;')
-    svg.append('        stroke-width: 2;')
-    svg.append('        filter: drop-shadow(0 0 6px rgba(154, 147, 255, 0.9));')
-    svg.append('      }')
-    svg.append('    }')
-    svg.append('    @keyframes indicator-glow {')
-    svg.append('      0%, 100% { opacity: 0.5; transform: scale(0.8); }')
-    svg.append('      50% { opacity: 1; transform: scale(1.3); }')
-    svg.append('    }')
-    svg.append('  </style>')
-
-    # 1. Month Labels
-    for col_idx, label in months_labels:
-        x_pos = 32 + col_idx * 13
-        svg.append(f'  <text x="{x_pos}" y="20" class="lbl">{label}</text>')
-
-    # 2. Weekday Labels
-    svg.append('  <text x="10" y="47" class="lbl">Mon</text>')
-    svg.append('  <text x="10" y="73" class="lbl">Wed</text>')
-    svg.append('  <text x="10" y="99" class="lbl">Fri</text>')
-
-    # Detect current day to highlight today
-    now = datetime.datetime.now(datetime.timezone.utc)
-    local_now = now + datetime.timedelta(hours=2) # Europe/Rome offset
-    local_date_str = local_now.strftime("%Y-%m-%d")
-
-    if local_date_str in date_to_coords:
-        today_row, today_col = date_to_coords[local_date_str]
+def render_calendar(calendar, theme="dark"):
+    if theme == "dark":
+        bg, text, muted, line = "#0c1b25", "#edf5f4", "#9fb7c3", "#28434f"
+        colors = ["#17313d", "#1c625f", "#278e86", "#48b5aa", "#85e2d5"]
+    elif theme == "light":
+        bg, text, muted, line = "#f1f6f6", "#153543", "#4e6977", "#c2d5d9"
+        colors = ["#e0ebed", "#b6dcd6", "#75bdb1", "#348e83", "#07665f"]
     else:
-        today_row, today_col = latest_coords
+        raise ValueError("Unknown calendar theme")
 
-    # 3. Calendar squares
-    for day_idx in range(7):
-        y_pos = 28 + day_idx * 13
-        for col_idx in range(num_weeks):
-            x_pos = 32 + col_idx * 13
-            # Check range
-            if col_idx < len(grid[day_idx]):
-                level = grid[day_idx][col_idx]
-            else:
-                level = 0
-            color = colors.get(level, colors[0])
-            
-            is_today = (day_idx == today_row and col_idx == today_col)
-            classes = "contrib-day"
-            if is_today:
-                classes += " contrib-today"
-                
-            delay = min(col_idx * 0.012, 0.65)
-            svg.append(f'  <rect x="{x_pos}" y="{y_pos}" width="10" height="10" rx="2.2" fill="{color}" class="{classes}" style="animation-delay: {delay:.3f}s;"/>')
-            
-            if is_today:
-                # Add small pulsing neon target dot at top-right of today block
-                svg.append(f'  <circle cx="{x_pos + 10}" cy="{y_pos}" r="2" fill="#9a93ff" class="today-indicator"/>')
-
-    # 4. Total count text (bottom left)
-    svg.append(f'  <text x="32" y="146" class="lbl">{total_contribs} contributions in the last year</text>')
-
-    # 5. Legend (bottom right)
-    legend_start_x = svg_width - 130
-    svg.append(f'  <text x="{legend_start_x - 30}" y="146" class="lbl">Less</text>')
-    for lvl in range(5):
-        lx = legend_start_x + lvl * 13
-        svg.append(f'  <rect x="{lx}" y="137" width="10" height="10" rx="2.2" fill="{colors[lvl]}" class="contrib-day"/>')
-    svg.append(f'  <text x="{legend_start_x + 5 * 13 + 5}" y="146" class="lbl">More</text>')
-
-    svg.append('</svg>')
-
-    # Write to file
-    svg_content = "\n".join(svg)
-    try:
-        with open(filename, "w") as f:
-            f.write(svg_content)
-        print(f"Generated {filename}.")
-        return True
-    except Exception as e:
-        print(f"Error writing {filename}: {e}")
-        return False
+    days = calendar["days"]
+    first = days[0][0]
+    start = first - timedelta(days=(first.weekday() + 1) % 7)
+    title = f'{calendar["total"]:,} contributions in the last year'
+    through = days[-1][0].strftime("%d %b %Y")
+    svg = [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="218" '
+        'viewBox="0 0 960 218" role="img" aria-labelledby="title desc">',
+        f'<title id="title">{escape(title)}</title>',
+        f'<desc id="desc">Public GitHub contribution calendar through {through}. '
+        'Darker or brighter squares indicate higher activity.</desc>',
+        f'<rect x="1" y="1" width="958" height="216" rx="12" fill="{bg}" stroke="{line}"/>',
+        '<style>text {font-family: -apple-system, BlinkMacSystemFont, '
+        '"Segoe UI", Helvetica, Arial, sans-serif;}'
+        f'.label {{font-size: 11px; fill: {muted};}}</style>',
+        f'<text x="30" y="29" fill="{text}" font-size="14" font-weight="600">{escape(title)}</text>',
+    ]
+    for row, label in ((1, "M"), (3, "W"), (5, "F")):
+        svg.append(f'<text x="22" y="{65 + row * 16}" class="label">{label}</text>')
+    for day, level in days:
+        index = (day - start).days
+        x, y = 44 + (index // 7) * 16, 54 + (index % 7) * 16
+        if day.day == 1:
+            svg.append(f'<text x="{x}" y="47" class="label">{day.strftime("%b")}</text>')
+        svg.append(
+            f'<rect x="{x}" y="{y}" width="12" height="12" rx="3" fill="{colors[level]}">'
+            f'<title>{day.isoformat()}: activity level {level} of 4</title></rect>'
+        )
+    svg.append(f'<text x="30" y="195" class="label">Public profile · through {through}</text>')
+    svg.append('<text x="777" y="195" class="label">Less</text>')
+    for level, color in enumerate(colors):
+        svg.append(f'<rect x="{810 + level * 16}" y="185" width="12" height="12" rx="3" fill="{color}"/>')
+    svg.append('<text x="897" y="195" class="label">More</text>')
+    svg.append("</svg>")
+    return "\n".join(svg) + "\n"

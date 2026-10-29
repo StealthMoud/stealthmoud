@@ -1,0 +1,90 @@
+from datetime import date, timedelta
+from pathlib import Path
+import tempfile
+import unittest
+from unittest.mock import patch
+import xml.etree.ElementTree as ET
+
+from src.contributions import fetch_calendar, parse_calendar, render_calendar
+import sync_profile
+
+
+def calendar_html(total="123", days=365):
+    start = date(2025, 10, 30)
+    cells = "".join(
+        f'<td data-date="{start + timedelta(days=i)}" data-level="{i % 5}"></td>'
+        for i in range(days)
+    )
+    return (
+        '<h2 id="js-contribution-activity-description">'
+        f'{total} contributions in the last year</h2><table>{cells}</table>'
+    )
+
+
+class CalendarTests(unittest.TestCase):
+    def test_calendar_preserves_source_total_and_activity(self):
+        calendar = parse_calendar(calendar_html("6,257"))
+        self.assertEqual(calendar["total"], 6257)
+        self.assertEqual(len(calendar["days"]), 365)
+        self.assertEqual(calendar["days"][4][1], 4)
+        for theme in ("dark", "light"):
+            svg = render_calendar(calendar, theme)
+            root = ET.fromstring(svg)
+            self.assertIn("6,257 contributions", svg)
+            self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")
+
+    def test_missing_total_never_invents_a_number(self):
+        with self.assertRaises(ValueError):
+            parse_calendar(calendar_html("unavailable"))
+
+    def test_incomplete_or_invalid_calendar_is_rejected(self):
+        with self.assertRaises(ValueError):
+            parse_calendar(calendar_html(days=20))
+        with self.assertRaises(ValueError):
+            parse_calendar(calendar_html().replace('data-level="4"', 'data-level="9"', 1))
+        with self.assertRaises(ValueError):
+            parse_calendar(calendar_html().replace('2025-11-02', '2025-11-01', 1))
+
+    @patch("src.contributions.urllib.request.urlopen")
+    def test_fetch_is_public_even_with_a_token_in_environment(self, request):
+        request.return_value.__enter__.return_value.read.return_value = calendar_html().encode()
+        with patch.dict("os.environ", {"GH_PAT": "never-send-this-token"}):
+            fetch_calendar("StealthMoud")
+        args, kwargs = request.call_args
+        self.assertEqual(args[0].full_url, "https://github.com/users/StealthMoud/contributions")
+        self.assertFalse(args[0].has_header("Authorization"))
+        self.assertEqual(kwargs["timeout"], 20)
+
+    def test_fetch_failure_preserves_previous_assets_and_readme(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "assets").mkdir()
+            for theme in ("dark", "light"):
+                (root / "assets" / f"activity-{theme}.svg").write_text("previous")
+            (root / "README.md").write_text("authored profile")
+            with patch.object(sync_profile, "ROOT", root), patch.object(
+                sync_profile, "fetch_calendar", side_effect=OSError("offline")
+            ):
+                self.assertEqual(sync_profile.main(), 1)
+            self.assertEqual((root / "README.md").read_text(), "authored profile")
+            for asset in (root / "assets").iterdir():
+                self.assertEqual(asset.read_text(), "previous")
+
+    def test_refresh_does_not_rewrite_readme_or_unchanged_assets(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "README.md").write_text("authored profile")
+            with patch.object(sync_profile, "ROOT", root), patch.object(
+                sync_profile, "fetch_calendar", return_value=parse_calendar(calendar_html())
+            ):
+                self.assertEqual(sync_profile.main(), 0)
+                before = {p.name: p.stat().st_mtime_ns for p in (root / "assets").iterdir()}
+                self.assertEqual(sync_profile.main(), 0)
+                after = {p.name: p.stat().st_mtime_ns for p in (root / "assets").iterdir()}
+                self.assertEqual(before, after)
+            self.assertEqual((root / "README.md").read_text(), "authored profile")
+            self.assertEqual(len(after), 2)
+
+
+if __name__ == "__main__":
+    unittest.main()
