@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">StealthMoud — Mahmoud Mohseni / security research console</title>
+<desc id="desc">An animated hacker terminal and radar illustrate local security research. Follow the input. Question the trust. Web and API security, authentication, access control, and backend engineering. Motion stops with reduced-motion preferences.</desc>
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#bacdb3" stroke-width="0.6"/>
+  </pattern>
+  <pattern id="crt" width="4" height="4" patternUnits="userSpaceOnUse">
+    <path d="M0 1H4" stroke="#183721" stroke-opacity=".035"/>
+  </pattern>
+  <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="type-clip"><rect class="type-mask" x="24" y="-23" width="325" height="33"/></clipPath>
+  <clipPath id="glitch-cut"><path d="M0 145H700V159H0ZM0 174H700V183H0Z"/></clipPath>
+</defs>
+<style>
+  text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #183721; }
+  .muted { fill: #526b57; }
+  .accent { fill: #3e6c08; }
+  .cyan { fill: #086d80; }
+  .line { stroke: #b2c9ad; fill: none; }
+  .panel { fill: #e5eddf; stroke: #b2c9ad; }
+  .wordmark { font-size: 86px; font-weight: 800; letter-spacing: -5px; fill: #3e6c08; }
+  .sweep { animation: radar 12s linear infinite; transform-origin: 0 0; }
+  .ping { animation: ping 12s cubic-bezier(.18,.65,.3,1) infinite; }
+  .ping-b { animation-delay: -4s; }
+  .ping-c { animation-delay: -8s; }
+  .type-mask { animation: typing 12s steps(24,end) infinite; }
+  .cursor { animation: cursor 1.2s steps(1,end) infinite; }
+  .cursor-ready { animation: ready 12s steps(1,end) infinite; }
+  .phase { fill: #526b57; animation: phase 12s steps(1,end) infinite; }
+  .phase-b { animation-name: phase-b; }
+  .phase-c { animation-name: phase-c; }
+  .glitch { opacity: 0; animation: glitch 12s steps(1,end) infinite; }
+  .trace { stroke: #3e6c08; stroke-width: 2; fill: none; stroke-dasharray: 20 1080; animation: transmit 8s cubic-bezier(.4,0,.3,1) infinite; }
+  .step { animation: step 12s steps(1,end) infinite; }
+  .step-b { animation-delay: -9s; }
+  .step-c { animation-delay: -6s; }
+  .step-d { animation-delay: -3s; }
+  @keyframes radar { to { transform: rotate(360deg); } }
+  @keyframes ping { 0%,8% { opacity: 1; stroke-width: 2; } 30%,100% { opacity: .15; stroke-width: 1; } }
+  @keyframes typing { 0%,3% { width: 0; } 23%,94% { width: 325px; } 98%,100% { width: 0; } }
+  @keyframes cursor { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @keyframes ready { 0%,22% { opacity: 0; } 23%,94% { opacity: 1; } 95%,100% { opacity: 0; } }
+  @keyframes phase { 0%,23% { fill: #526b57; } 24%,45% { fill: #3e6c08; } 46%,100% { fill: #526b57; } }
+  @keyframes phase-b { 0%,45% { fill: #526b57; } 46%,68% { fill: #3e6c08; } 69%,100% { fill: #526b57; } }
+  @keyframes phase-c { 0%,68% { fill: #526b57; } 69%,94% { fill: #3e6c08; } 95%,100% { fill: #526b57; } }
+  @keyframes glitch { 0%,51% { opacity: 0; } 52% { opacity: .8; transform: translateX(3px); } 53% { opacity: .6; transform: translateX(-2px); } 54%,100% { opacity: 0; } }
+  @keyframes transmit { 0% { stroke-dashoffset: 20; opacity: 0; } 8%,85% { opacity: 1; } 100% { stroke-dashoffset: -1080; opacity: 0; } }
+  @keyframes step { 0%,24% { stroke: #3e6c08; } 25%,100% { stroke: #b2c9ad; } }
+  @media all {
+    *, *::before, *::after { animation: none !important; }
+    .type-mask { width: 325px; }
+    .cursor-ready { opacity: 1; }
+    .glitch { display: none; }
+    .trace { stroke-dasharray: none; opacity: .45; }
+  }
+</style>
+<path d="M17 1H1174L1199 26V543L1183 559H26L1 534V17Z" fill="#f0f5ec" stroke="#b2c9ad" stroke-width="2"/>
+
+  <rect x="746" y="57" width="430" height="450" fill="url(#grid)" opacity=".45"/>
+  <path d="M1 56H1199" class="line"/>
+  <circle cx="31" cy="29" r="4" fill="#3e6c08"/><circle cx="48" cy="29" r="4" fill="#086d80"/><circle cx="65" cy="29" r="4" fill="#b2c9ad"/>
+  <text x="89" y="35" font-size="16" class="muted">stealthmoud@lab:~</text>
+  <text x="1155" y="35" text-anchor="end" font-size="13" class="muted" letter-spacing="2">PUBLIC RESEARCH CONSOLE</text>
+  <text x="47" y="107" font-size="14" class="cyan" letter-spacing="2">SECURITY RESEARCH / BACKEND ENGINEERING</text>
+  <text x="42" y="189" class="wordmark">STEALTHMOUD</text>
+  <g class="glitch" clip-path="url(#glitch-cut)"><text x="42" y="189" class="wordmark" style="fill:#086d80">STEALTHMOUD</text></g>
+  <text x="48" y="228" font-size="17" class="muted" letter-spacing="3">MAHMOUD MOHSENI</text>
+  <text x="48" y="277" font-size="23">Follow the input. Question the trust.</text>
+  <path d="M48 306H672" class="line"/>
+  <g transform="translate(49 348)" font-size="17">
+  <text class="accent">$</text>
+  <text x="24" clip-path="url(#type-clip)">trace --scope local-lab</text>
+  <g class="cursor-ready"><rect x="258" y="-14" width="9" height="17" fill="#3e6c08" class="cursor"/></g>
+  <text y="34" class="phase">[+] map the attack surface</text>
+  <text y="68" class="phase phase-b">[+] inspect trust boundaries</text>
+  <text y="102" class="phase phase-c">[+] reproduce &amp; document</text>
+</g>
+  <path d="M720 91V476" class="line" stroke-dasharray="2 8"/>
+  <text x="953" y="91" text-anchor="middle" font-size="13" class="muted" letter-spacing="3">ATTACK SURFACE</text>
+  <g transform="translate(953 286) scale(1)">
+  <circle r="166" class="line" stroke-dasharray="2 9"/>
+  <circle r="148" class="line"/>
+  <circle r="112" class="line"/>
+  <circle r="75" class="line"/>
+  <path d="M-162 0H162M0-162V162" class="line" stroke-dasharray="3 7"/>
+  <g class="sweep">
+    <path d="M0 0V-147A147 147 0 0 1 127.3-73.5Z" fill="#3e6c08" opacity=".075"/>
+    <path d="M0 0V-147" stroke="#3e6c08" stroke-width="1.5" opacity=".75"/>
+    <circle cy="-147" r="3" fill="#3e6c08"/>
+  </g>
+  <path d="M-99-62-46-27M92-42 46-21M20 110 8 50" class="line"/>
+  <circle cx="-99" cy="-62" r="12" fill="none" stroke="#3e6c08" class="ping"/>
+  <circle cx="-99" cy="-62" r="4" fill="#3e6c08"/>
+  <circle cx="92" cy="-42" r="12" fill="none" stroke="#086d80" class="ping ping-b"/>
+  <circle cx="92" cy="-42" r="4" fill="#086d80"/>
+  <circle cx="20" cy="110" r="12" fill="none" stroke="#3e6c08" class="ping ping-c"/>
+  <circle cx="20" cy="110" r="4" fill="#3e6c08"/>
+  <text x="-127" y="-84" font-size="12" class="muted">AUTH</text>
+  <text x="105" y="-56" font-size="12" class="muted">INPUT</text>
+  <text x="37" y="132" font-size="12" class="muted">STATE</text>
+  <path d="M0-58 50-29V29L0 58-50 29V-29Z" fill="#f0f5ec" stroke="#3e6c08" stroke-opacity=".5"/>
+  <g stroke-width="3" stroke-linecap="square" fill="none">
+    <path d="M-9-19H-30V0H-9V19H-30" stroke="#3e6c08"/>
+    <path d="M5 19V-19L18 0 31-19V19" stroke="#086d80"/>
+  </g>
+  <path d="M-176-122V-176H-122M122-176H176V-122M176 122V176H122M-122 176H-176V122" fill="none" stroke="#3e6c08" opacity=".65"/>
+</g>
+  <text x="953" y="493" text-anchor="middle" font-size="12" class="muted" letter-spacing="1.5">[ LOCAL LAB SIMULATION ]</text>
+  <path d="M48 506H1152" class="line"/><path d="M48 506H1152" class="trace"/>
+  <text x="48" y="537" font-size="13" class="accent" letter-spacing="1.5">WEB + API SECURITY</text>
+  <text x="380" y="537" font-size="13" class="muted" letter-spacing="1.5">AUTH / ACCESS / BACKEND LOGIC</text>
+  <text x="1152" y="537" text-anchor="end" font-size="13" class="cyan" letter-spacing="1.5">CURIOSITY IS THE ENTRY POINT.</text>
+<rect x="18" y="58" width="1164" height="483" fill="url(#crt)" pointer-events="none"/>
+</svg>

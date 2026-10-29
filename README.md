@@ -1,4 +1,8 @@
 <picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/hero-dark-mobile-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/hero-light-mobile-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/hero-dark-static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero-light-static.svg">
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/hero-dark-mobile.svg">
   <source media="(max-width: 600px)" srcset="assets/hero-light-mobile.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
@@ -21,6 +25,10 @@ I'm **Mahmoud Mohseni**, aka **StealthMoud**. I build security tools and backend
 My projects move between investigating how applications fail and building systems with authentication and access controls. Curiosity starts the investigation; reproducible evidence makes it useful.
 
 <picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/flow-dark-mobile-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/flow-light-mobile-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/flow-dark-static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/flow-light-static.svg">
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/flow-dark-mobile.svg">
   <source media="(max-width: 600px)" srcset="assets/flow-light-mobile.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/flow-dark.svg">

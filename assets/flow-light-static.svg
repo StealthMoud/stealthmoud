@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-labelledby="title desc">
+<title id="title">The research loop</title>
+<desc id="desc">Scope: define the boundaries. Inspect: follow the request. Reproduce: verify the behavior. Document: keep the evidence.</desc>
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#bacdb3" stroke-width="0.6"/>
+  </pattern>
+  <pattern id="crt" width="4" height="4" patternUnits="userSpaceOnUse">
+    <path d="M0 1H4" stroke="#183721" stroke-opacity=".035"/>
+  </pattern>
+  <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="type-clip"><rect class="type-mask" x="24" y="-23" width="325" height="33"/></clipPath>
+  <clipPath id="glitch-cut"><path d="M0 145H700V159H0ZM0 174H700V183H0Z"/></clipPath>
+</defs>
+<style>
+  text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #183721; }
+  .muted { fill: #526b57; }
+  .accent { fill: #3e6c08; }
+  .cyan { fill: #086d80; }
+  .line { stroke: #b2c9ad; fill: none; }
+  .panel { fill: #e5eddf; stroke: #b2c9ad; }
+  .wordmark { font-size: 86px; font-weight: 800; letter-spacing: -5px; fill: #3e6c08; }
+  .sweep { animation: radar 12s linear infinite; transform-origin: 0 0; }
+  .ping { animation: ping 12s cubic-bezier(.18,.65,.3,1) infinite; }
+  .ping-b { animation-delay: -4s; }
+  .ping-c { animation-delay: -8s; }
+  .type-mask { animation: typing 12s steps(24,end) infinite; }
+  .cursor { animation: cursor 1.2s steps(1,end) infinite; }
+  .cursor-ready { animation: ready 12s steps(1,end) infinite; }
+  .phase { fill: #526b57; animation: phase 12s steps(1,end) infinite; }
+  .phase-b { animation-name: phase-b; }
+  .phase-c { animation-name: phase-c; }
+  .glitch { opacity: 0; animation: glitch 12s steps(1,end) infinite; }
+  .trace { stroke: #3e6c08; stroke-width: 2; fill: none; stroke-dasharray: 20 1080; animation: transmit 8s cubic-bezier(.4,0,.3,1) infinite; }
+  .step { animation: step 12s steps(1,end) infinite; }
+  .step-b { animation-delay: -9s; }
+  .step-c { animation-delay: -6s; }
+  .step-d { animation-delay: -3s; }
+  @keyframes radar { to { transform: rotate(360deg); } }
+  @keyframes ping { 0%,8% { opacity: 1; stroke-width: 2; } 30%,100% { opacity: .15; stroke-width: 1; } }
+  @keyframes typing { 0%,3% { width: 0; } 23%,94% { width: 325px; } 98%,100% { width: 0; } }
+  @keyframes cursor { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @keyframes ready { 0%,22% { opacity: 0; } 23%,94% { opacity: 1; } 95%,100% { opacity: 0; } }
+  @keyframes phase { 0%,23% { fill: #526b57; } 24%,45% { fill: #3e6c08; } 46%,100% { fill: #526b57; } }
+  @keyframes phase-b { 0%,45% { fill: #526b57; } 46%,68% { fill: #3e6c08; } 69%,100% { fill: #526b57; } }
+  @keyframes phase-c { 0%,68% { fill: #526b57; } 69%,94% { fill: #3e6c08; } 95%,100% { fill: #526b57; } }
+  @keyframes glitch { 0%,51% { opacity: 0; } 52% { opacity: .8; transform: translateX(3px); } 53% { opacity: .6; transform: translateX(-2px); } 54%,100% { opacity: 0; } }
+  @keyframes transmit { 0% { stroke-dashoffset: 20; opacity: 0; } 8%,85% { opacity: 1; } 100% { stroke-dashoffset: -1080; opacity: 0; } }
+  @keyframes step { 0%,24% { stroke: #3e6c08; } 25%,100% { stroke: #b2c9ad; } }
+  @media all {
+    *, *::before, *::after { animation: none !important; }
+    .type-mask { width: 325px; }
+    .cursor-ready { opacity: 1; }
+    .glitch { display: none; }
+    .trace { stroke-dasharray: none; opacity: .45; }
+  }
+</style>
+<path d="M17 1H1174L1199 26V133L1183 149H26L1 124V17Z" fill="#f0f5ec" stroke="#b2c9ad" stroke-width="2"/>
+<path d="M82 29H282" class="line"/>
+<circle cx="40" cy="29" r="8" class="step " fill="#f0f5ec" stroke="#b2c9ad" stroke-width="2"/>
+<text x="62" y="34" font-size="13" class="muted">01</text>
+<text x="31" y="79" font-size="22" class="accent">SCOPE</text>
+<text x="31" y="113" font-size="15" class="muted">Define the boundaries</text>
+<path d="M376 29H576" class="line"/>
+<circle cx="334" cy="29" r="8" class="step step-b" fill="#f0f5ec" stroke="#b2c9ad" stroke-width="2"/>
+<text x="356" y="34" font-size="13" class="muted">02</text>
+<text x="325" y="79" font-size="22" class="accent">INSPECT</text>
+<text x="325" y="113" font-size="15" class="muted">Follow the request</text>
+<path d="M670 29H870" class="line"/>
+<circle cx="628" cy="29" r="8" class="step step-c" fill="#f0f5ec" stroke="#b2c9ad" stroke-width="2"/>
+<text x="650" y="34" font-size="13" class="muted">03</text>
+<text x="619" y="79" font-size="22" class="accent">REPRODUCE</text>
+<text x="619" y="113" font-size="15" class="muted">Verify the behavior</text>
+<path d="M964 29H1164" class="line"/>
+<circle cx="922" cy="29" r="8" class="step step-d" fill="#f0f5ec" stroke="#b2c9ad" stroke-width="2"/>
+<text x="944" y="34" font-size="13" class="muted">04</text>
+<text x="913" y="79" font-size="22" class="accent">DOCUMENT</text>
+<text x="913" y="113" font-size="15" class="muted">Keep the evidence</text>
+</svg>

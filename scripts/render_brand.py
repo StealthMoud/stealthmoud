@@ -230,8 +230,17 @@ def main():
         for mobile in (False, True):
             suffix = "-mobile" if mobile else ""
             for name, render in (("hero", render_hero), ("flow", render_flow)):
+                artwork = render(theme, mobile)
                 (assets / f"{name}-{theme}{suffix}.svg").write_text(
-                    render(theme, mobile), encoding="utf-8"
+                    artwork, encoding="utf-8"
+                )
+                # Picture sources select this version even when an embedded SVG
+                # does not inherit the host page's reduced-motion preference.
+                static_artwork = artwork.replace(
+                    "@media (prefers-reduced-motion: reduce)", "@media all"
+                )
+                (assets / f"{name}-{theme}{suffix}-static.svg").write_text(
+                    static_artwork, encoding="utf-8"
                 )
 
 

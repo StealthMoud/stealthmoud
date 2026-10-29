@@ -16,12 +16,14 @@ explicitly labeled a local lab simulation; its graphics are not live telemetry.
   stages in sequence, and rotates the radar. A small wordmark glitch appears once
   per loop. A separate research-flow strip highlights scope, inspection,
   reproduction, and documentation in order.
-- Desktop and mobile compositions have dedicated SVGs. All looping motion stops
-  under `prefers-reduced-motion: reduce`, leaving complete, readable content.
+- Desktop and mobile compositions have dedicated SVGs. The picture elements select
+  static assets under `prefers-reduced-motion: reduce`, leaving complete, readable
+  content even when the host browser does not pass that preference into SVG images.
 - Native Markdown and HTML keep the biography, project descriptions, and contact
   links selectable. No external badges, trackers, image services, or SVG scripts.
 
-Rebuild all eight header and workflow images with `python3 scripts/render_brand.py`.
+Rebuild the eight animated and eight static header and research-flow images with
+`python3 scripts/render_brand.py`.
 
 ## References reviewed
 
